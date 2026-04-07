@@ -5,7 +5,6 @@ pipeline {
     APP_NAME = 'mydevschool'
     IMAGE_TAG = "${env.BUILD_NUMBER}"
     IMAGE_REPO = 'ghcr.io/owner/mydevschool'
-    DOCKER_AVAILABLE = 'false'
   }
 
   stages {
@@ -18,12 +17,12 @@ pipeline {
     stage('Normalize Image Repo') {
       steps {
         script {
-          def remoteUrl = env.GIT_URL ?: (scm?.userRemoteConfigs ? scm.userRemoteConfigs[0].url : '')
+          def remoteUrl = bat(returnStdout: true, script: '@echo off\r\ngit config --get remote.origin.url').trim()
           def owner = 'owner'
           if (remoteUrl) {
             def parts = remoteUrl.tokenize('/')
             if (parts.size() >= 2) {
-              owner = parts[-2]
+              owner = parts[-2].replace('.git', '')
             }
           }
 
@@ -40,10 +39,12 @@ pipeline {
         script {
           def dockerStatus = bat(returnStatus: true, script: 'docker info >nul 2>&1')
           if (dockerStatus == 0) {
-            env.DOCKER_AVAILABLE = 'true'
+            writeFile file: '.docker_available', text: 'true\n'
             echo 'Docker is available.'
           } else {
-            env.DOCKER_AVAILABLE = 'false'
+            if (fileExists('.docker_available')) {
+              bat 'del /f /q .docker_available'
+            }
             currentBuild.result = 'UNSTABLE'
             echo 'Docker is not available (likely paused). Skipping Docker/K8s stages.'
           }
@@ -53,7 +54,7 @@ pipeline {
 
     stage('Build Docker Image') {
       when {
-        expression { return env.DOCKER_AVAILABLE == 'true' }
+        expression { return fileExists('.docker_available') }
       }
       steps {
         bat 'docker build -t %APP_NAME%:%IMAGE_TAG% .'
@@ -62,7 +63,7 @@ pipeline {
 
     stage('Tag Image') {
       when {
-        expression { return env.DOCKER_AVAILABLE == 'true' }
+        expression { return fileExists('.docker_available') }
       }
       steps {
         bat 'docker tag %APP_NAME%:%IMAGE_TAG% %IMAGE_REPO%:%IMAGE_TAG%'
@@ -72,7 +73,7 @@ pipeline {
 
     stage('Push Image (optional)') {
       when {
-        expression { return env.DOCKER_AVAILABLE == 'true' && env.GHCR_TOKEN != null }
+        expression { return fileExists('.docker_available') && env.GHCR_TOKEN != null }
       }
       steps {
         bat 'echo %GHCR_TOKEN% | docker login ghcr.io -u %GHCR_USER% --password-stdin'
@@ -83,7 +84,7 @@ pipeline {
 
     stage('K8s Deploy (optional)') {
       when {
-        expression { return env.DOCKER_AVAILABLE == 'true' && fileExists('k8s/deployment.yaml') }
+        expression { return fileExists('.docker_available') && fileExists('k8s/deployment.yaml') }
       }
       steps {
         bat 'kubectl apply -f k8s/'
