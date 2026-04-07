@@ -92,6 +92,9 @@ pipeline {
           env.K8S_AVAILABLE = bat(returnStatus: true, script: '@kubectl cluster-info >nul 2>&1').toString() == '0'
           if (!env.K8S_AVAILABLE) {
             echo 'Kubernetes API is not reachable for Jenkins service. Skipping deploy stage.'
+          } else {
+            echo 'Kubernetes API is reachable. Loading image into Minikube...'
+            bat(returnStatus: true, script: '@minikube image load ${APP_NAME}:${IMAGE_TAG}')
           }
         }
       }

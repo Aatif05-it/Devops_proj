@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
         - name: web
-          image: ghcr.io/aatif05-it/mydevschool:latest
-          imagePullPolicy: Always
+          image: mydevschool:latest
+          imagePullPolicy: Never
           ports:
             - containerPort: 80
           readinessProbe:
