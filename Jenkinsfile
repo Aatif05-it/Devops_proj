@@ -68,9 +68,30 @@ pipeline {
       }
     }
 
-    stage('K8s Deploy (optional)') {
+    stage('Check Kubernetes') {
       when {
         expression { return fileExists('.docker_available') && fileExists('k8s/deployment.yaml') }
+      }
+      steps {
+        script {
+          def kubeStatus = bat(returnStatus: true, script: 'kubectl cluster-info >nul 2>&1')
+          if (kubeStatus == 0) {
+            writeFile file: '.k8s_available', text: 'true\n'
+            echo 'Kubernetes API is reachable.'
+          } else {
+            if (fileExists('.k8s_available')) {
+              bat 'del /f /q .k8s_available'
+            }
+            currentBuild.result = 'UNSTABLE'
+            echo 'Kubernetes API is not reachable for Jenkins service. Skipping deploy stage.'
+          }
+        }
+      }
+    }
+
+    stage('K8s Deploy (optional)') {
+      when {
+        expression { return fileExists('.docker_available') && fileExists('.k8s_available') && fileExists('k8s/deployment.yaml') }
       }
       steps {
         bat 'kubectl apply -f k8s/'
