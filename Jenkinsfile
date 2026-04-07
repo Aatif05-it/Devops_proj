@@ -4,7 +4,7 @@ pipeline {
   environment {
     APP_NAME = 'mydevschool'
     IMAGE_TAG = "${env.BUILD_NUMBER}"
-    IMAGE_REPO = "ghcr.io/${env.GIT_URL?.tokenize('/')[-2] ?: 'owner'}/${APP_NAME}"
+    IMAGE_REPO = 'ghcr.io/owner/mydevschool'
     DOCKER_AVAILABLE = 'false'
   }
 
@@ -12,6 +12,26 @@ pipeline {
     stage('Checkout') {
       steps {
         checkout scm
+      }
+    }
+
+    stage('Normalize Image Repo') {
+      steps {
+        script {
+          def remoteUrl = env.GIT_URL ?: (scm?.userRemoteConfigs ? scm.userRemoteConfigs[0].url : '')
+          def owner = 'owner'
+          if (remoteUrl) {
+            def parts = remoteUrl.tokenize('/')
+            if (parts.size() >= 2) {
+              owner = parts[-2]
+            }
+          }
+
+          owner = owner.toLowerCase()
+          env.APP_NAME = env.APP_NAME.toLowerCase()
+          env.IMAGE_REPO = "ghcr.io/${owner}/${env.APP_NAME}"
+          echo "Using image repository: ${env.IMAGE_REPO}"
+        }
       }
     }
 
