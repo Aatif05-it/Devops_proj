@@ -4,7 +4,7 @@ pipeline {
   environment {
     APP_NAME = 'mydevschool'
     IMAGE_TAG = "${env.BUILD_NUMBER}"
-    IMAGE_REPO = 'ghcr.io/owner/mydevschool'
+    IMAGE_REPO = 'ghcr.io/aatif05-it/mydevschool'
   }
 
   stages {
@@ -16,21 +16,7 @@ pipeline {
 
     stage('Normalize Image Repo') {
       steps {
-        script {
-          def remoteUrl = bat(returnStdout: true, script: '@echo off\r\ngit config --get remote.origin.url').trim()
-          def owner = 'owner'
-          if (remoteUrl) {
-            def parts = remoteUrl.tokenize('/')
-            if (parts.size() >= 2) {
-              owner = parts[-2].replace('.git', '')
-            }
-          }
-
-          owner = owner.toLowerCase()
-          env.APP_NAME = env.APP_NAME.toLowerCase()
-          env.IMAGE_REPO = "ghcr.io/${owner}/${env.APP_NAME}"
-          echo "Using image repository: ${env.IMAGE_REPO}"
-        }
+        echo "Using image repository: ${env.IMAGE_REPO}"
       }
     }
 
