@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: ghcr.io/aatif05-it/devops_proj:latest
+          image: ghcr.io/aatif05-it/mydevschool:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
