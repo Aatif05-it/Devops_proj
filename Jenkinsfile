@@ -16,14 +16,14 @@ pipeline {
 
     stage('Build Docker Image') {
       steps {
-        sh 'docker build -t ${APP_NAME}:${IMAGE_TAG} .'
+        bat 'docker build -t %APP_NAME%:%IMAGE_TAG% .'
       }
     }
 
     stage('Tag Image') {
       steps {
-        sh 'docker tag ${APP_NAME}:${IMAGE_TAG} ${IMAGE_REPO}:${IMAGE_TAG}'
-        sh 'docker tag ${APP_NAME}:${IMAGE_TAG} ${IMAGE_REPO}:latest'
+        bat 'docker tag %APP_NAME%:%IMAGE_TAG% %IMAGE_REPO%:%IMAGE_TAG%'
+        bat 'docker tag %APP_NAME%:%IMAGE_TAG% %IMAGE_REPO%:latest'
       }
     }
 
@@ -32,9 +32,9 @@ pipeline {
         expression { return env.GHCR_TOKEN != null }
       }
       steps {
-        sh 'echo ${GHCR_TOKEN} | docker login ghcr.io -u ${GHCR_USER} --password-stdin'
-        sh 'docker push ${IMAGE_REPO}:${IMAGE_TAG}'
-        sh 'docker push ${IMAGE_REPO}:latest'
+        bat 'echo %GHCR_TOKEN% | docker login ghcr.io -u %GHCR_USER% --password-stdin'
+        bat 'docker push %IMAGE_REPO%:%IMAGE_TAG%'
+        bat 'docker push %IMAGE_REPO%:latest'
       }
     }
 
@@ -43,14 +43,16 @@ pipeline {
         expression { return fileExists('k8s/deployment.yaml') }
       }
       steps {
-        sh 'kubectl apply -f k8s/'
+        bat 'kubectl apply -f k8s/'
       }
     }
   }
 
   post {
     always {
-      sh 'docker image prune -f || true'
+      script {
+        bat(returnStatus: true, script: 'docker image prune -f')
+      }
     }
     success {
       echo 'Pipeline completed successfully.'
