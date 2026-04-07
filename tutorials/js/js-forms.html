@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Forms &amp; Validation - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="js-intro.html" class="active" target="_blank">JavaScript</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="js"></aside>
+
+    <main class="content">
+      <h1>JS Forms &amp; Validation</h1>
+      <p>
+        JavaScript can validate form input in the browser and prevent submission when required fields are empty or invalid. 
+      </p>
+
+      <h2>Required fields example</h2>
+      <p>
+        This example checks that both the name and email fields are filled before allowing the form to submit. 
+      </p>
+
+      <div class="example-box">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+  &lt;form id="signup-form"&gt;
+    &lt;label&gt;
+      Name:
+      &lt;input type="text" id="name" /&gt;
+    &lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label&gt;
+      Email:
+      &lt;input type="email" id="email" /&gt;
+    &lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;button type="submit"&gt;Sign up&lt;/button&gt;
+    &lt;p id="error" style="color: red;"&gt;&lt;/p&gt;
+  &lt;/form&gt;
+
+  &lt;script&gt;
+    const form = document.getElementById("signup-form");
+    const error = document.getElementById("error");
+
+    form.addEventListener("submit", function (event) {
+      error.textContent = "";
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+
+      if (!name || !email) {
+        event.preventDefault();
+        error.textContent = "Please enter both name and email.";
+      }
+    });
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+
+      <p>
+        Clientâ€‘side validation improves user experience but should always be combined with serverâ€‘side checks for security.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="js-timers.html" target="_blank">&laquo; Back: JS Timers</a>
+        <a class="btn primary" href="js-errors.html" target="_blank">Next: JS Error Handling &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

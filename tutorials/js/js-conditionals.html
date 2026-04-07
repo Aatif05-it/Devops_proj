@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Conditionals - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="js-intro.html" class="active" target="_blank">JavaScript</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="js"></aside>
+
+    <main class="content">
+      <h1>JS Conditionals</h1>
+      <p>
+        Conditional statements let JavaScript run different code depending on whether a condition is true or false. 
+      </p>
+
+      <h2>if / else if / else</h2>
+      <p>
+        This example uses an <code>if...else if...else</code> chain to map a score to a letter grade. 
+      </p>
+
+      <div class="example-box">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+  &lt;p id="grade"&gt;&lt;/p&gt;
+
+  &lt;script&gt;
+    const score = 78;
+    let grade;
+
+    if (score &gt;= 90) {
+      grade = "A";
+    } else if (score &gt;= 75) {
+      grade = "B";
+    } else if (score &gt;= 60) {
+      grade = "C";
+    } else {
+      grade = "D";
+    }
+
+    document.getElementById("grade").textContent =
+      "Score: " + score + " → Grade " + grade;
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+
+      <p>
+        Combining conditionals with logical operators like <code>&amp;&amp;</code> and <code>||</code> makes it easy to express complex decision rules.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="js-operators.html" target="_blank">&laquo; Back: JS Operators</a>
+        <a class="btn primary" href="js-loops.html" target="_blank">Next: JS Loops &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

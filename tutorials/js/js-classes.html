@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Classes - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="js-intro.html" class="active" target="_blank">JavaScript</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="js"></aside>
+
+    <main class="content">
+      <h1>JS Classes</h1>
+      <p>
+        Classes are templates for creating objects with shared properties and methods, built on top of JavaScript prototypes. 
+      </p>
+
+      <h2>Class and instance</h2>
+      <p>
+        This example defines a <code>Person</code> class with a constructor and method, then creates an instance.
+      </p>
+
+      <div class="example-box">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+  &lt;p id="info"&gt;&lt;/p&gt;
+
+  &lt;script&gt;
+    class Person {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      describe() {
+        return this.name + " is " + this.age + " years old.";
+      }
+    }
+
+    const student = new Person("Alex", 21);
+    document.getElementById("info").textContent = student.describe();
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+
+      <p>
+        Classes can extend other classes using <code>extends</code> and call parent constructors with <code>super()</code>. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="js-arrow-fn.html" target="_blank">&laquo; Back: JS Arrow Functions</a>
+        <a class="btn primary" href="js-modules.html" target="_blank">Next: JS Modules &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

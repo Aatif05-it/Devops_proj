@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL LIMIT / TOP - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL LIMIT / TOP</h1>
+      <p>
+        Many databases provide a way to restrict how many rows a query returns using <code>LIMIT</code>, <code>TOP</code>, or <code>FETCH FIRST</code>.
+      </p>
+      <p>
+        Limiting rows is useful for pagination, dashboards, and testing queries on a small subset of data. 
+      </p>
+
+      <h2>LIMIT in MySQL / PostgreSQL</h2>
+      <p>
+        This example returns only the first 5 rows from the <code>Customers</code> table. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT *
+FROM Customers
+ORDER BY CustomerName
+LIMIT 5;
+</code></pre>
+      </div>
+
+      <p>
+        Adding <code>ORDER BY</code> before <code>LIMIT</code> ensures the â€œfirstâ€ rows are consistently defined, for example the alphabetically earliest customers. 
+      </p>
+
+      <h2>TOP in SQL Server</h2>
+      <p>
+        SQL Server uses the <code>TOP</code> keyword to return a fixed number or percentage of rows. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT TOP 10 *
+FROM Orders
+ORDER BY OrderDate DESC;
+</code></pre>
+      </div>
+
+      <p>
+        This query returns the 10 most recent orders because the rows are sorted from newest to oldest before applying <code>TOP</code>. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-order-by.html" target="_blank">&laquo; Back: SQL ORDER BY</a>
+        <a class="btn primary" href="sql-insert.html" target="_blank">Next: SQL INSERT &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

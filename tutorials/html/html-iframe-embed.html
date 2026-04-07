@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML Iframe &amp; Embed - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="../../html-intro.html" class="active" target="_blank">HTML</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="html"></aside>
+
+    <main class="content">
+      <h1>HTML Iframe &amp; Embed</h1>
+      <p>
+        Iframes let you display another web page inside your page. They are often
+        used for maps, videos, or external tools.
+      </p>
+
+      <h2>Basic iframe</h2>
+      <p>
+        The <code>&lt;iframe&gt;</code> element takes a <code>src</code> URL and optional
+        width and height attributes.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;iframe
+  src=&quot;https://example.com&quot;
+  width=&quot;600&quot;
+  height=&quot;400&quot;
+  title=&quot;Example website&quot;&gt;
+&lt;/iframe&gt;
+</code></pre>
+      </div>
+      <p>
+        Always set a descriptive <code>title</code> for accessibility so screen readers
+        understand what the iframe contains.
+      </p>
+
+      <h2>Responsive iframe (full width)</h2>
+      <p>
+        For responsive layouts you can use CSS to make the iframe stretch to 100% width
+        and control the height with a ratio.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;div class=&quot;iframe-wrapper&quot;&gt;
+  &lt;iframe
+    src=&quot;https://www.example.com&quot;
+    title=&quot;Responsive demo&quot;
+    frameborder=&quot;0&quot;
+    allowfullscreen&gt;
+  &lt;/iframe&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
+
+      <h2>Embedding a YouTube video</h2>
+      <p>
+        Many services (like YouTube or Google Maps) provide readyâ€‘made iframe snippets
+        that you can paste into your page.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;iframe
+  width=&quot;560&quot;
+  height=&quot;315&quot;
+  src=&quot;https://www.youtube.com/embed/VIDEO_ID&quot;
+  title=&quot;YouTube video player&quot;
+  frameborder=&quot;0&quot;
+  allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;
+  allowfullscreen&gt;
+&lt;/iframe&gt;
+</code></pre>
+      </div>
+
+      <h2>Security considerations</h2>
+      <p>
+        Use the <code>sandbox</code> attribute to limit what the embedded page can do
+        (for example, block scripts or form submission) when you do not fully trust it.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;iframe
+  src=&quot;https://untrusted.example&quot;
+  sandbox=&quot;allow-same-origin allow-forms&quot;
+  title=&quot;Sandboxed content&quot;&gt;
+&lt;/iframe&gt;
+</code></pre>
+      </div>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="html-entities.html" target="_blank">&laquo; Previous: HTML Entities</a>
+        <a class="btn primary" href="html-form-advanced.html" target="_blank">HTML Form Advanced</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+
+</body>
+</html>
+
+
+

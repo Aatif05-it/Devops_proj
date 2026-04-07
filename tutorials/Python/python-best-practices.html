@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Best Practices - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python Best Practices</h1>
+      <p>Following best practices makes your Python code cleaner, faster, and easier to maintain.</p>
+      <p>Focus on readable style, proper structure, and safe use of external libraries.</p>
+
+      <h2>Code style (PEP 8)</h2>
+      <div class="example-box">
+<pre><code class="language-python"># Good
+def calculate_total(price, tax_rate):
+    return price * (1 + tax_rate)
+
+# Bad
+def calcTotal(p,t): return p*(1+t)
+</code></pre>
+      </div>
+      <p>Use clear names, 4â€‘space indentation, and one logical statement per line.</p>
+
+      <h2>Use virtual environments</h2>
+      <div class="example-box">
+<pre><code class="language-python"># Create and activate venv (Linux/macOS)
+python -m venv venv
+source venv/bin/activate
+
+# Windows
+python -m venv venv
+venv\Scripts\activate
+</code></pre>
+      </div>
+      <p>Virtual environments isolate project dependencies so versions do not conflict.</p>
+
+      <h2>Handle errors and logging</h2>
+      <div class="example-box">
+<pre><code class="language-python">import logging
+
+logging.basicConfig(level=logging.INFO)
+
+try:
+    result = 10 / 0
+except ZeroDivisionError as e:
+    logging.error("Failed to compute: %s", e)
+</code></pre>
+      </div>
+      <p>Prefer logging over print for production code, and handle expected errors with tryâ€‘except.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-pandas.html" target="_blank">&laquo; Back: Python Pandas Basics</a>
+        <a class="btn primary"href="../../index.html" target="_blank">Back to Home &raquo;</a>
+      </div>
+
+      <div class="next-topics">
+        <h3>Continue Learning with Other Languages</h3>
+        <p>Now that you've mastered Python, explore other programming languages:</p>
+        <ul>
+          <li><a href="../js/js-intro.html" target="_blank">JavaScript Introduction</a> - Learn JavaScript for web development</li>
+          <li><a href="../html/html-intro.html" target="_blank">HTML Fundamentals</a> - Master HTML for building web pages</li>
+          <li><a href="../css/css-intro.html" target="_blank">CSS Styling</a> - Learn CSS to style your web applications</li>
+          <li><a href="../java/java-intro.html" target="_blank">Java Programming</a> - Explore Java for backend development</li>
+          <li><a href="../c/c-intro.html" target="_blank">C Programming</a> - Learn low-level programming fundamentals</li>
+          <li><a href="../cpp/cpp-intro.html" target="_blank">C++ Programming</a> - Master object-oriented systems programming</li>
+          <li><a href="../csharp/csharp-intro.html" target="_blank">C# Programming</a> - Build modern apps with .NET</li>
+          <li><a href="../sql/sql-intro.html" target="_blank">SQL Databases</a> - Learn SQL for database management</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

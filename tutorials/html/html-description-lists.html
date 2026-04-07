@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML Description Lists - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="../../html-intro.html" class="active" target="_blank">HTML</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="html"></aside>
+
+    <main class="content">
+      <h1>HTML Description Lists</h1>
+      <p>
+        Description lists are used for pairs of terms and descriptions, such as glossaries,
+        FAQs, or key/value information. They use <code>&lt;dl&gt;</code>,
+        <code>&lt;dt&gt;</code>, and <code>&lt;dd&gt;</code>.
+      </p>
+
+      <h2>Basic description list</h2>
+      <p>
+        Wrap the whole list in <code>&lt;dl&gt;</code>. Each term goes in a
+        <code>&lt;dt&gt;</code> element and its description goes in a
+        <code>&lt;dd&gt;</code> element.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;The standard markup language for web pages.&lt;/dd&gt;
+
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;A style sheet language used to describe the look of HTML.&lt;/dd&gt;
+
+  &lt;dt&gt;JavaScript&lt;/dt&gt;
+  &lt;dd&gt;A programming language that adds interactivity to web pages.&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+      </div>
+      <p>
+        Browsers usually display the description indented under the term, making
+        the relationship between them clear.
+      </p>
+
+      <h2>Multiple descriptions per term</h2>
+      <p>
+        A term can have more than one description by following a single
+        <code>&lt;dt&gt;</code> with multiple <code>&lt;dd&gt;</code> elements.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;dl&gt;
+  &lt;dt&gt;Frontend developer&lt;/dt&gt;
+  &lt;dd&gt;Works with HTML, CSS, and JavaScript.&lt;/dd&gt;
+  &lt;dd&gt;Focuses on the user interface and experience.&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+      </div>
+      <p>
+        This is useful when you want to give both a short definition and an
+        additional note or example for the same term.
+      </p>
+
+      <h2>Using description lists for key/value data</h2>
+      <p>
+        Description lists can also represent key/value pairs such as user profile
+        details or product specifications.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;dl&gt;
+  &lt;dt&gt;Name&lt;/dt&gt;
+  &lt;dd&gt;Alex Kumar&lt;/dd&gt;
+
+  &lt;dt&gt;Role&lt;/dt&gt;
+  &lt;dd&gt;Frontend Developer&lt;/dd&gt;
+
+  &lt;dt&gt;Location&lt;/dt&gt;
+  &lt;dd&gt;Bengaluru, India&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+      </div>
+      <p>
+        Compared to a table, description lists are simpler when you only need a
+        single column of labels and values.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="html-tables-advanced.html" target="_blank">&laquo; Previous: HTML Tables Advanced</a>
+        <a class="btn primary" href="html-images-advanced.html" target="_blank">Next: HTML Images Advanced  &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+
+</body>
+</html>
+
+
+

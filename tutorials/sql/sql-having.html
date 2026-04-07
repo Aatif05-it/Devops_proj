@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL HAVING - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL HAVING</h1>
+      <p>
+        The <code>HAVING</code> clause filters groups created by <code>GROUP BY</code>, similar to how <code>WHERE</code> filters individual rows. 
+      </p>
+      <p>
+        Unlike <code>WHERE</code>, <code>HAVING</code> can use aggregate functions such as <code>COUNT()</code> or <code>SUM()</code> in its conditions. 
+      </p>
+
+      <h2>Filter groups by count</h2>
+      <p>
+        This query returns only countries that have more than 5 customers. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT Country,
+       COUNT(*) AS CustomerCount
+FROM Customers
+GROUP BY Country
+HAVING COUNT(*) &gt; 5;
+</code></pre>
+      </div>
+
+      <p>
+        The condition in <code>HAVING</code> runs after grouping, so <code>COUNT(*)</code> already represents the number of customers in each country. 
+      </p>
+
+      <h2>Filter by aggregated totals</h2>
+      <p>
+        You can also use <code>HAVING</code> with sums or averages, for example to keep only highâ€‘revenue customers. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT CustomerID,
+       SUM(TotalAmount) AS TotalSpent
+FROM Orders
+GROUP BY CustomerID
+HAVING SUM(TotalAmount) &gt; 1000
+ORDER BY TotalSpent DESC;
+</code></pre>
+      </div>
+
+      <p>
+        Combining <code>HAVING</code> with <code>ORDER BY</code> helps highlight the most important groups, such as top customers or topâ€‘selling products. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-group-by.html" target="_blank">&laquo; Back: SQL GROUP BY</a>
+        <a class="btn primary" href="sql-aliases.html" target="_blank">Next: SQL Aliases &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

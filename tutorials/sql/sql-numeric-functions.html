@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Numeric Functions - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Numeric Functions</h1>
+      <p>
+        Numeric functions perform arithmetic and rounding, which is useful when calculating currency, percentages, or bucketed values. 
+      </p>
+      <p>
+        Common examples include <code>ROUND()</code>, <code>CEILING()</code>, <code>FLOOR()</code>, <code>ABS()</code>, and sometimes <code>POWER()</code> and <code>MOD()</code>. 
+      </p>
+
+      <h2>Rounding values</h2>
+      <p>
+        This query rounds average order amounts to two decimal places. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT
+  CustomerID,
+  ROUND(AVG(TotalAmount), 2) AS AvgOrderRounded
+FROM Orders
+GROUP BY CustomerID;
+</code></pre>
+      </div>
+
+      <p>
+        Rounding inside the query ensures consistent formatting and avoids floatingâ€‘point noise in reports. 
+      </p>
+
+      <h2>Ceiling, floor, and absolute</h2>
+      <p>
+        <code>CEILING()</code> and <code>FLOOR()</code> move numbers up or down to the nearest integer, while <code>ABS()</code> removes the sign.
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT
+  Price,
+  CEILING(Price) AS RoundedUp,
+  FLOOR(Price)   AS RoundedDown,
+  ABS(Discount)  AS DiscountMagnitude
+FROM Products;
+</code></pre>
+      </div>
+
+      <p>
+        These functions help with bucketing values, cleaning negative measurements, and preparing data for charts.
+          </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-date-functions.html" target="_blank">&laquo; Back: SQL Date &amp; Time Functions</a>
+        <a class="btn primary" href="sql-constraints.html" target="_blank">Next: SQL Constraints Basics &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

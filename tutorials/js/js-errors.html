@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Error Handling - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="js-intro.html" class="active" target="_blank">JavaScript</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="js"></aside>
+
+    <main class="content">
+      <h1>JS Error Handling</h1>
+      <p>
+        Error handling with <code>try...catch</code> lets JavaScript catch runtime errors and react instead of stopping the script. 
+      </p>
+
+      <h2>try / catch example</h2>
+      <p>
+        This example deliberately uses an undefined variable and catches the resulting error to show a friendly message. 
+      </p>
+
+      <div class="example-box">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+  &lt;p id="info"&gt;&lt;/p&gt;
+
+  &lt;script&gt;
+    try {
+      const result = notDefined + 10; // ReferenceError
+      document.getElementById("info").textContent = result;
+    } catch (error) {
+      document.getElementById("info").textContent =
+        "Something went wrong: " + error.message;
+    }
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+
+      <p>
+        Use <code>throw</code> to create custom errors and optionally a <code>finally</code> block to run cleanup code whether an error occurs or not. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="js-forms.html" target="_blank">&laquo; Back: JS Forms &amp; Validation</a>
+        <a class="btn primary" href="js-this.html" target="_blank">Next: JS This &amp; Context &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

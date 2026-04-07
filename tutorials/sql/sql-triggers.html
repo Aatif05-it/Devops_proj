@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Triggers - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Triggers</h1>
+      <p>
+        Triggers automatically execute SQL code in response to INSERT, UPDATE, or DELETE events on a table, enforcing rules without application code. 
+      </p>
+      <p>
+        They maintain audit trails, update related tables, and validate data changes at the database level. 
+      </p>
+
+      <h2>AFTER INSERT trigger</h2>
+      <p>
+        This trigger logs every new order to an audit table with timestamp and user info. [web:477][web:478]
+      </p>
+
+      <div class="example-box">
+<pre><code>CREATE TRIGGER OrderAudit
+AFTER INSERT ON Orders
+FOR EACH ROW
+BEGIN
+  INSERT INTO OrderAuditLog (OrderID, Action, UserID, Timestamp)
+  VALUES (NEW.OrderID, 'INSERT', USER(), NOW());
+END;
+</code></pre>
+      </div>
+
+      <p>
+        <code>NEW</code> refers to the inserted row; the trigger fires automatically after each insert. 
+      </p>
+
+      <h2>BEFORE UPDATE trigger</h2>
+      <p>
+        This prevents price decreases below cost and logs attempted changes. 
+      </p>
+
+      <div class="example-box">
+<pre><code>CREATE TRIGGER PreventPriceDrop
+BEFORE UPDATE ON Products
+FOR EACH ROW
+BEGIN
+  IF NEW.Price &lt; NEW.Cost THEN
+    SIGNAL SQLSTATE '45000' 
+    SET MESSAGE_TEXT = 'Price cannot be less than cost';
+  END IF;
+END;
+</code></pre>
+      </div>
+
+      <p>
+        BEFORE triggers can modify <code>NEW</code> values or block the operation entirely with <code>SIGNAL</code>. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-functions.html" target="_blank">&laquo; Back: SQL User-Defined Functions</a>
+        <a class="btn primary" href="sql-performance.html" target="_blank">Next: SQL Performance Tuning &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

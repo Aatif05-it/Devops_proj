@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Syntax & Data Types - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Syntax & Data Types</h1>
+      <p>
+        SQL statements are written as keywords followed by identifiers such as table and column names, ending with a semicolon in many database systems. 
+      </p>
+      <p>
+        Each column in a table has a data type that controls what kind of values it can store, such as integers, decimals, dates, or text strings. 
+      </p>
+
+      <h2>Basic syntax example</h2>
+      <p>
+        This example shows a simple statement that selects two columns from a table, following the pattern KEYWORDS → identifiers → semicolon.
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT CustomerName, City
+FROM Customers;
+</code></pre>
+      </div>
+
+      <p>
+        SQL is generally case-insensitive for keywords, so <code>select</code> and <code>SELECT</code> behave the same, but using uppercase keywords improves readability.
+      </p>
+
+      <h2>Common data types</h2>
+      <p>
+        Databases support many data types, but most queries rely on numeric, character, and date/time types as a foundation. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- Example column definitions
+INT              -- whole numbers
+DECIMAL(10, 2)   -- fixed decimal money values
+VARCHAR(100)     -- variable-length text up to 100 characters
+DATE             -- calendar date (YYYY-MM-DD)
+TIMESTAMP        -- date and time
+BOOLEAN          -- true / false (some systems use TINYINT)
+</code></pre>
+      </div>
+
+      <p>
+        Choosing the smallest data type that fits your data helps save storage and can significantly improve query performance on large tables. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-intro.html" target="_blank">&laquo; Back: SQL Introduction</a>
+        <a class="btn primary" href="sql-database-basics.html" target="_blank">Next: SQL Database Basics &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

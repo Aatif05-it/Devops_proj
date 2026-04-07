@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Best Practices - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Best Practices</h1>
+      <p>
+        Follow these guidelines to write maintainable, performant, and secure SQL that scales with production workloads. 
+      </p>
+      <p>
+        Consistent formatting, indexing strategies, and parameterization prevent common pitfalls and debugging headaches. 
+      </p>
+
+      <h2>Query writing standards</h2>
+      <p>
+        Use consistent capitalization, indentation, and table aliases for readability across teams. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- GOOD: Readable, consistent style
+SELECT 
+    c.CustomerName,
+    COUNT(o.OrderID) AS OrderCount,
+    AVG(o.TotalAmount) AS AvgOrderValue
+FROM Customers c
+JOIN Orders o ON c.CustomerID = o.CustomerID
+WHERE o.OrderDate >= '2025-01-01'
+GROUP BY c.CustomerID, c.CustomerName
+HAVING COUNT(o.OrderID) > 5
+ORDER BY AvgOrderValue DESC;
+
+-- BAD: Hard to read/maintain
+select c.customername,count(o.orderid)as total,avg(o.totalamount)from customers c,orders o where c.customerid=o.customerid and o.orderdate>'2025-01-01' group by c.customerid having count(o.orderid)>5 order by 3 desc
+</code></pre>
+      </div>
+
+      <h2>Indexing strategies</h2>
+      <p>
+        Index foreign keys, WHERE columns, JOIN columns, and ORDER BY columns; avoid over-indexing. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- Essential indexes for this query:
+CREATE INDEX idx_orders_customer_date ON Orders(CustomerID, OrderDate);
+CREATE INDEX idx_customers_id_name ON Customers(CustomerID, CustomerName);
+
+-- Check with EXPLAIN before/after
+EXPLAIN SELECT ... -- Look for "Using index" vs "ALL"
+</code></pre>
+      </div>
+
+      <p>
+        Composite indexes match common WHERE/JOIN patterns; single-column indexes for selective filters.
+      </p>
+
+      <h2>Security: Parameterized queries</h2>
+      <p>
+        Always use prepared statements to prevent SQL injection attacks. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- DANGEROUS: Direct string concatenation
+query = "SELECT * FROM Users WHERE id = " + userInput;
+
+-- SECURE: Parameterized query
+PREPARE stmt FROM "SELECT * FROM Users WHERE id = ?";
+EXECUTE stmt USING userInput;
+</code></pre>
+      </div>
+
+      <p>
+        Parameterization separates code from data, blocking injection while enabling query plan reuse. 
+      </p>
+
+      <h2>Performance checklist</h2>
+      <p>
+        Avoid SELECT *, limit rows early, rewrite correlated subqueries as JOINs. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- Always check these:
+LIMIT 1000;                    -- Cap results
+WHERE indexed_column = value;  -- Use indexes
+EXISTS (subquery) vs IN;       -- EXISTS usually faster
+JOIN over subquery in WHERE;   -- Push filters early
+</code></pre>
+      </div>
+
+      <h2>Schema design principles</h2>
+      <p>
+        Use meaningful names, appropriate data types, and constraints for data integrity. 
+
+      <ul>
+        <li>Use <code>INT</code> over <code>BIGINT</code> unless needed</li>
+        <li><code>VARCHAR(50)</code> instead of <code>TEXT</code> for short strings</li>
+        <li>Always define <code>NOT NULL</code> and defaults where possible</li>
+        <li>Foreign keys enforce referential integrity</li>
+      </ul>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-execution-plans.html" target="_blank">&laquo; Back: SQL Execution Plans</a>
+        <a class="btn primary" href="../../index.html" target="_blank">Back to Home &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

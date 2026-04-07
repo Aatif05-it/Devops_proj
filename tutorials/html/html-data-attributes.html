@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML Data Attributes - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="../../html-intro.html" class="active" target="_blank">HTML</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="html"></aside>
+
+    <main class="content">
+      <h1>HTML Data Attributes</h1>
+      <p>
+        Data attributes let you store custom information on HTML elements using
+        attributes that start with <code>data-</code>. They are often used by
+        JavaScript and CSS.
+      </p>
+
+      <h2>Basic syntax</h2>
+      <p>
+        A data attribute has a name and value: <code>data-name="value"</code>.
+        You can define as many as you need on any HTML element.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;button
+  data-course-id=&quot;html101&quot;
+  data-level=&quot;beginner&quot;&gt;
+  Start HTML course
+&lt;/button&gt;
+</code></pre>
+      </div>
+      <p>
+        Here <code>data-course-id</code> and <code>data-level</code> store extra
+        information that does not affect how the button is rendered.
+      </p>
+
+      <h2>Using data attributes with JavaScript</h2>
+      <p>
+        In JavaScript you can read data attributes through the
+        <code>dataset</code> property, which exposes them as camelâ€‘cased keys.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;button id=&quot;startBtn&quot;
+        data-course-id=&quot;html101&quot;
+        data-level=&quot;beginner&quot;&gt;
+  Start HTML course
+&lt;/button&gt;
+
+&lt;script&gt;
+  const btn = document.getElementById(&quot;startBtn&quot;);
+  const courseId = btn.dataset.courseId; // &quot;html101&quot;
+  const level = btn.dataset.level;       // &quot;beginner&quot;;
+
+  console.log(courseId, level);
+&lt;/script&gt;
+</code></pre>
+      </div>
+      <p>
+        This pattern is useful for attaching IDs, types, or configuration options
+        to elements without hardâ€‘coding them in your script.
+      </p>
+
+      <h2>Data attributes for styling hooks</h2>
+      <p>
+        CSS can also select elements based on data attributes using attribute
+        selectors, which is handy for stateâ€‘based styling.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;button data-state=&quot;active&quot;&gt;Active tab&lt;/button&gt;
+&lt;button data-state=&quot;inactive&quot;&gt;Inactive tab&lt;/button&gt;
+
+&lt;style&gt;
+  button[data-state=&quot;active&quot;] {
+    background: #04aa6d;
+    color: #fff;
+  }
+&lt;/style&gt;
+</code></pre>
+      </div>
+      <p>
+        JavaScript can update the data attribute value and CSS will automatically
+        reflect the change in the UI.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="html-block-inline.html" target="_blank">&laquo; Previous: Block vs Inline Elements</a>
+        <a class="btn primary" href="html-comments-best-practices.html" target="_blank">Next: HTML Comments  &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+
+</body>
+</html>
+
+
+

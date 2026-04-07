@@ -1,0 +1,9 @@
+.git
+.gitignore
+.vscode
+.certs
+report_screenshots
+Security_Captcha_Privacy_Report.doc
+Security_Captcha_Privacy_Report.pdf
+*.log
+*.tmp

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Create & Drop DB - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Create &amp; Drop DB</h1>
+      <p>
+        SQL can create new databases with <code>CREATE DATABASE</code> and remove them with <code>DROP DATABASE</code>, operations usually restricted to administrators. 
+      </p>
+      <p>
+        Dropping a database permanently deletes all its tables and data, so it should only be done on development or with full backups.
+      </p>
+
+      <h2>Create a database</h2>
+      <p>
+        This example creates a database named <code>ShopDB</code> and then switches to it using <code>USE</code>. 
+      </p>
+
+      <div class="example-box">
+<pre><code>CREATE DATABASE ShopDB;
+
+-- Select the new database (syntax may vary)
+USE ShopDB;
+</code></pre>
+      </div>
+
+      <p>
+        Some systems support options such as character set and collation when you create a database to control how text is stored and compared. 
+      </p>
+
+      <h2>Drop a database</h2>
+      <p>
+        The following command removes a database completely; many DBMSs support <code>IF EXISTS</code> to avoid errors when the database is missing. 
+      </p>
+
+      <div class="example-box">
+<pre><code>DROP DATABASE IF EXISTS ShopDB;
+</code></pre>
+      </div>
+
+      <p>
+        On production servers, dropping databases is rareâ€”most changes are made at the table level or by archiving data instead of deleting whole schemas. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-database-basics.html" target="_blank">&laquo; Back: SQL Database Basics</a>
+        <a class="btn primary" href="sql-create-table.html" target="_blank">Next: SQL Tables (CREATE) &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

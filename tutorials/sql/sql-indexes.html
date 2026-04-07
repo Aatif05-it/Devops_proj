@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Indexes - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Indexes</h1>
+      <p>
+        Indexes are data structures that speed up searches and sorts on columns, at the cost of extra storage and slightly slower writes.
+      </p>
+      <p>
+        They are especially useful on columns frequently used in <code>WHERE</code>, <code>JOIN</code>, and <code>ORDER BY</code> clauses. 
+      </p>
+
+      <h2>Create a simple index</h2>
+      <p>
+        This example adds an index on the <code>LastName</code> column of the <code>Persons</code> table. 
+      </p>
+
+      <div class="example-box">
+<pre><code>CREATE INDEX idx_lastname
+ON Persons(LastName);
+</code></pre>
+      </div>
+
+      <p>
+        With this index, queries that filter or sort by <code>LastName</code> can locate rows much faster than scanning the whole table. 
+      </p>
+
+      <h2>Composite index</h2>
+      <p>
+        A composite index covers multiple columns and is useful when queries often filter on the same combination of fields. 
+      </p>
+
+      <div class="example-box">
+<pre><code>CREATE INDEX idx_country_city
+ON Customers(Country, City);
+</code></pre>
+      </div>
+
+      <p>
+        The column order matters: this index can efficiently support filters on <code>Country</code> alone or on <code>Country</code> plus <code>City</code>. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-views.html" target="_blank">&laquo; Back: SQL Views</a>
+        <a class="btn primary" href="sql-transactions.html" target="_blank">Next: SQL Transactions &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

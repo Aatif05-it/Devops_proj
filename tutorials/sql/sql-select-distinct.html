@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL SELECT DISTINCT - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL SELECT DISTINCT</h1>
+      <p>
+        The <code>SELECT DISTINCT</code> clause returns only unique rows, removing duplicates from the result set.
+      </p>
+      <p>
+        It can be applied to one or more columns; in that case, only unique combinations of those column values are kept. 
+      </p>
+
+      <h2>Distinct values in one column</h2>
+      <p>
+        This example returns each city only once from the <code>Customers</code> table. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT DISTINCT City
+FROM Customers;
+</code></pre>
+      </div>
+
+      <p>
+        The number of rows in this result equals the number of different cities where customers live, which is often useful for building filters or dashboards.
+      </p>
+
+      <h2>Distinct on multiple columns</h2>
+      <p>
+        You can also find unique pairs or combinations, such as country and city together.
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT DISTINCT Country, City
+FROM Customers;
+</code></pre>
+      </div>
+
+      <p>
+        Here a row appears only if the <code>(Country, City)</code> pair is unique, which is different from making each column distinct separately. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-select.html" target="_blank">&laquo; Back: SQL SELECT</a>
+        <a class="btn primary" href="sql-where-operators.html" target="_blank">Next: SQL WHERE &amp; Operators &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

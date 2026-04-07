@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL DELETE - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL DELETE</h1>
+      <p>
+        The <code>DELETE</code> statement removes rows from a table based on a filter condition in the <code>WHERE</code> clause. 
+      </p>
+      <p>
+        Without a <code>WHERE</code> clause, all rows in the table are deleted, leaving the structure but no data. 
+      </p>
+
+      <h2>Delete a single row</h2>
+      <p>
+        This example deletes one customer with a specific id.
+      </p>
+
+      <div class="example-box">
+<pre><code>DELETE FROM Customers
+WHERE CustomerID = 101;
+</code></pre>
+      </div>
+
+      <p>
+        Deleting by primary key is a common pattern because it uniquely identifies the row you want to remove. 
+      </p>
+
+      <h2>Delete multiple rows</h2>
+      <p>
+        The same syntax can remove all rows that match a broader condition, such as all customers from a given country. 
+      </p>
+
+      <div class="example-box">
+<pre><code>DELETE FROM Customers
+WHERE Country = 'Spain';
+</code></pre>
+      </div>
+
+      <p>
+        For bulk deletions, many teams wrap the command in a transaction so they can roll back if the affected row count is higher than expected. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-update.html" target="_blank">&laquo; Back: SQL UPDATE</a>
+        <a class="btn primary" href="sql-null.html" target="_blank">Next: SQL NULL &amp; IS NULL &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

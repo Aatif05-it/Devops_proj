@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Code Editor - CodeNexa Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-light.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fff7ed;
+            --panel: #fffaf4;
+            --toolbar: #3f2a1d;
+            --toolbar-border: #5a3a28;
+            --text-light: #fdecd9;
+            --text-dark: #3b2f2f;
+            --muted: #7c5e52;
+            --border: #ead7c5;
+            --accent: #f97316;
+            --accent-hover: #ea580c;
+            --icon-bg: #5a3a28;
+            --icon-bg-hover: #704933;
+            --website-btn: #0f766e;
+            --website-btn-hover: #0d5e58;
+            --editor-bg: #fffdf8;
+            --line-bg: #f6eadf;
+            --selection: #ffd7b3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background: var(--bg);
+            overflow: hidden;
+        }
+
+        .toolbar {
+            background: var(--toolbar);
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            border-bottom: 1px solid var(--toolbar-border);
+            box-shadow: 0 2px 8px rgba(2, 6, 23, 0.35);
+        }
+
+        .toolbar-left {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .toolbar-icon {
+            width: 35px;
+            height: 35px;
+            background: var(--icon-bg);
+            border: 1px solid #8b5e46;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.2s;
+            text-decoration: none;
+            color: var(--text-light);
+        }
+
+        .toolbar-icon:hover {
+            background: var(--icon-bg-hover);
+            border-color: #a06d50;
+        }
+
+        .toolbar-icon i {
+            font-size: 20px;
+            color: var(--text-light);
+        }
+
+        .toolbar-center {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn-run {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 15px;
+            transition: background 0.3s ease;
+            box-shadow: 0 2px 8px rgba(14, 165, 166, 0.35);
+        }
+
+        .btn-run:hover {
+            background: var(--accent-hover);
+            box-shadow: 0 3px 10px rgba(14, 165, 166, 0.42);
+        }
+
+        .toolbar-right {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .result-size {
+            font-size: 13px;
+            color: #fddfbe;
+            font-weight: 500;
+        }
+
+        .btn-website {
+            background: var(--website-btn);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 12px;
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-website:hover {
+            background: var(--website-btn-hover);
+        }
+
+        .container {
+            display: flex;
+            height: calc(100% - 50px);
+        }
+
+        .left-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: var(--panel);
+            border-right: 1px solid var(--border);
+        }
+
+        .right-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: var(--panel);
+        }
+
+        .code-editor {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+            background: var(--panel);
+        }
+
+        .line-numbers {
+            display: none;
+            background: var(--line-bg);
+            color: var(--muted);
+            padding: 12px 10px;
+            text-align: right;
+            border-right: 1px solid var(--border);
+            font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Courier New', monospace;
+            font-size: 12px;
+            line-height: 1.6;
+            user-select: none;
+            overflow: hidden;
+            min-width: 45px;
+        }
+
+        textarea {
+            flex: 1;
+            border: none;
+            padding: 16px;
+            font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            resize: none;
+            outline: none;
+            background: var(--editor-bg);
+            color: var(--text-dark);
+            tab-size: 2;
+        }
+
+        textarea::selection {
+            background: var(--selection);
+        }
+
+        iframe {
+            flex: 1;
+            border: none;
+            background: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .left-panel {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .toolbar {
+                flex-wrap: wrap;
+                height: auto;
+                gap: 10px;
+            }
+
+            .toolbar-center {
+                order: 2;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="toolbar">
+        <div class="toolbar-left">
+            <a href="../get-website.html" class="toolbar-icon" title="Home"><i class="material-icons">home</i></a>
+            <div class="toolbar-icon" title="Menu"><i class="material-icons">menu</i></div>
+            <div class="toolbar-icon" title="Save"><i class="material-icons">save</i></div>
+            <div class="toolbar-icon" title="Edit"><i class="material-icons">edit</i></div>
+            <div class="toolbar-icon" title="Info"><i class="material-icons">info</i></div>
+        </div>
+        <div class="toolbar-center">
+            <button class="btn-run" onclick="updatePreview(); updateSize();">Run ▶</button>
+        </div>
+        <div class="toolbar-right">
+            <span class="result-size">Result Size: <span id="size-info">0 × 0</span></span>
+            <a href="../get-website.html" class="btn-website">Get your own website</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left-panel">
+            <div class="code-editor">
+                <div class="line-numbers" id="lineNumbers"></div>
+                <textarea id="htmlInput" spellcheck="false"></textarea>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <iframe id="output"></iframe>
+        </div>
+    </div>
+
+    <script src="../assets/js/frontend-editor.js?v=3"></script>
+</body>
+</html>
+

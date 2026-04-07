@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Fetch API - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="js-intro.html" class="active" target="_blank">JavaScript</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="js"></aside>
+
+    <main class="content">
+      <h1>JS Fetch API</h1>
+      <p>
+        The Fetch API lets JavaScript make HTTP requests and work with responses using promises.
+      </p>
+
+      <h2>Fetch JSON example</h2>
+      <p>
+        This example fetches JSON from a sample API and displays the title from the response.
+      </p>
+
+      <div class="example-box">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+  &lt;p id="result"&gt;Loading...&lt;/p&gt;
+
+  &lt;script&gt;
+    const resultEl = document.getElementById("result");
+
+    fetch("https://jsonplaceholder.typicode.com/posts/1")
+      .then(response =&gt; response.json())
+      .then(data =&gt; {
+        resultEl.textContent = "Post title: " + data.title;
+      })
+      .catch(error =&gt; {
+        resultEl.textContent = "Error: " + error;
+      });
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+
+      <p>
+        A fetch call returns a promise that resolves to a <code>Response</code>; methods like <code>response.json()</code> read the response body. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="js-async-await.html" target="_blank">&laquo; Back: JS Async &amp; Await</a>
+        <a class="btn primary" href="js-local-storage.html" target="_blank">Next: JS Local Storage &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

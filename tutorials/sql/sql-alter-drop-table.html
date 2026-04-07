@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL ALTER &amp; DROP TABLE - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL ALTER &amp; DROP TABLE</h1>
+      <p>
+        The <code>ALTER TABLE</code> statement modifies an existing table by adding, changing, or removing columns and constraints. [web:312][web:321]
+      </p>
+      <p>
+        The <code>DROP TABLE</code> command deletes a table and all of its data, so it must be used carefully, usually only in development or after backups. [web:321][web:318]
+      </p>
+
+      <h2>Add and drop a column</h2>
+      <p>
+        This example adds an <code>Email</code> column to <code>Customers</code> and later removes it. [web:312][web:318]
+      </p>
+
+      <div class="example-box">
+<pre><code>-- Add a new column
+ALTER TABLE Customers
+ADD Email VARCHAR(100);
+
+-- Drop an existing column
+ALTER TABLE Customers
+DROP COLUMN Email;
+</code></pre>
+      </div>
+
+      <p>
+        Many systems support multiple column changes in one statement, but some dialects require separate <code>ALTER TABLE</code> commands per change. 
+      </p>
+
+      <h2>Drop a table</h2>
+      <p>
+        This example removes the <code>Orders</code> table completely; using <code>IF EXISTS</code> avoids errors if the table is missing. 
+      </p>
+
+      <div class="example-box">
+<pre><code>DROP TABLE IF EXISTS Orders;
+</code></pre>
+      </div>
+
+      <p>
+        When foreign keys reference a table, you may need to drop or update those constraints before dropping the table, depending on the database. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-create-table.html" target="_blank">&laquo; Back: SQL Tables (CREATE)</a>
+        <a class="btn primary" href="sql-select.html" target="_blank">Next: SQL SELECT &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

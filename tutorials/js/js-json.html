@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS JSON - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="js-intro.html" class="active" target="_blank">JavaScript</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="js"></aside>
+
+    <main class="content">
+      <h1>JS JSON</h1>
+      <p>
+        JSON (JavaScript Object Notation) is a text format for representing structured data, commonly used to send data between browser and server. 
+      </p>
+
+      <h2>stringify and parse</h2>
+      <p>
+        This example converts an object into a JSON string with <code>JSON.stringify()</code> and back into an object with <code>JSON.parse()</code>. 
+      </p>
+
+      <div class="example-box">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+  &lt;pre id="info"&gt;&lt;/pre&gt;
+
+  &lt;script&gt;
+    const user = { name: "Alex", age: 21 };
+
+    const json = JSON.stringify(user);
+    const parsed = JSON.parse(json);
+
+    const text =
+      "JSON string: " + json + "\\n" +
+      "Parsed name: " + parsed.name;
+
+    document.getElementById("info").textContent = text;
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+
+      <p>
+        JSON keys and string values must use double quotes, and only valid JSON types like objects, arrays, numbers, strings, booleans, and null are allowed. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="js-modules.html" target="_blank">&laquo; Back: JS Modules</a>
+        <a class="btn primary" href="js-promises.html" target="_blank">Next: JS Promises &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

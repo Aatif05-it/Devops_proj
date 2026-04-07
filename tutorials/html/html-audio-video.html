@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML Audio &amp; Video - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="../../html-intro.html" class="active" target="_blank">HTML</a>
+
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="html"></aside>
+
+    <main class="content">
+      <h1>HTML Audio &amp; Video</h1>
+      <p>
+        HTML lets you embed sound and video directly on a page using the
+        <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> elements with builtâ€‘in controls.
+      </p>
+
+      <h2>Basic audio player</h2>
+      <p>
+        The simplest audio element needs a <code>src</code> and the
+        <code>controls</code> attribute so users can play or pause.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;audio src=&quot;sound.mp3&quot; controls&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+</code></pre>
+      </div>
+
+      <h2>Audio with multiple sources</h2>
+      <p>
+        Use nested <code>&lt;source&gt;</code> tags to provide different formats
+        (for example MP3 and OGG) for better browser support.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;audio controls&gt;
+  &lt;source src=&quot;sound.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+  &lt;source src=&quot;sound.ogg&quot; type=&quot;audio/ogg&quot;&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+</code></pre>
+      </div>
+
+      <h2>Basic video player</h2>
+      <p>
+        The <code>&lt;video&gt;</code> element works like audio but can also have
+        width, height, and a poster image shown before playback.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;video width=&quot;640&quot; height=&quot;360&quot; controls&gt;
+  &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;movie.webm&quot; type=&quot;video/webm&quot;&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+</code></pre>
+      </div>
+
+      <h2>Common attributes</h2>
+      <p>
+        Useful attributes for audio and video include
+        <code>controls</code>, <code>autoplay</code>, <code>loop</code>, and
+        <code>muted</code>. Autoplay is often required to be muted to work in modern browsers.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;video src=&quot;intro.mp4&quot; controls autoplay muted loop&gt;&lt;/video&gt;
+</code></pre>
+      </div>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="html-head-meta.html" target="_blank">&laquo; Previous: HTML Head &amp; Meta</a>
+        <a class="btn primary" href="html-entities.html" target="_blank">Next: HTML Entities &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+
+</body>
+</html>
+
+
+

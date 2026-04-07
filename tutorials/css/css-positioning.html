@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Positioning - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="css-intro.html" class="active" target="_blank">CSS</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="css"></aside>
+
+    <main class="content">
+      <h1>CSS Positioning</h1>
+      <p>
+        The <code>position</code> property controls how elements are placed on
+        the page relative to the normal document flow.
+      </p>
+
+      <h2>Relative and absolute</h2>
+      <div class="example-box">
+        <pre><code>.relative-box {
+  position: relative;
+}
+
+.absolute-child {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}</code></pre>
+      </div>
+      <p>
+        An absolutely positioned element is taken out of flow and positioned
+        relative to the nearest ancestor with <code>position: relative;</code>.
+      </p>
+
+      <h2>Fixed and sticky</h2>
+      <div class="example-box">
+        <pre><code>.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.sticky-note {
+  position: sticky;
+  top: 1rem;
+}</code></pre>
+      </div>
+      <p>
+        Fixed elements stay in place relative to the viewport. Sticky elements
+        scroll normally until they reach a threshold, then stick.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="css-display-visibility.html" target="_blank">&laquo; Previous: CSS Display &amp; Visibility</a>
+        <a class="btn primary" href="css-zindex.html" target="_blank">Next: CSS Zâ€‘Index &amp; Stacking &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

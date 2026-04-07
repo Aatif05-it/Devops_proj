@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Context Managers - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python Context Managers</h1>
+      <p>Context managers handle setup and cleanup around a block of code, most commonly used with the with statement.</p>
+      <p>They ensure resources like files, locks, or network connections are always released properly.</p>
+
+      <h2>Using with for files</h2>
+      <div class="example-box">
+<pre><code class="language-python">with open("data.txt", "r", encoding="utf-8") as f:
+    for line in f:
+        print(line.strip())
+</code></pre>
+      </div>
+      <p>When the with block ends, the file is automatically closed, even if an exception occurs.</p>
+
+      <h2>Custom class-based context manager</h2>
+      <div class="example-box">
+<pre><code class="language-python">class Timer:
+    def __enter__(self):
+        import time
+        self.start = time.perf_counter()
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        import time
+        self.end = time.perf_counter()
+        self.elapsed = self.end - self.start
+        print(f"Elapsed: {self.elapsed:.4f} seconds")
+
+with Timer():
+    total = sum(range(1_000_000))
+</code></pre>
+      </div>
+      <p>A context manager class implements __enter__ and __exit__, which run at the start and end of the with block.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-decorators.html" target="_blank">&laquo; Back: Python Decorators</a>
+        <a class="btn primary" href="python-threading.html" target="_blank">Next: Python Multithreading &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

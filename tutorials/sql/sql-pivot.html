@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL PIVOT &amp; UNPIVOT - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL PIVOT &amp; UNPIVOT</h1>
+      <p>
+        PIVOT transforms rows into columns (e.g., monthly sales by year), while UNPIVOT does the reverse for reporting flexibility. 
+      </p>
+      <p>
+        PIVOT is ideal for crosstab reports where values become column headers, common in Excel-style summaries. 
+      </p>
+
+      <h2>PIVOT example: Sales by month</h2>
+      <p>
+        This converts monthly sales rows into columns for each year. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- Source data (long format):
+-- Year | Month | Sales
+-- 2024 | Jan   | 1000
+-- 2024 | Feb   | 1200
+
+SELECT *
+FROM (
+  SELECT Year, MonthName, Sales
+  FROM MonthlySales
+) AS SourceTable
+PIVOT (
+  SUM(Sales) FOR MonthName IN ([Jan], [Feb], [Mar], [Apr])
+) AS PivotTable;
+</code></pre>
+      </div>
+
+      <p>
+        Result shows columns: Year, Jan, Feb, Mar, Apr with sales values pivoted across. 
+      </p>
+
+      <h2>Dynamic PIVOT (SQL Server)</h2>
+      <p>
+        Generate column list dynamically when months are unknown at query time. 
+      </p>
+
+      <div class="example-box">
+<pre><code>DECLARE @columns NVARCHAR(MAX), @sql NVARCHAR(MAX);
+
+SELECT @columns = STUFF((
+  SELECT ',' + QUOTENAME(MonthName)
+  FROM (SELECT DISTINCT MonthName FROM MonthlySales) m
+  FOR XML PATH(''), TYPE).value('.', 'NVARCHAR(MAX)'), 1, 1, '');
+
+SET @sql = '
+SELECT Year, ' + @columns + '
+FROM (
+  SELECT Year, MonthName, Sales FROM MonthlySales
+) src
+PIVOT (SUM(Sales) FOR MonthName IN (' + @columns + ')) pvt';
+
+EXEC sp_executesql @sql;
+</code></pre>
+      </div>
+
+      <p>
+        Dynamic SQL builds the PIVOT clause from actual data, perfect for variable categories. 
+      </p>
+
+      <h2>UNPIVOT: Columns to rows</h2>
+      <p>
+        Convert pivoted data back to long format for analytics or inserts. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT Year, MonthName, Sales
+FROM (
+  SELECT Year, [Jan], [Feb], [Mar]
+  FROM PivotedSales
+) AS SourceTable
+UNPIVOT (
+  Sales FOR MonthName IN ([Jan], [Feb], [Mar])
+) AS UnpivotTable;
+</code></pre>
+      </div>
+
+      <p>
+        UNPIVOT normalizes wide tables back to key-value pairs for easier processing. 
+      </p>
+
+      <h2>Conditional aggregation (standard alternative)</h2>
+      <p>
+        Use <code>CASE</code> when PIVOT isn't available (MySQL, PostgreSQL). 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT 
+  Year,
+  SUM(CASE WHEN MonthName = 'Jan' THEN Sales ELSE 0 END) AS Jan,
+  SUM(CASE WHEN MonthName = 'Feb' THEN Sales ELSE 0 END) AS Feb
+FROM MonthlySales
+GROUP BY Year;
+</code></pre>
+      </div>
+
+      <p>
+        Manual pivoting works everywhere and gives full control over aggregation logic. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-window-functions.html" target="_blank">&laquo; Back: SQL Window Functions</a>
+        <a class="btn primary" href="sql-permissions.html" target="_blank">Next: SQL Permissions & Users &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

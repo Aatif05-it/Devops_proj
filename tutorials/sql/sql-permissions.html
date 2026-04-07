@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Permissions &amp; Users - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Permissions &amp; Users</h1>
+      <p>
+        Permissions control what users can do with database objects using <code>GRANT</code> and <code>REVOKE</code>, following the principle of least privilege. 
+      </p>
+      <p>
+        Common privileges include <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, and <code>EXECUTE</code> on tables, views, and procedures. 
+      </p>
+
+      <h2>Creating users and granting permissions</h2>
+      <p>
+        First create a user account, then assign specific privileges on targeted objects. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- Create a new user
+CREATE USER 'app_user'@'localhost' IDENTIFIED BY 'secure_password';
+
+-- Grant specific permissions
+GRANT SELECT, INSERT, UPDATE ON Orders TO 'app_user'@'localhost';
+GRANT SELECT ON Customers TO 'app_user'@'localhost';
+GRANT EXECUTE ON PROCEDURE CreateOrder TO 'app_user'@'localhost';
+
+-- Apply changes
+FLUSH PRIVILEGES;
+</code></pre>
+      </div>
+
+      <p>
+        This user can read customers and manage orders but cannot delete data or access other tables. 
+      </p>
+
+      <h2>Role-based permissions</h2>
+      <p>
+        Roles group permissions for easier management across multiple users. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- Create roles
+CREATE ROLE 'readonly_role', 'order_manager_role';
+
+-- Assign permissions to roles
+GRANT SELECT ON *.* TO 'readonly_role';
+GRANT SELECT, INSERT, UPDATE, DELETE ON Orders.* TO 'order_manager_role';
+
+-- Assign roles to users
+GRANT 'readonly_role' TO 'reporter'@'localhost';
+GRANT 'order_manager_role' TO 'app_user'@'localhost';
+
+FLUSH PRIVILEGES;
+</code></pre>
+      </div>
+
+      <p>
+        Users inherit all permissions from their assigned roles, simplifying administration. 
+      </p>
+
+      <h2>Revoking and checking permissions</h2>
+      <p>
+        Use <code>REVOKE</code> to remove access and <code>SHOW GRANTS</code> to audit current permissions. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- Revoke specific permission
+REVOKE DELETE ON Orders FROM 'app_user'@'localhost';
+
+-- Check what permissions a user has
+SHOW GRANTS FOR 'app_user'@'localhost';
+
+-- Revoke entire role
+REVOKE 'order_manager_role' FROM 'app_user'@'localhost';
+</code></pre>
+      </div>
+
+      <p>
+        Regular audits with <code>SHOW GRANTS</code> ensure users only have necessary access.
+      </p>
+
+      <h2>Column-level permissions</h2>
+      <p>
+        Grant access to specific columns instead of entire tables for extra security. 
+      </p>
+
+      <div class="example-box">
+<pre><code>GRANT SELECT (CustomerID, CustomerName) ON Customers 
+TO 'limited_user'@'localhost';
+
+GRANT UPDATE (Email, Phone) ON Customers 
+TO 'support_user'@'localhost';
+</code></pre>
+      </div>
+
+      <p>
+        Column-level grants protect sensitive data like salaries or personal info while allowing necessary operations. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-pivot.html" target="_blank">&laquo; Back: SQL PIVOT &amp; UNPIVOT</a>
+        <a class="btn primary" href="sql-backup-restore.html" target="_blank">Next: SQL Backup & Restore &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

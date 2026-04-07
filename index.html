@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CodeNexa Academy - Learn to Code</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+</head>
+<body>
+
+  <!-- Main top navbar -->
+  <header class="topnav">
+    <div class="logo">
+      <span class="logo-mark">&lt;/&gt;</span>
+      <span class="logo-text">CodeNexa Academy</span>
+    </div>
+
+    <nav class="topnav-links">
+      <a href="index.html" class="active" target="_blank">Home</a>
+      <a href="#" class="nav-disabled" target="_blank">Tutorials</a>
+      <a href="#" class="nav-disabled" target="_blank">References</a>
+      <a href="#" class="nav-disabled" target="_blank">Exercises</a>
+      <a href="#" class="nav-disabled" target="_blank">Certificates</a>
+    </nav>
+  </header>
+
+  <!-- Language strip -->
+  <div class="langbar-wrap" aria-label="Language navigation scroller">
+    <button class="langbar-arrow langbar-arrow--prev" type="button" aria-label="Scroll languages left">&lt;</button>
+    <nav class="langbar">
+    <a href="tutorials/html/html-intro.html" target="_blank">HTML</a>
+    <a href="tutorials/css/css-intro.html" target="_blank">CSS</a>
+    <a href="tutorials/js/js-intro.html" target="_blank">JavaScript</a>
+    <a href="tutorials/sql/sql-intro.html" target="_blank">SQL</a>
+    <a href="tutorials/Python/python-intro.html" target="_blank">Python</a>
+    <a href="tutorials/java/java-intro.html" target="_blank">Java</a>
+    <a href="tutorials/c/c-intro.html" target="_blank">C</a>
+    <a href="tutorials/cpp/cpp-intro.html" target="_blank">C++</a>
+    <a href="tutorials/csharp/csharp-intro.html" target="_blank">C#</a>
+    <a href="tutorials/php/php-intro.html" target="_blank">PHP</a>
+    <a href="tutorials/jquery/jquery-intro.html" target="_blank">jQuery</a>
+    <a href="tutorials/bootstrap/bootstrap-intro.html" target="_blank">Bootstrap</a>
+    <a href="tutorials/r/r-intro.html" target="_blank">R</a>
+    <a href="tutorials/kotlin/kotlin-intro.html" target="_blank">Kotlin</a>
+    <a href="tutorials/nodejs/nodejs-intro.html" target="_blank">Node.js</a>
+    <a href="tutorials/react/react-intro.html" target="_blank">React</a>
+    <a href="tutorials/json/json-intro.html" target="_blank">JSON</a>
+    <a href="tutorials/vue/vue-intro.html" target="_blank">Vue</a>
+    <a href="tutorials/mysql/mysql-intro.html" target="_blank">MySQL</a>
+    <a href="tutorials/xml/xml-intro.html" target="_blank">XML</a>
+    <a href="tutorials/sass/sass-intro.html" target="_blank">Sass</a>
+    <a href="tutorials/icons/icons-intro.html" target="_blank">Icons</a>
+    <a href="tutorials/rwd/rwd-intro.html" target="_blank">RWD</a>
+    <a href="tutorials/graphics/graphics-intro.html" target="_blank">Graphics</a>
+    <a href="tutorials/svg/svg-intro.html" target="_blank">SVG</a>
+    <a href="tutorials/canvas/canvas-intro.html" target="_blank">Canvas</a>
+    <a href="tutorials/raspberrypi/raspberrypi-intro.html" target="_blank">Raspberry Pi</a>
+    <a href="tutorials/cyber-security/cyber-security-intro.html" target="_blank">CNS Security</a>
+    <a href="tutorials/devops/devops-intro.html" target="_blank">DevOps</a>
+    <a href="tutorials/colors/colors-intro.html" target="_blank">Colors</a>
+    <a href="tutorials/git/git-intro.html" target="_blank">Git</a>
+    </nav>
+    <button class="langbar-arrow langbar-arrow--next" type="button" aria-label="Scroll languages right">&gt;</button>
+  </div>
+
+  <!-- Home hero -->
+  <main class="home-main">
+    <section class="hero">
+      <h1>Learn to Code</h1>
+      <p>With simple, practice focused tutorials for web and programming languages.</p>
+
+      <!-- Big search bar -->
+      <form class="hero-search" action="tutorials/html/html-intro.html">
+        <input
+          type="text"
+          placeholder="Search our tutorials, e.g. HTML"
+          aria-label="Search tutorials"
+        />
+        <button type="submit">Search</button>
+      </form>
+
+      <a href="tutorials/html/html-intro.html" class="hero-cta" target="_blank">
+        Not sure where to begin? Start with HTML →
+      </a>
+    </section>
+  </main>
+
+  <!-- HTML section -->
+  <section class="topic topic--html">
+    <div class="topic-inner">
+      <div class="topic-text">
+        <h2>HTML</h2>
+        <p>The language for building web pages.</p>
+        <a class="btn primary" href="tutorials/html/html-intro.html" target="_blank">Learn HTML</a>
+        <a class="btn secondary" href="tutorials/html/html-elements.html" target="_blank">HTML Reference</a>
+      </div>
+
+      <div class="topic-example">
+        <div class="example-card">
+          <div class="example-card-header">HTML Example:</div>
+          <div class="example-card-body">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, world!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+          </div>
+          <div class="example-card-footer">
+            <a class="btn primary btn-small" href="editor/frontend-editor.html" target="_blank">Try it Yourself </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CSS section -->
+  <section class="topic topic--css">
+    <div class="topic-inner">
+      <div class="topic-text">
+        <h2>CSS</h2>
+        <p>The language for styling web pages.</p>
+        <a class="btn primary" href="tutorials/css/css-intro.html" target="_blank">Learn CSS</a>
+        <a class="btn secondary" href="tutorials/css/css-selectors.html" target="_blank">CSS Reference</a>
+      </div>
+
+      <div class="topic-example">
+        <div class="example-card">
+          <div class="example-card-header">CSS Example:</div>
+          <div class="example-card-body">
+<pre><code>body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+</code></pre>
+          </div>
+          <div class="example-card-footer">
+            <a class="btn primary btn-small" href="editor/frontend-editor.html" target="_blank">Try it Yourself </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript section -->
+  <section class="topic topic--js">
+    <div class="topic-inner">
+      <div class="topic-text">
+        <h2>JavaScript</h2>
+        <p>The language for programming web pages.</p>
+        <a class="btn primary" href="tutorials/js/js-intro.html" target="_blank">Learn JavaScript</a>
+        <a class="btn secondary" href="tutorials/js/js-operators.html" target="_blank">JavaScript Reference</a>
+      </div>
+
+      <div class="topic-example">
+        <div class="example-card">
+          <div class="example-card-header">JavaScript Example:</div>
+          <div class="example-card-body">
+<pre><code>function greet(name) {
+  alert("Hello " + name + "!");
+}
+
+greet("Student");
+</code></pre>
+          </div>
+          <div class="example-card-footer">
+            <a class="btn primary btn-small" href="editor/frontend-editor.html" target="_blank">Try it Yourself </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Python section -->
+  <section class="topic topic--python">
+    <div class="topic-inner">
+      <div class="topic-text">
+        <h2>Python</h2>
+        <p>A popular programming language.</p>
+        <a class="btn primary" href="tutorials/Python/python-intro.html" target="_blank">Learn Python</a>
+        <a class="btn secondary" href="tutorials/Python/python-functions.html" target="_blank">Python Reference</a>
+      </div>
+
+      <div class="topic-example">
+        <div class="example-card">
+          <div class="example-card-header">Python Example:</div>
+          <div class="example-card-body">
+<pre><code>if 5 &gt; 2:
+    print("Five is greater than two!");
+</code></pre>
+          </div>
+          <div class="example-card-footer">
+            <a class="btn primary btn-small" href="editor/backend-editor.html" target="_blank">Try it Yourself </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SQL section -->
+  <section class="topic topic--sql">
+    <div class="topic-inner">
+      <div class="topic-text">
+        <h2>SQL</h2>
+        <p>A language for accessing databases.</p>
+        <a class="btn primary" href="#">Learn SQL</a>
+        <a class="btn secondary" href="#">SQL Reference</a>
+      </div>
+
+      <div class="topic-example">
+        <div class="example-card">
+          <div class="example-card-header">SQL Example:</div>
+          <div class="example-card-body">
+<pre><code>SELECT * FROM Customers
+WHERE Country = 'Mexico';
+</code></pre>
+          </div>
+          <div class="example-card-footer">
+            <a class="btn primary btn-small" href="#">Try it Yourself </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Language cards grid (big cards) -->
+  <section class="topic topic--cards">
+    <div class="cards-grid">
+
+      <article class="lang-card card--php">
+        <h3>PHP</h3>
+        <p>A web server programming language.</p>
+        <a href="#" class="btn primary btn-small">Learn PHP</a>
+      </article>
+
+      <article class="lang-card card--jquery">
+        <h3>jQuery</h3>
+        <p>A JS library for developing web pages.</p>
+        <a href="#" class="btn primary btn-small">Learn jQuery</a>
+      </article>
+
+      <article class="lang-card card--java">
+        <h3>Java</h3>
+        <p>A programming language.</p>
+        <a href="tutorials/java/java-intro.html" class="btn primary btn-small" target="_blank">Learn Java</a>
+      </article>
+
+      <article class="lang-card card--cpp">
+        <h3>C++</h3>
+        <p>A programming language.</p>
+        <a href="tutorials/cpp/cpp-intro.html" class="btn primary btn-small" target="_blank">Learn C++</a>
+      </article>
+
+      <article class="lang-card card--w3css">
+        <h3>W3.CSS</h3>
+        <p>A CSS framework for faster and better responsive web pages.</p>
+        <a href="#" class="btn primary btn-small">Learn W3.CSS</a>
+      </article>
+
+      <article class="lang-card card--bootstrap">
+        <h3>Bootstrap</h3>
+        <p>A CSS framework for designing better web pages.</p>
+        <a href="#" class="btn primary btn-small">Learn Bootstrap</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Smaller topics grid -->
+  <section class="topic topic--cards">
+    <div class="cards-grid">
+
+      <a class="lang-card card--php"   href="tutorials/c/c-intro.html" target="_blank"><h3>C</h3></a>
+      <a class="lang-card card--java"  href="tutorials/csharp/csharp-intro.html" target="_blank"><h3>C#</h3></a>
+
+      <a class="lang-card card--w3css" href="tutorials/r/r-intro.html"><h3>R</h3></a>
+      <a class="lang-card card--cpp"   href="tutorials/kotlin/kotlin-intro.html"><h3>Kotlin</h3></a>
+      <a class="lang-card card--w3css" href="tutorials/nodejs/nodejs-intro.html"><h3>Node.js</h3></a>
+      <a class="lang-card card--php"   href="tutorials/react/react-intro.html"><h3>React</h3></a>
+
+      <a class="lang-card card--jquery" href="tutorials/json/json-intro.html"><h3>JSON</h3></a>
+      <a class="lang-card card--java"   href="tutorials/vue/vue-intro.html"><h3>Vue</h3></a>
+      <a class="lang-card card--w3css"  href="tutorials/mysql/mysql-intro.html"><h3>MySQL</h3></a>
+      <a class="lang-card card--w3css"  href="tutorials/xml/xml-intro.html"><h3>XML</h3></a>
+
+      <a class="lang-card card--php"    href="tutorials/sass/sass-intro.html"><h3>Sass</h3></a>
+      <a class="lang-card card--jquery" href="tutorials/icons/icons-intro.html"><h3>Icons</h3></a>
+      <a class="lang-card card--java"   href="tutorials/rwd/rwd-intro.html"><h3>RWD</h3></a>
+      <a class="lang-card card--cpp"    href="tutorials/graphics/graphics-intro.html"><h3>Graphics</h3></a>
+
+      <a class="lang-card card--w3css"  href="tutorials/svg/svg-intro.html"><h3>SVG</h3></a>
+      <a class="lang-card card--php"    href="tutorials/canvas/canvas-intro.html"><h3>Canvas</h3></a>
+      <a class="lang-card card--jquery" href="tutorials/raspberrypi/raspberrypi-intro.html"><h3>Raspberry Pi</h3></a>
+      <a class="lang-card card--java"   href="tutorials/cyber-security/cyber-security-intro.html"><h3>CNS Security</h3></a>
+      <a class="lang-card card--php"    href="tutorials/devops/devops-intro.html"><h3>DevOps</h3></a>
+
+      <a class="lang-card card--cpp"    href="tutorials/colors/colors-intro.html"><h3>Colors</h3></a>
+      <a class="lang-card card--w3css"  href="tutorials/git/git-intro.html"><h3>Git</h3></a>
+      <a class="lang-card card--php"    href="tutorials/matplotlib/matplotlib-intro.html"><h3>Matplotlib</h3></a>
+      <a class="lang-card card--jquery" href="tutorials/numpy/numpy-intro.html"><h3>NumPy</h3></a>
+
+      <a class="lang-card card--java"   href="tutorials/pandas/pandas-intro.html"><h3>Pandas</h3></a>
+      <a class="lang-card card--cpp"    href="tutorials/scipy/scipy-intro.html"><h3>SciPy</h3></a>
+      <a class="lang-card card--w3css"  href="tutorials/asp/asp-intro.html"><h3>ASP</h3></a>
+      <a class="lang-card card--php"    href="tutorials/angularjs/angularjs-intro.html"><h3>AngularJS</h3></a>
+
+      <a class="lang-card card--jquery" href="tutorials/appml/appml-intro.html"><h3>AppML</h3></a>
+      <a class="lang-card card--java"   href="tutorials/go/go-intro.html"><h3>Go</h3></a>
+      <a class="lang-card card--cpp"    href="tutorials/typescript/typescript-intro.html"><h3>TypeScript</h3></a>
+      <a class="lang-card card--w3css"  href="tutorials/django/django-intro.html"><h3>Django</h3></a>
+
+      <a class="lang-card card--php"    href="tutorials/mongodb/mongodb-intro.html"><h3>MongoDB</h3></a>
+      <a class="lang-card card--jquery" href="tutorials/statistics/statistics-intro.html"><h3>Statistics</h3></a>
+      <a class="lang-card card--java"   href="tutorials/datascience/datascience-intro.html"><h3>Data Science</h3></a>
+      <a class="lang-card card--cpp"    href="tutorials/postgresql/postgresql-intro.html"><h3>PostgreSQL</h3></a>
+
+      <a class="lang-card card--w3css"  href="tutorials/howto/howto-index.html"><h3>HowTo</h3></a>
+      <a class="lang-card card--php"    href="tutorials/rust/rust-intro.html"><h3>Rust</h3></a>
+      <a class="lang-card card--jquery" href="tutorials/spaces/spaces-intro.html"><h3>Spaces</h3></a>
+      <a class="lang-card card--java"   href="tutorials/typing-speed/typing-speed-intro.html"><h3>Typing Speed</h3></a>
+
+    </div>
+
+    <!-- second grid: Excel → Angular -->
+    <div class="cards-grid cards-grid--wide">
+      <a class="lang-card card--w3css"  href="tutorials/excel/excel-intro.html"><h3>Excel</h3></a>
+      <a class="lang-card card--jquery" href="tutorials/dsa/dsa-intro.html"><h3>DSA - Data Structures and Algorithms</h3></a>
+      <a class="lang-card card--php"    href="tutorials/machine-learning/ml-intro.html"><h3>Machine Learning</h3></a>
+      <a class="lang-card card--java"   href="tutorials/ai/ai-intro.html"><h3>Artificial Intelligence</h3></a>
+      <a class="lang-card card--cpp"    href="tutorials/intro-programming/intro-programming-intro.html"><h3>Introduction to Programming</h3></a>
+      <a class="lang-card card--w3css"  href="tutorials/bash/bash-intro.html"><h3>Bash</h3></a>
+      <a class="lang-card card--jquery" href="tutorials/swift/swift-intro.html"><h3>Swift</h3></a>
+      <a class="lang-card card--php"    href="tutorials/angular/angular-intro.html"><h3>Angular</h3></a>
+    </div>
+  </section>
+
+  <!-- Security hub section -->
+  <section class="topic topic--security-hub">
+    <div class="security-hub-inner">
+      <h2>CNS Security Hub</h2>
+      <p>Practical security topics for real systems: SSH, cryptography, network defense, and privacy protection.</p>
+
+      <div class="security-hub-grid">
+        <a class="security-hub-card" href="tutorials/cyber-security/cyber-security-ssh-security.html" target="_blank">
+          <h3>SSH Security</h3>
+          <p>Harden remote access with key auth, restricted users, and safe defaults.</p>
+        </a>
+
+        <a class="security-hub-card" href="tutorials/cyber-security/cyber-security-network-security.html" target="_blank">
+          <h3>Network Security</h3>
+          <p>Use segmentation, traffic filtering, and monitoring to reduce attack surface.</p>
+        </a>
+
+        <a class="security-hub-card" href="tutorials/cyber-security/cyber-security-cryptography-basics.html" target="_blank">
+          <h3>Cryptography</h3>
+          <p>Learn encryption, hashing, and key handling for data protection.</p>
+        </a>
+
+        <a class="security-hub-card" href="tutorials/cyber-security/cyber-security-privacy-protection.html" target="_blank">
+          <h3>Privacy Protection</h3>
+          <p>Apply data minimization, consent, and retention controls in your apps.</p>
+        </a>
+
+        <a class="security-hub-card" href="tutorials/cyber-security/cyber-security-vpn-firewall-security.html" target="_blank">
+          <h3>VPN and Firewall</h3>
+          <p>Protect internal services and secure remote administration paths.</p>
+        </a>
+
+        <a class="security-hub-card" href="tutorials/cyber-security/cyber-security-email-phishing-security.html" target="_blank">
+          <h3>Email and Phishing</h3>
+          <p>Detect social engineering and respond to credential theft attempts.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Account sign-up promo -->
+  <section class="topic topic--account">
+    <div class="account-inner">
+      <div class="account-card">
+        <h2>Log in / Sign Up</h2>
+        <p>
+          Create an account to track your progress, get your own website,
+          and get access to more features and learning materials.
+        </p>
+
+        <div class="account-preview">
+          <img src="assets/images/account-dashboard.svg" alt="Account dashboard preview" />
+        </div>
+
+        <a href="signup.html" class="btn primary account-btn">Sign Up</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Code Editor promo -->
+  <section class="topic topic--editor">
+    <div class="editor-inner">
+      <div class="editor-text">
+        <h2>Code Editor</h2>
+        <p>
+          With our online code editor, you can edit code and view the result
+          right in your browser.
+        </p>
+      </div>
+
+      <div class="editor-preview">
+        <img src="assets/images/code-editor.svg" alt="Online code editor preview" />
+      </div>
+
+      <div class="editor-actions">
+        <a href="editor/frontend-editor.html" class="btn primary" target="_blank">
+          Try Frontend Editor (HTML/CSS/JS)
+        </a>
+        <a href="editor/backend-editor.html" class="btn secondary" target="_blank">
+          Try Backend Editor (Python/PHP/Java/..)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- External Python compiler promo -->
+  <section class="topic topic--spaces">
+    <div class="account-inner">
+      <div class="account-card">
+        <h2>Online Python IDE</h2>
+        <p>
+          Run Python code for free in your browser with a full online IDE.
+          No installation required – just open it and start coding.
+        </p>
+
+        <div class="account-preview">
+          <img src="assets/images/python-ide-preview.svg" alt="Online Python IDE preview" />
+        </div>
+
+        <a href="tutorials/python/python-intro.html" class="btn primary account-btn">
+          Learn More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Web Templates section -->
+  <section class="topic topic--templates">
+    <div class="templates-inner">
+      <h2>Web Templates</h2>
+      <p>Browse our selection of free responsive HTML templates.</p>
+
+      <div class="templates-preview">
+        <img src="assets/images/web-templates-preview.svg"
+             alt="Web templates gallery preview" />
+      </div>
+
+      <a href="templates/index.html" class="btn secondary templates-btn">
+        Browse Templates
+      </a>
+    </div>
+  </section>
+
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-logo-block">
+          <div class="footer-logo-mark">CodeNexa Academy</div>
+          <div class="footer-logo-text">schools</div>
+        </div>
+
+        <nav class="footer-main-links">
+          <a href="#">PLUS</a>
+          <a href="#">SPACES</a>
+          <a href="#">GET CERTIFIED</a>
+          <a href="#">FOR TEACHERS</a>
+          <a href="#">FOR BUSINESS</a>
+          <a href="#">CONTACT US</a>
+        </nav>
+      </div>
+
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h3>Top Tutorials</h3>
+          <a href="tutorials/html/html-intro.html" target="_blank">HTML Tutorial</a>
+          <a href="tutorials/css/css-intro.html" target="_blank">CSS Tutorial</a>
+          <a href="tutorials/js/js-intro.html" target="_blank">JavaScript Tutorial</a>
+          <a href="tutorials/Python/python-intro.html" target="_blank">Python Tutorial</a>
+          <a href="#">SQL Tutorial</a>
+          <a href="#">PHP Tutorial</a>
+          <a href="#">jQuery Tutorial</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Top References</h3>
+          <a href="tutorials/html/html-elements.html" target="_blank">HTML Reference</a>
+          <a href="tutorials/css/css-selectors.html" target="_blank">CSS Reference</a>
+          <a href="tutorials/js/js-operators.html" target="_blank">JavaScript Reference</a>
+          <a href="tutorials/Python/python-functions.html" target="_blank">Python Reference</a>
+          <a href="#">SQL Reference</a>
+          <a href="#">PHP Reference</a>
+          <a href="#">jQuery Reference</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Top Examples</h3>
+          <a href="#">HTML Examples</a>
+          <a href="#">CSS Examples</a>
+          <a href="#">JavaScript Examples</a>
+          <a href="#">Python Examples</a>
+          <a href="#">SQL Examples</a>
+          <a href="#">PHP Examples</a>
+          <a href="#">jQuery Examples</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Get Certified</h3>
+          <a href="#">HTML Certificate</a>
+          <a href="#">CSS Certificate</a>
+          <a href="#">JavaScript Certificate</a>
+          <a href="#">Front End Certificate</a>
+          <a href="#">Python Certificate</a>
+          <a href="#">SQL Certificate</a>
+          <a href="#">Full-Stack Certificate</a>
+        </div>
+      </div>
+
+    <div class="footer-social">
+  <div class="footer-social-icons">
+    <a href="#" class="social-btn yt" aria-label="YouTube"></a>
+    <a href="#" class="social-btn li" aria-label="LinkedIn"></a>
+    <a href="#" class="social-btn dc" aria-label="Discord"></a>
+    <a href="#" class="social-btn fb" aria-label="Facebook"></a>
+    <a href="#" class="social-btn ig" aria-label="Instagram"></a>
+  </div>
+
+  <div class="footer-social-links">
+    <a href="forum.html">FORUM</a>
+    <a href="about.html">ABOUT</a>
+    <a href="academy.html">ACADEMY</a>
+  </div>
+</div>
+
+
+        <p class="footer-note">
+          Tutorials, references, and examples are constantly reviewed to avoid errors, but
+          full correctness cannot be guaranteed. By using this site, you agree to have read
+          and accepted our terms of use, cookie and privacy policy.
+        </p>
+
+        <p class="footer-copy">
+          © 2025 CodeNexa Academy. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

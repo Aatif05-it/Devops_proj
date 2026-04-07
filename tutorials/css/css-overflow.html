@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Overflow - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="css-intro.html" class="active" target="_blank">CSS</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="css"></aside>
+
+    <main class="content">
+      <h1>CSS Overflow</h1>
+      <p>
+        The <code>overflow</code> property controls what happens when content is
+        too large for its container.
+      </p>
+
+      <h2>Common overflow values</h2>
+      <div class="example-box">
+        <pre><code>.box-visible {
+  overflow: visible;  /* default: content spills out */
+}
+
+.box-hidden {
+  overflow: hidden;   /* extra content is clipped */
+}
+
+.box-scroll {
+  overflow: scroll;   /* scrollbars always shown */
+}
+
+.box-auto {
+  overflow: auto;     /* scrollbars only if needed */
+}</code></pre>
+      </div>
+      <p>
+        Use <code>hidden</code> to clip content, <code>scroll</code> for
+        persistent scrollbars, or <code>auto</code> to show them only when
+        content overflows.
+      </p>
+
+      <h2>Axis-specific overflow</h2>
+      <div class="example-box">
+        <pre><code>.box-y-scroll {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}</code></pre>
+      </div>
+      <p>
+        <code>overflow-x</code> and <code>overflow-y</code> let you control
+        horizontal and vertical scrolling separately.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="css-zindex.html" target="_blank">&laquo; Previous: CSS Zâ€‘Index &amp; Stacking</a>
+        <a class="btn primary" href="css-transitions-transforms.html" target="_blank">Next: CSS Transitions &amp; Transforms &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

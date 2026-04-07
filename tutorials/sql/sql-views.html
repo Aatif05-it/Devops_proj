@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Views - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Views</h1>
+      <p>
+        A view is a stored <code>SELECT</code> query that behaves like a virtual table, letting you reuse complex queries with a simple name. 
+      </p>
+      <p>
+        Views are useful for security, encapsulating joins, and providing a stable interface even if underlying tables change. 
+      </p>
+
+      <h2>Create and use a view</h2>
+      <p>
+        This example creates a view that exposes only customers from India and then queries that view. 
+      </p>
+
+      <div class="example-box">
+<pre><code>CREATE VIEW IndiaCustomers AS
+SELECT CustomerID, CustomerName, City
+FROM Customers
+WHERE Country = 'India';
+
+-- Later:
+SELECT * FROM IndiaCustomers;
+</code></pre>
+      </div>
+
+      <p>
+        Because the view stores only the query definition, it always shows the latest data from the base table when you run a <code>SELECT</code>. 
+      </p>
+
+      <h2>View over multiple tables</h2>
+      <p>
+        Views can join several tables to create convenient readâ€‘only reporting layers. 
+      </p>
+
+      <div class="example-box">
+<pre><code>CREATE VIEW OrderSummary AS
+SELECT
+  o.OrderID,
+  o.OrderDate,
+  c.CustomerName,
+  o.TotalAmount
+FROM Orders AS o
+JOIN Customers AS c
+  ON o.CustomerID = c.CustomerID;
+</code></pre>
+      </div>
+
+      <p>
+        Applications can query <code>OrderSummary</code> as if it were a table, without repeating the join logic in every query. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-default-notnull.html" target="_blank">&laquo; Back: SQL DEFAULT &amp; NOT NULL</a>
+        <a class="btn primary" href="sql-indexes.html" target="_blank">Next: SQL Indexes &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

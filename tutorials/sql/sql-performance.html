@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Performance Tuning - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Performance Tuning</h1>
+      <p>
+        Performance tuning optimizes slow queries using indexes, query refactoring, statistics, and execution plans. 
+      </p>
+      <p>
+        Start with <code>EXPLAIN</code> to analyze query plans, then target missing indexes and inefficient patterns. 
+      </p>
+
+      <h2>EXPLAIN query plans</h2>
+      <p>
+        <code>EXPLAIN</code> reveals how the database executes a query, showing index usage and row scans. 
+      </p>
+
+      <div class="example-box">
+<pre><code>EXPLAIN SELECT * FROM Orders 
+WHERE CustomerID = 123 
+  AND OrderDate &gt;= '2025-01-01';
+-- Look for: index usage, row estimates, join order
+</code></pre>
+      </div>
+
+      <p>
+        Plans showing "full table scan" or high row counts indicate optimization opportunities.
+      </p>
+
+      <h2>Common optimizations</h2>
+      <p>
+        Rewrite correlated subqueries as joins, limit result sets early, and avoid functions on indexed columns in <code>WHERE</code>. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- SLOW: Function on indexed column
+SELECT * FROM Orders 
+WHERE YEAR(OrderDate) = 2025;
+
+-- FAST: Range on indexed column
+SELECT * FROM Orders 
+WHERE OrderDate &gt;= '2025-01-01' 
+  AND OrderDate &lt; '2026-01-01';
+</code></pre>
+      </div>
+
+      <p>
+        Regular index maintenance and updated statistics keep the query optimizer making good decisions. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-normalization.html" target="_blank">&laquo; Back: SQL Normalization</a>
+        <a class="btn primary" href="sql-execution-plans.html" target="_blank">Next: SQL Execution Plans &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

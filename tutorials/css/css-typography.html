@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Typography - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="css-intro.html" class="active" target="_blank">CSS</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar: built from JSON -->
+    <aside class="sidebar" id="sidebar" data-section="css"></aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <h1>CSS Typography</h1>
+      <p>
+        Typography in CSS controls fonts, sizes, line spacing, and alignment to
+        make text readable and visually pleasing.
+      </p>
+
+      <h2>Setting the font</h2>
+      <div class="example-box">
+        <pre><code>body {
+  font-family: "InterLocal", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}</code></pre>
+      </div>
+      <p>
+        <code>font-family</code> lists preferred fonts in order. The browser
+        uses the first available one.
+      </p>
+
+      <h2>Font size, weight, and style</h2>
+      <div class="example-box">
+        <pre><code>h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}</code></pre>
+      </div>
+      <p>
+        Use <code>font-size</code> (often with <code>rem</code> units) for
+        scalable text and <code>font-weight</code> for boldness.
+      </p>
+
+      <h2>Line height and letter spacing</h2>
+      <div class="example-box">
+        <pre><code>p {
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}</code></pre>
+      </div>
+      <p>
+        <code>line-height</code> improves readability by adding vertical space
+        between lines; <code>letter-spacing</code> adjusts spacing between
+        characters.
+      </p>
+
+      <h2>Text alignment and decoration</h2>
+      <div class="example-box">
+        <pre><code>.centered {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}</code></pre>
+      </div>
+      <p>
+        <code>text-align</code> controls horizontal alignment inside a block and
+        <code>text-decoration</code> is often used to remove underlines from
+        links.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="css-units.html" target="_blank">&laquo; Previous: CSS Units</a>
+        <a class="btn primary" href="css-links-buttons.html" target="_blank">Next: CSS Links & Buttons &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

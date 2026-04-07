@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Generators - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python Generators</h1>
+      <p>Generators are functions that yield a sequence of values lazily instead of returning them all at once.</p>
+      <p>They help with memoryâ€‘efficient iteration over large or infinite sequences.</p>
+
+      <h2>Creating a generator function</h2>
+      <div class="example-box">
+<pre><code class="language-python">def countdown(n):
+    while n &gt; 0:
+        yield n
+        n -= 1
+
+for num in countdown(3):
+    print(num)
+</code></pre>
+      </div>
+      <p>The <code>yield</code> keyword pauses the function and sends a value back to the caller each time.</p>
+
+      <h2>Using next() with generators</h2>
+      <div class="example-box">
+<pre><code class="language-python">gen = countdown(3)
+
+print(next(gen))  # 3
+print(next(gen))  # 2
+print(next(gen))  # 1
+# next(gen) would now raise StopIteration
+</code></pre>
+      </div>
+      <p>Generators are iterators, so you can manually advance them with <code>next()</code>.</p>
+
+      <h2>Generator expressions</h2>
+      <div class="example-box">
+<pre><code class="language-python">squares = (n * n for n in range(5))
+
+for value in squares:
+    print(value)
+</code></pre>
+      </div>
+      <p>Generator expressions look like list comprehensions but use parentheses and produce values on demand.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-comprehensions.html" target="_blank">&laquo; Back: Python List Comprehensions</a>
+        <a class="btn primary" href="python-decorators.html" target="_blank">Next: Python Decorators &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML Tables Advanced - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="../../html-intro.html" class="active" target="_blank">HTML</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="html"></aside>
+
+    <main class="content">
+      <h1>HTML Tables Advanced</h1>
+      <p>
+        Advanced table features include table headers, grouped sections, and cells
+        that span multiple rows or columns. These features make data tables
+        easier to read and more accessible.
+      </p>
+
+      <h2>Head, body, and foot sections</h2>
+      <p>
+        Use <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and
+        <code>&lt;tfoot&gt;</code> to group header rows, body rows, and footer
+        rows inside a table.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Month&lt;/th&gt;
+      &lt;th&gt;Sales&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;January&lt;/td&gt;
+      &lt;td&gt;$1,200&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;February&lt;/td&gt;
+      &lt;td&gt;$950&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Total&lt;/th&gt;
+      &lt;th&gt;$2,150&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+      </div>
+      <p>
+        Grouping rows like this makes tables easier to style and helps assistive
+        technologies understand the structure.
+      </p>
+
+      <h2>Rowspan and colspan</h2>
+      <p>
+        The <code>rowspan</code> attribute lets a cell span multiple rows, and
+        <code>colspan</code> lets a cell span multiple columns.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th rowspan=&quot;2&quot;&gt;Name&lt;/th&gt;
+    &lt;th colspan=&quot;2&quot;&gt;Score&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Math&lt;/th&gt;
+    &lt;th&gt;Science&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Alex&lt;/td&gt;
+    &lt;td&gt;90&lt;/td&gt;
+    &lt;td&gt;85&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+      </div>
+      <p>
+        Spanning cells is useful for grouped headings or summarizing data across
+        several rows or columns.
+      </p>
+
+      <h2>Scope for accessible headers</h2>
+      <p>
+        Add the <code>scope</code> attribute to header cells so screen readers
+        know which row or column a header belongs to.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;
+    &lt;th scope=&quot;col&quot;&gt;Email&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th scope=&quot;row&quot;&gt;Alex&lt;/th&gt;
+    &lt;td&gt;alex@example.com&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th scope=&quot;row&quot;&gt;Sam&lt;/th&gt;
+    &lt;td&gt;sam@example.com&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+      </div>
+      <p>
+        <code>scope="col"</code> marks a header as describing the column below,
+        and <code>scope="row"</code> describes the row to the right, improving
+        accessibility for data tables.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="html-comments-best-practices.html" target="_blank">&laquo; Previous: HTML Comments </a>
+        <a class="btn primary" href="html-description-lists.html" target="_blank">Next: HTML Description Lists &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML Attributes - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="../../html-intro.html" class="active" target="_blank">HTML</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="html"></aside>
+
+    <main class="content">
+      <h1>HTML Attributes</h1>
+      <p>Attributes provide extra information about an element, such as id, class, style, or a link target.[web:124][web:127]</p>
+
+      <h2>Basic syntax</h2>
+      <div class="example-box">
+        <pre><code>&lt;tagname attribute=&quot;value&quot;&gt;Content&lt;/tagname&gt;
+</code></pre>
+      </div>
+      <p>Attributes are always written in the opening tag as name=&quot;value&quot; pairs.[web:128][web:134]</p>
+
+      <h2>Common attributes: id and class</h2>
+      <div class="example-box">
+        <pre><code>&lt;p id=&quot;intro&quot; class=&quot;lead-text&quot;&gt;
+  This paragraph has an id and a class.
+&lt;/p&gt;
+</code></pre>
+      </div>
+      <p>The id attribute uniquely identifies one element, while class can be shared by many elements and is heavily used with CSS.[web:127][web:143]</p>
+
+      <h2>The href attribute on links</h2>
+      <div class="example-box">
+        <pre><code>&lt;a href=&quot;https://example.com&quot;&gt;Visit Example&lt;/a&gt;
+</code></pre>
+      </div>
+      <p>Here href is the attribute name and the URL is the value, telling the browser where the link should go.</p>
+
+      <h2>The src attribute on images</h2>
+      <div class="example-box">
+        <pre><code>&lt;img src=&quot;photo.jpg&quot; alt=&quot;A landscape photo&quot; width=&quot;300&quot;&gt;
+</code></pre>
+      </div>
+      <p>The src attribute defines the image file, alt provides alternative text, and width sets the display size in pixels.</p>
+
+      <h2>Boolean attributes</h2>
+      <div class="example-box">
+        <pre><code>&lt;input type=&quot;text&quot; required&gt;
+&lt;button disabled&gt;You cannot click me&lt;/button&gt;
+</code></pre>
+      </div>
+      <p>Boolean attributes like required and disabled can appear without a value and turn on special behavior for the element.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="html-elements.html" target="_blank">&laquo; Previous: HTML Elements</a>
+        <a class="btn primary" href="html-headings.html" target="_blank">Next: HTML Headings &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Introduction - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="js-intro.html" class="active" target="_blank">JavaScript</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="js"></aside>
+
+    <main class="content">
+      <h1>JavaScript Introduction</h1>
+      <p>JavaScript is the programming language of the web. It runs in the browser and can update content, react to user actions, and make web pages feel interactive and alive.</p>
+
+      <h2>Basic example</h2>
+      <p>Here is a simple HTML page with some JavaScript that changes the text of a heading when a button is clicked.</p>
+
+      <div class="example-box">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My first JS page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1 id="title"&gt;Hello, JavaScript!&lt;/h1&gt;
+  &lt;button onclick="changeText()"&gt;Click me&lt;/button&gt;
+
+  &lt;script&gt;
+    function changeText() {
+      document.getElementById("title").textContent =
+        "You clicked the button!";
+    }
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+
+      <p>The code inside the <code>&lt;script&gt;</code> tag tells the browser what to do when the button is clicked, such as finding the heading and changing its text content.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="../../index.html" target="_blank">&laquo; Back to Home</a>
+        <a class="btn primary" href="js-dom.html" target="_blank">Next: JS DOM &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

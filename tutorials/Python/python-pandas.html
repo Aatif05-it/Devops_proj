@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Pandas Basics - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python Pandas Basics</h1>
+      <p>Pandas provides Series and DataFrame structures for working with tabular data.</p>
+      <p>It makes loading, cleaning, and analyzing data from CSV, Excel, and databases much easier.</p>
+
+      <h2>Creating a DataFrame</h2>
+      <div class="example-box">
+<pre><code class="language-python">import pandas as pd
+
+data = {
+    "name": ["Alice", "Bob", "Cara"],
+    "age": [25, 30, 22],
+    "city": ["Mumbai", "Delhi", "Pune"],
+}
+
+df = pd.DataFrame(data)
+print(df)
+</code></pre>
+      </div>
+      <p>DataFrame is like a table with labeled columns and rows.</p>
+
+      <h2>Loading from CSV and basic operations</h2>
+      <div class="example-box">
+<pre><code class="language-python">df = pd.read_csv("users.csv")
+
+print(df.head())           # first 5 rows
+print(df["age"].mean())    # average age
+
+filtered = df[df["age"] &gt;= 25]
+print(filtered[["name", "city"]])
+</code></pre>
+      </div>
+      <p>Pandas lets you filter rows, select columns, and compute statistics in just a few lines.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-numpy.html" target="_blank">&laquo; Back: Python NumPy Basics</a>
+        <a class="btn primary" href="python-best-practices.html" target="_blank">Next: Python Best Practices &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

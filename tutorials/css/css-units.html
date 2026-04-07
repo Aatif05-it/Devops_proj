@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Units - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="css-intro.html" class="active" target="_blank">CSS</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar: built from JSON -->
+    <aside class="sidebar" id="sidebar" data-section="css"></aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <h1>CSS Units</h1>
+      <p>
+        CSS supports absolute units like <code>px</code> and relative units like
+        <code>em</code>, <code>rem</code>, <code>%</code>, <code>vw</code>, and
+        <code>vh</code>. Choosing the right unit is important for responsive
+        design.
+      </p>
+
+      <h2>Pixels (px)</h2>
+      <div class="example-box">
+        <pre><code>h1 {
+  font-size: 32px;
+}
+
+.box {
+  width: 200px;
+  height: 100px;
+}</code></pre>
+      </div>
+      <p>
+        Pixels are fixed-size units; they do not scale automatically with the
+        userâ€™s default font size.
+      </p>
+
+      <h2>Relative font units: em and rem</h2>
+      <div class="example-box">
+        <pre><code>body {
+  font-size: 16px;
+}
+
+p {
+  font-size: 1rem;   /* 16px */
+}
+
+p.small {
+  font-size: 0.875rem; /* 14px */
+}
+
+button {
+  font-size: 1em;    /* relative to button's parent font size */
+}</code></pre>
+      </div>
+      <p>
+        <code>rem</code> is based on the root font size (<code>html</code>), while
+        <code>em</code> is based on the current elementâ€™s parent. Using
+        <code>rem</code> helps keep sizes more predictable.
+      </p>
+
+      <h2>Percent and viewport units</h2>
+      <div class="example-box">
+        <pre><code>.half-width {
+  width: 50%;
+}
+
+.full-screen {
+  width: 100vw;  /* viewport width */
+  height: 100vh; /* viewport height */
+}</code></pre>
+      </div>
+      <p>
+        Percentage units are relative to the parent box. Viewport units
+        (<code>vw</code>, <code>vh</code>) are relative to the size of the
+        browser window.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="css-responsive.html" target="_blank">&laquo; Previous: CSS Responsive Design</a>
+        <a class="btn primary" href="css-typography.html" target="_blank">Next: CSS Typography &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

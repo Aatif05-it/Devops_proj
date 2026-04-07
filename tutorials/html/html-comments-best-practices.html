@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML Comments - Best Practices - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="../../html-intro.html" class="active" target="_blank">HTML</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="html"></aside>
+
+    <main class="content">
+      <h1>HTML Comments &amp; Best Practices</h1>
+      <p>
+        HTML comments are ignored by the browser and are only visible in the source.
+        They are useful for notes, section markers, or temporary debugging.
+      </p>
+
+      <h2>Basic comment syntax</h2>
+      <p>
+        A comment starts with <code>&lt;!--</code> and ends with <code>--&gt;</code>.
+        Everything between these markers is not rendered on the page.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;!-- This is a single-line comment --&gt;
+
+&lt;p&gt;Visible content on the page.&lt;/p&gt;
+
+&lt;!--
+  This is a multi-line comment.
+  It can span several lines.
+--&gt;
+</code></pre>
+      </div>
+      <p>
+        Comments can be placed almost anywhere in the HTML but cannot be nested
+        inside each other.
+      </p>
+
+      <h2>Using comments to mark sections</h2>
+      <p>
+        Comments can help you and other developers quickly see where major
+        sections of the layout begin and end.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;!-- Header section --&gt;
+&lt;header&gt;...&lt;/header&gt;
+
+&lt;!-- Main content --&gt;
+&lt;main&gt;...&lt;/main&gt;
+
+&lt;!-- Footer --&gt;
+&lt;footer&gt;...&lt;/footer&gt;
+</code></pre>
+      </div>
+      <p>
+        Clear section comments are especially helpful in long pages or templates
+        with repeated structures.
+      </p>
+
+      <h2>Temporarily disabling elements</h2>
+      <p>
+        You can wrap elements in comments to hide them temporarily without
+        deleting the code.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;!--
+&lt;div class=&quot;promo-banner&quot;&gt;
+  &lt;p&gt;Limited time offer!&lt;/p&gt;
+&lt;/div&gt;
+--&gt;
+
+&lt;p&gt;This content is still visible.&lt;/p&gt;
+</code></pre>
+      </div>
+      <p>
+        This is useful when testing different layouts or turning features off
+        during development.
+      </p>
+
+      <h2>Comment best practices</h2>
+      <p>
+        Comments should explain <em>why</em> something is done, not restate the
+        obvious. Avoid putting secrets like API keys or passwords in comments,
+        because they are still sent to the browser.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;!-- Good: explains why --&gt;
+&lt;!-- Keep this wrapper for legacy CSS layout support --&gt;
+
+&lt;!-- Bad: repeats HTML --&gt;
+&lt;!-- This is a paragraph --&gt;
+&lt;p&gt;Welcome&lt;/p&gt;
+</code></pre>
+      </div>
+      <p>
+        Keep comments short, meaningful, and updated when you change the related
+        code so they do not become misleading.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="html-data-attributes.html" target="_blank">&laquo; Previous: HTML Data Attributes</a>
+        <a class="btn primary" href="html-tables-advanced.html" target="_blank">Next: HTML Tables Advanced &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+
+</body>
+</html>
+
+
+

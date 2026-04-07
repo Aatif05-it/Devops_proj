@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Aggregate Functions - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Aggregate Functions</h1>
+      <p>
+        Aggregate functions calculate a single value from many rows, such as counting rows or summing amounts. 
+      </p>
+      <p>
+        Common aggregate functions include <code>COUNT()</code>, <code>SUM()</code>, <code>AVG()</code>, <code>MIN()</code>, and <code>MAX()</code>, often used in reports and dashboards. 
+      </p>
+
+      <h2>Basic aggregate examples</h2>
+      <p>
+        This example counts customers and calculates the minimum, maximum, and average order totals. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT
+  COUNT(*)        AS TotalCustomers,
+  MIN(TotalAmount) AS SmallestOrder,
+  MAX(TotalAmount) AS LargestOrder,
+  AVG(TotalAmount) AS AverageOrder
+FROM Orders;
+</code></pre>
+      </div>
+
+      <p>
+        Aggregates ignore <code>NULL</code> values by default, so only rows with real numeric values contribute to these calculations.
+      </p>
+
+      <h2>SUM for totals</h2>
+      <p>
+        <code>SUM()</code> is commonly used to compute totals like revenue, quantities, or durations over a set of rows.
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT SUM(TotalAmount) AS TotalRevenue
+FROM Orders
+WHERE OrderDate &gt;= '2025-01-01';
+</code></pre>
+      </div>
+
+      <p>
+        Combining aggregates with filters allows you to compute metrics for specific time periods, regions, or customer segments. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-null.html" target="_blank">&laquo; Back: SQL NULL &amp; IS NULL</a>
+        <a class="btn primary" href="sql-group-by.html" target="_blank">Next: SQL GROUP BY &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

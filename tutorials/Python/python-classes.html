@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Classes &amp; Objects - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python Classes &amp; Objects</h1>
+      <p>Classes define blueprints for objects, bundling data (attributes) and behavior (methods) together.</p>
+      <p>Objects are instances of classes, each with its own copy of the classâ€™s attributes.</p>
+
+      <h2>Defining a simple class</h2>
+      <div class="example-box">
+<pre><code class="language-python">class Student:
+    # constructor
+    def __init__(self, name, age):
+        self.name = name      # instance attribute
+        self.age = age
+
+    # instance method
+    def introduce(self):
+        print(f"My name is {self.name} and I am {self.age} years old")
+
+# create objects
+s1 = Student("Alice", 20)
+s2 = Student("Ravi", 22)
+
+s1.introduce()
+s2.introduce()
+</code></pre>
+      </div>
+      <p>The <code>__init__</code> method runs automatically when you create a new object and sets up initial state.</p>
+
+      <h2>Class vs instance attributes</h2>
+      <div class="example-box">
+<pre><code class="language-python">class Counter:
+    count = 0   # class attribute (shared)
+
+    def __init__(self):
+        Counter.count += 1
+
+c1 = Counter()
+c2 = Counter()
+print(Counter.count)  # 2
+</code></pre>
+      </div>
+      <p>Class attributes are shared across all instances, while instance attributes live on each object separately.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-exceptions.html" target="_blank">&laquo; Back: Python Exception Handling</a>
+        <a class="btn primary" href="python-inheritance.html" target="_blank">Next: Python Inheritance &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

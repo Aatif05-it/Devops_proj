@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python NumPy Basics - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python NumPy Basics</h1>
+      <p>NumPy provides fast nâ€‘dimensional arrays and vectorized operations for numerical computing.</p>
+      <p>It is the foundation of many data science and machine learning libraries.</p>
+
+      <h2>Creating arrays</h2>
+      <div class="example-box">
+<pre><code class="language-python">import numpy as np
+
+a = np.array([1, 2, 3])
+b = np.array([[1, 2, 3],
+              [4, 5, 6]])
+
+print(a.shape)   # (3,)
+print(b.shape)   # (2, 3)
+</code></pre>
+      </div>
+      <p>Unlike Python lists, NumPy arrays have a fixed type and support efficient vectorized math.</p>
+
+      <h2>Vectorized operations</h2>
+      <div class="example-box">
+<pre><code class="language-python">x = np.array([1, 2, 3])
+y = np.array([10, 20, 30])
+
+print(x + y)      # [11 22 33]
+print(x * 10)     # [10 20 30]
+print(np.mean(y)) # 20.0
+</code></pre>
+      </div>
+      <p>Operations on arrays apply elementâ€‘wise without explicit loops, making code shorter and faster.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-async.html" target="_blank">&laquo; Back: Python Async/Await</a>
+        <a class="btn primary" href="python-pandas.html" target="_blank">Next: Python Pandas Basics &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

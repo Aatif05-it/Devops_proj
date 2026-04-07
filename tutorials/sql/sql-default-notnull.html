@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL DEFAULT &amp; NOT NULL - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL DEFAULT &amp; NOT NULL</h1>
+      <p>
+        <code>NOT NULL</code> prevents a column from storing <code>NULL</code>, while <code>DEFAULT</code> supplies an automatic value when none is provided. 
+      </p>
+      <p>
+        Combining them ensures important fields are never left blank and always have a useful initial value. 
+      </p>
+
+      <h2>NOT NULL examples</h2>
+      <p>
+        This table requires both a name and registration date for each customer. 
+      </p>
+
+      <div class="example-box">
+<pre><code>CREATE TABLE Customers (
+  CustomerID   INT PRIMARY KEY,
+  CustomerName VARCHAR(100) NOT NULL,
+  RegisteredAt DATE NOT NULL
+);
+</code></pre>
+      </div>
+
+      <p>
+        Inserts that omit these columns or explicitly set them to <code>NULL</code> will fail with a constraint error.
+      </p>
+
+      <h2>Using DEFAULT values</h2>
+      <p>
+        Defaults help standardize new rows without requiring every client to provide all columns explicitly. 
+      </p>
+
+      <div class="example-box">
+<pre><code>CREATE TABLE Orders (
+  OrderID     INT PRIMARY KEY,
+  OrderDate   DATE DEFAULT CURRENT_DATE,
+  Status      VARCHAR(20) DEFAULT 'Pending',
+  TotalAmount DECIMAL(10, 2) DEFAULT 0
+);
+</code></pre>
+      </div>
+
+      <p>
+        New orders automatically get todayâ€™s date, a Pending status, and a zero amount unless the insert statement overrides those values. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-unique-check.html" target="_blank">&laquo; Back: SQL UNIQUE &amp; CHECK</a>
+        <a class="btn primary" href="sql-views.html" target="_blank">Next: SQL Views &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

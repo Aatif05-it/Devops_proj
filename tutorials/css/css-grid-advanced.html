@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Grid Deep Dive - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="css-intro.html" class="active" target="_blank">CSS</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="css"></aside>
+
+    <main class="content">
+      <h1>CSS Grid Deep Dive</h1>
+      <p>
+        CSS Grid is a twoâ€‘dimensional layout system that lets you control rows
+        and columns together. 
+      </p>
+
+      <h2>Named areas</h2>
+      <div class="example-box">
+        <pre><code>.layout-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-areas:
+    "sidebar main"
+    "sidebar footer";
+}
+
+.sidebar { grid-area: sidebar; }
+.main    { grid-area: main; }
+.footer  { grid-area: footer; }</code></pre>
+      </div>
+      <p>
+        Named grid areas make complex page layouts readable and easy to reorder
+        at different breakpoints.
+      </p>
+
+      <h2>Auto-fit and minmax</h2>
+      <div class="example-box">
+        <pre><code>.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}</code></pre>
+      </div>
+      <p>
+        <code>auto-fit</code> with <code>minmax</code> creates responsive
+        columns that grow and wrap automatically. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="css-flexbox-advanced.html" target="_blank">&laquo; Previous: CSS Flexbox Deep Dive</a>
+        <a class="btn primary" href="css-organization.html" target="_blank">Next: CSS Naming &amp; Organization &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

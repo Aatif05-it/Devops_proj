@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL SELECT - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL SELECT</h1>
+      <p>
+        The <code>SELECT</code> statement retrieves data from one or more tables and returns a result set of rows that match your query. 
+      </p>
+      <p>
+        A basic query has the form <code>SELECT columns FROM table</code>, and additional clauses like <code>WHERE</code> and <code>ORDER BY</code> refine which rows are returned and how they are sorted. 
+      </p>
+
+      <h2>Select specific columns</h2>
+      <p>
+        This example returns only the customer name and city from the <code>Customers</code> table. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT CustomerName,
+       City
+FROM Customers;
+</code></pre>
+      </div>
+
+      <p>
+        Selecting only the needed columns keeps queries faster and outputs smaller, which matters when tables contain many fields or millions of rows. 
+      </p>
+
+      <h2>Select all columns</h2>
+      <p>
+        Using <code>*</code> is convenient while exploring data, but is less ideal in production code because it may return unnecessary columns. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT *
+FROM Customers;
+</code></pre>
+      </div>
+
+      <p>
+        As schemas evolve, <code>SELECT *</code> can accidentally pull new columns that a client application does not expect, so most style guides recommend explicit column lists. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-alter-drop-table.html" target="_blank">&laquo; Back: SQL ALTER &amp; DROP TABLE</a>
+        <a class="btn primary" href="sql-select-distinct.html" target="_blank">Next: SQL SELECT DISTINCT &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

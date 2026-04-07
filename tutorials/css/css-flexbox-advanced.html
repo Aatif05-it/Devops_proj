@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Flexbox Deep Dive - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="css-intro.html" class="active" target="_blank">CSS</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="css"></aside>
+
+    <main class="content">
+      <h1>CSS Flexbox Deep Dive</h1>
+      <p>
+        Flexbox is a oneâ€‘dimensional layout system ideal for rows or columns of
+        items that need to align and distribute space.
+      </p>
+
+      <h2>Axis and alignment</h2>
+      <div class="example-box">
+        <pre><code>.nav {
+  display: flex;
+  align-items: center;        /* cross axis */
+  justify-content: space-between; /* main axis */
+}</code></pre>
+      </div>
+      <p>
+        <code>justify-content</code> works along the main axis; 
+        <code>align-items</code> works along the cross axis. 
+      </p>
+
+      <h2>Wrapping and gaps</h2>
+      <div class="example-box">
+        <pre><code>.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}</code></pre>
+      </div>
+      <p>
+        <code>flex-wrap</code> allows items to move to new lines, and
+        <code>gap</code> adds consistent spacing between them.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="css-shadows.html" target="_blank">&laquo; Previous: CSS Shadows</a>
+        <a class="btn primary" href="css-grid-advanced.html" target="_blank">Next: CSS Grid Deep Dive &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

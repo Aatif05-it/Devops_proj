@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Normalization - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Normalization</h1>
+      <p>
+        Normalization eliminates data redundancy and dependency by organizing tables and relationships, typically through 1NF, 2NF, and 3NF forms. 
+      </p>
+      <p>
+        It prevents update anomalies while maintaining data integrity through proper primary and foreign key relationships. 
+      </p>
+
+      <h2>1NF: First Normal Form</h2>
+      <p>
+        Eliminate repeating groups; every column must contain atomic (single) values with a primary key. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- UNNORMALIZED (repeating groups)
+CustomerOrders
+CustomerName | Products
+"John"       | "Book, Pen, Notebook"
+"Mary"       | "Laptop"
+
+-- 1NF (atomic values)
+CustomerOrders
+CustomerID | OrderID | ProductName
+1          | 101     | Book
+1          | 101     | Pen
+1          | 101     | Notebook
+</code></pre>
+      </div>
+
+      <p>
+        1NF enables efficient querying and prevents inconsistent multi-value storage. 
+      </p>
+
+      <h2>2NF: Eliminate Partial Dependencies</h2>
+      <p>
+        Remove dependencies on only part of a composite primary key by creating separate tables. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- 1NF but violates 2NF
+OrderItems
+OrderID | ProductID | ProductName | CustomerName
+101     | 1         | Book        | John
+101     | 2         | Pen         | John
+
+-- 2NF (separate tables)
+Orders
+OrderID | CustomerID
+101     | 1
+
+OrderItems
+OrderID | ProductID
+101     | 1
+101     | 2
+
+Products
+ProductID | ProductName
+1         | Book
+2         | Pen
+</code></pre>
+      </div>
+
+      <p>
+        ProductName now stored once; changing a product name updates all orders automatically. 
+      </p>
+
+      <h2>3NF: Eliminate Transitive Dependencies</h2>
+      <p>
+        Remove dependencies between non-key columns by isolating independent entities. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- Violates 3NF (DeptLocation depends on DeptName)
+Employees
+EmpID | EmpName | DeptName | DeptLocation
+1     | John    | Sales    | Mumbai
+2     | Mary    | Sales    | Mumbai
+
+-- 3NF
+Employees
+EmpID | EmpName | DeptID
+1     | John    | 1
+2     | Mary    | 1
+
+Departments
+DeptID | DeptName | Location
+1      | Sales    | Mumbai
+</code></pre>
+      </div>
+
+      <p>
+        Department location changes in one place, not scattered across employee records. 
+      </p>
+
+      <h2>Denormalization trade-offs</h2>
+      <p>
+        Purposefully add redundancy for read performance in data warehouses or reporting tables.
+      </p>
+
+      <div class="example-box">
+<pre><code>-- Denormalized reporting table (fast reads)
+CustomerOrderSummary
+CustomerID | CustomerName | TotalOrders | LifetimeValue
+1          | John         | 15          | 12500.00
+</code></pre>
+      </div>
+
+      <p>
+        Denormalization improves query speed but requires careful maintenance to avoid inconsistencies. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-backup-restore.html" target="_blank">&laquo; Back: SQL Backup &amp; Restore</a>
+        <a class="btn primary" href="sql-performance.html" target="_blank">Next: SQL Performance Tuning &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

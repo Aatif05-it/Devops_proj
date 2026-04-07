@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Functions - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python Functions</h1>
+      <p>Functions are reusable blocks of code defined with def that can accept parameters and return values.</p>
+      <p>They help you organize code, avoid repetition, and make programs easier to test.</p>
+
+      <h2>Defining and calling a function</h2>
+      <div class="example-box">
+<pre><code class="language-python">def greet(name):
+    """Return a greeting message."""
+    return f"Hello, {name}!"
+
+message = greet("Alice")
+print(message)
+</code></pre>
+      </div>
+      <p>Use return to send a value back to the caller; without return, the function returns None.</p>
+
+      <h2>Default and keyword arguments</h2>
+      <div class="example-box">
+<pre><code class="language-python">def introduce(name, country="India"):
+    print(f"My name is {name} and I am from {country}")
+
+introduce("Ravi")
+introduce("Sara", country="USA")
+</code></pre>
+      </div>
+      <p>Default parameters provide fallback values; keyword arguments make calls more readable.</p>
+
+      <h2>*args and **kwargs</h2>
+      <div class="example-box">
+<pre><code class="language-python">def add_all(*numbers):
+    total = 0
+    for n in numbers:
+        total += n
+    return total
+
+def print_user(**info):
+    for key, value in info.items():
+        print(key, ":", value)
+
+print(add_all(1, 2, 3, 4))
+print_user(name="Alice", age=21, city="Mumbai")
+</code></pre>
+      </div>
+      <p>*args collects extra positional arguments into a tuple, while **kwargs collects keyword arguments into a dictionary.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-loops.html" target="_blank">&laquo; Back: Python For &amp; While Loops</a>
+        <a class="btn primary" href="python-lambda.html" target="_blank">Next: Python Lambda Functions &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

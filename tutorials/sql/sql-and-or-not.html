@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL AND, OR, NOT - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL AND, OR, NOT</h1>
+      <p>
+        Logical operators <code>AND</code>, <code>OR</code>, and <code>NOT</code> combine <code>WHERE</code> conditions so you can express complex filters in one query. 
+      </p>
+      <p>
+        <code>AND</code> requires all conditions to be true, <code>OR</code> requires at least one to be true, and <code>NOT</code> inverts a condition. 
+      </p>
+
+      <h2>AND and OR together</h2>
+      <p>
+        This query finds customers in France or Germany whose city is Paris. Parentheses control the evaluation order. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT CustomerName, City, Country
+FROM Customers
+WHERE Country IN ('France', 'Germany')
+  AND City = 'Paris';
+</code></pre>
+      </div>
+
+      <p>
+        Without parentheses, mixing <code>AND</code> and <code>OR</code> can change the meaning of the query, so grouping related conditions is important. 
+      </p>
+
+      <h2>Using NOT to exclude rows</h2>
+      <p>
+        <code>NOT</code> is helpful when you want the opposite of a condition, such as excluding a status or a numeric range. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- Orders that are NOT between 100 and 500
+SELECT OrderID, TotalAmount
+FROM Orders
+WHERE NOT (TotalAmount BETWEEN 100 AND 500);
+</code></pre>
+      </div>
+
+      <p>
+        Combining <code>NOT</code> with <code>BETWEEN</code>, <code>IN</code>, or <code>LIKE</code> quickly expresses filters like â€œanything except these values or ranges.â€ 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-where-operators.html" target="_blank">&laquo; Back: SQL WHERE &amp; Operators</a>
+        <a class="btn primary" href="sql-order-by.html" target="_blank">Next: SQL ORDER BY &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

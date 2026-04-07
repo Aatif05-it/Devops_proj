@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Java Syntax & Variables - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="java-intro.html" class="active" target="_blank">Java</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="java"></aside>
+
+    <main class="content">
+      <h1>Java Syntax & Variables</h1>
+      <p>Java syntax resembles C/C++ but simpler: <strong>classâ€‘based</strong>, <strong>statically typed</strong>, <strong>caseâ€‘sensitive</strong>, statements end with <code>;</code>.</p>
+      <p>Every executable program needs <code>public static void main(String[] args)</code> as entry point.</p>
+
+      <h2>Basic Program Structure</h2>
+      <div class="example-box">
+<pre><code class="language-java">public class MyProgram {        // Class declaration
+    public static void main(String[] args) {  // Entry point
+        // Statements here
+        System.out.println("Hello");
+    }
+}</code></pre>
+      </div>
+
+      <h2>Variables Complete Guide</h2>
+      <p>Syntax: <code>&lt;type&gt; &lt;name&gt; = &lt;value&gt;;</code> Declare before use, scoped to block <code>{}</code>.</p>
+      <div class="example-box">
+<pre><code class="language-java">public class Variables {
+    public static void main(String[] args) {
+        // 1. Declaration & Initialization
+        int age = 25;                    // Integer variable
+        String name = "John Doe";        // String reference
+        double salary = 75000.50;        // Floating point
+        final double PI = 3.14159;       // Constant (final)
+        
+        // 2. Multiple declarations
+        int x, y, z;  // Declare only
+        x = 10; y = 20; z = x + y;
+        
+        // 3. Printing variables
+        System.out.println("Name: " + name);
+        System.out.printf("Age: %d, Salary: %.2f%n", age, salary);
+        
+        // 4. Scope example
+        if(age > 18) {
+            String status = "Adult";  // Local to this block
+            System.out.println(status);
+        }
+        // System.out.println(status);  // ERROR: out of scope
+    }
+}
+</code></pre>
+      </div>
+
+      <h2>Naming Conventions</h2>
+      <ul>
+        <li><strong>camelCase:</strong> myVariable, calculateTotal</li>
+        <li><strong>Class names:</strong> PascalCase (MyClass)</li>
+        <li><strong>Constants:</strong> UPPER_SNAKE_CASE</li>
+        <li>Start with letter/$_ , then letters/digits/$_</li>
+        <li>Avoid reserved keywords: int, class, public, void, etc.</li>
+      </ul>
+
+      <h2>Common Errors</h2>
+      <ul>
+        <li><code>variable not initialized</code> → assign value before use</li>
+        <li><code>incompatible types</code> → match type or cast</li>
+        <li><code>cannot find symbol</code> → misspelled or wrong scope</li>
+      </ul>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="java-intro.html" target="_blank">&laquo; Back: Java Introduction</a>
+        <a class="btn primary" href="java-data-types.html" target="_blank">Next: Java Data Types &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

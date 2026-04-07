@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Box Model - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="css-intro.html" class="active" target="_blank">CSS</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar: built from JSON -->
+    <aside class="sidebar" id="sidebar" data-section="css"></aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <h1>CSS Box Model</h1>
+      <p>
+        In CSS, every element is treated as a rectangular box made up of
+        <strong>content</strong>, <strong>padding</strong>, <strong>border</strong>,
+        and <strong>margin</strong>.
+      </p>
+
+      <h2>Box model layers</h2>
+      <div class="example-box">
+        <pre><code>.box {
+  margin: 16px;      /* space outside the border */
+  border: 2px solid #04aa6d;
+  padding: 12px;     /* space between border and content */
+  width: 200px;
+}</code></pre>
+      </div>
+      <p>
+        The total visual width of the element is its content width plus padding,
+        border, and left/right margins.
+      </p>
+
+      <h2>Content-box vs border-box</h2>
+      <div class="example-box">
+        <pre><code>/* Default: content-box */
+.box-default {
+  width: 200px;
+}
+
+/* border-box: width includes padding and border */
+.box-border-box {
+  box-sizing: border-box;
+  width: 200px;
+  padding: 16px;
+  border: 4px solid #04aa6d;
+}</code></pre>
+      </div>
+      <p>
+        With <code>box-sizing: border-box;</code>, the declared width includes
+        padding and border, which makes layouts easier to control.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="css-backgrounds.html" target="_blank">&laquo; Previous: CSS Backgrounds</a>
+        <a class="btn primary" href="css-flexbox.html" target="_blank">Next: CSS Flexbox &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

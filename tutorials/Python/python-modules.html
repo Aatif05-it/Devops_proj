@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Modules &amp; Packages - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python Modules &amp; Packages</h1>
+      <p>Modules are Python files that contain code (functions, classes, variables) you can import into other files.</p>
+      <p>Packages are folders that group related modules together, usually with an <code>__init__.py</code> file inside.</p>
+
+      <h2>Importing builtâ€‘in modules</h2>
+      <div class="example-box">
+<pre><code class="language-python">import math
+
+print(math.pi)
+print(math.sqrt(16))
+
+from random import randint
+
+print(randint(1, 10))
+</code></pre>
+      </div>
+      <p>Use <code>import module</code> to bring in the whole module, or <code>from module import name</code> to import specific functions or classes.</p>
+
+      <h2>Creating your own module</h2>
+      <div class="example-box">
+<pre><code class="language-python"># File: utils.py
+def add(a, b):
+    return a + b
+
+def greet(name):
+    return f"Hello, {name}!"
+
+# File: main.py (same folder)
+import utils
+
+print(utils.add(2, 3))
+print(utils.greet("Alice"))
+</code></pre>
+      </div>
+      <p>Any <code>.py</code> file can act as a module; just import it by its filename (without the <code>.py</code> extension).</p>
+
+      <h2>Basic package structure</h2>
+      <div class="example-box">
+<pre><code class="language-python"># Folder structure:
+# myapp/
+#   calculations/
+#     __init__.py
+#     add.py
+#     subtract.py
+
+# add.py
+def add(a, b):
+    return a + b
+
+# subtract.py
+def subtract(a, b):
+    return a - b
+
+# main.py
+from calculations.add import add
+from calculations.subtract import subtract
+
+print(add(5, 3))
+print(subtract(5, 3))
+</code></pre>
+      </div>
+      <p>Putting an <code>__init__.py</code> file in a folder makes it a package, allowing dotâ€‘notation imports like <code>package.module</code>.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-lambda.html" target="_blank">&laquo; Back: Python Lambda Functions</a>
+        <a class="btn primary" href="python-file-handling.html" target="_blank">Next: Python File Handling &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

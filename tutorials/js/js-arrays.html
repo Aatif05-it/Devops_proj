@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Arrays - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="js-intro.html" class="active" target="_blank">JavaScript</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="js"></aside>
+
+    <main class="content">
+      <h1>JS Arrays</h1>
+      <p>
+        An array stores multiple values in a single variable, such as a list of strings or numbers. 
+      </p>
+
+      <h2>Create and loop an array</h2>
+      <p>
+        This example creates an array of fruits and uses <code>forEach()</code> to show them as a list. 
+      </p>
+
+      <div class="example-box">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+  &lt;ul id="fruits"&gt;&lt;/ul&gt;
+
+  &lt;script&gt;
+    const fruits = ["Apple", "Banana", "Mango"];
+
+    const list = document.getElementById("fruits");
+
+    fruits.forEach(function (fruit) {
+      const li = document.createElement("li");
+      li.textContent = fruit;
+      list.appendChild(li);
+    });
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+
+      <p>
+        Arrays come with many helpful methods like <code>push</code>, <code>pop</code>, <code>map</code>, and <code>filter</code> for working with collections. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="js-functions.html" target="_blank">&laquo; Back: JS Functions</a>
+        <a class="btn primary" href="js-objects.html" target="_blank">Next: JS Objects &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Block vs Inline Elements - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="../../html-intro.html" class="active" target="_blank">HTML</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="html"></aside>
+
+    <main class="content">
+      <h1>Block vs Inline Elements</h1>
+      <p>
+        HTML elements are broadly divided into blockâ€‘level and inline elements.
+        Understanding the difference helps you predict how elements flow on the page.
+      </p>
+
+      <h2>Block-level elements</h2>
+      <p>
+        Block elements start on a new line and normally stretch to fill the available
+        horizontal space. Common examples are <code>&lt;div&gt;</code>,
+        <code>&lt;p&gt;</code>, and heading tags (<code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code>).
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;h2&gt;Block elements example&lt;/h2&gt;
+&lt;p&gt;This paragraph is a block element.&lt;/p&gt;
+&lt;div&gt;This div is also a block element.&lt;/div&gt;
+</code></pre>
+      </div>
+      <p>
+        Each block element appears on its own line, one under another, creating
+        the main structure of the page.
+      </p>
+
+      <h2>Inline elements</h2>
+      <p>
+        Inline elements do not start on a new line. They only take up as much
+        width as their content and flow inside a block container.
+        Examples: <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>,
+        <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;p&gt;This &lt;strong&gt;word&lt;/strong&gt; is bold,
+and this &lt;em&gt;word&lt;/em&gt; is emphasized in the same line.&lt;/p&gt;
+</code></pre>
+      </div>
+      <p>
+        Inline elements are typically used for styling or linking parts of text
+        inside paragraphs and other block containers.
+      </p>
+
+      <h2>Mixing block and inline</h2>
+      <p>
+        Block elements can contain inline elements, but inline elements should
+        not usually contain block elements (it can lead to invalid HTML).
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;div&gt;
+  &lt;p&gt;You can have &lt;strong&gt;inline&lt;/strong&gt; text inside a paragraph.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Avoid this (block inside inline) --&gt;
+&lt;span&gt;
+  &lt;h2&gt;This is not valid HTML&lt;/h2&gt;
+&lt;/span&gt;
+</code></pre>
+      </div>
+      <p>
+        Use block elements to define sections and inline elements to format or
+        highlight parts of the content inside those sections.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="html-accessibility.html" target="_blank">&laquo; Previous: HTML Accessibility Basics</a>
+        <a class="btn primary" href="html-data-attributes.html" target="_blank">Next: HTML Data Attributes &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+
+</body>
+</html>
+
+
+

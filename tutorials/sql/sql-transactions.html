@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Transactions - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Transactions</h1>
+      <p>
+        A transaction is a group of SQL statements treated as a single unit of work, where either all changes are committed or all are rolled back. 
+      </p>
+      <p>
+        Transactions protect data consistency for multiâ€‘step operations such as money transfers or inserting related rows in several tables. 
+      </p>
+
+      <h2>BEGIN, COMMIT, ROLLBACK</h2>
+      <p>
+        Most databases use <code>START TRANSACTION</code> or <code>BEGIN</code>, followed by <code>COMMIT</code> to make changes permanent or <code>ROLLBACK</code> to undo them. 
+      </p>
+
+      <div class="example-box">
+<pre><code>START TRANSACTION;
+
+UPDATE Accounts
+SET Balance = Balance - 1000
+WHERE AccountID = 1;
+
+UPDATE Accounts
+SET Balance = Balance + 1000
+WHERE AccountID = 2;
+
+COMMIT;  -- or ROLLBACK; on error
+</code></pre>
+      </div>
+
+      <p>
+        If any step fails, rolling back restores the database to its state before the transaction, preventing partial updates. 
+      </p>
+
+      <h2>Errorâ€‘handling pattern</h2>
+      <p>
+        Application code typically checks for errors and decides whether to commit or roll back the current transaction. 
+      </p>
+
+      <div class="example-box">
+<pre><code>START TRANSACTION;
+
+-- do work here
+
+IF error_detected THEN
+  ROLLBACK;
+ELSE
+  COMMIT;
+END IF;
+</code></pre>
+      </div>
+
+      <p>
+        Explicit transactions and careful error handling ensure that related changes succeed or fail together, preserving integrity.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-indexes.html" target="_blank">&laquo; Back: SQL Indexes</a>
+        <a class="btn primary" href="sql-acid-isolation.html" target="_blank">Next: SQL ACID &amp; Isolation &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

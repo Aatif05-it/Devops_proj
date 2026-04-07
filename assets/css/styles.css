@@ -1,0 +1,553 @@
+/* Global reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Base typography and body */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}
+
+/* Top navigation */
+.topnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #282a35;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+}
+
+.topnav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.logo::before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  margin-right: 0.5rem;
+  border-radius: 7px;
+  background: url("../images/codenexa-logo.svg") center/contain no-repeat;
+  flex: 0 0 auto;
+}
+
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-right: 0.5rem;
+  border-radius: 7px;
+  background: url("../images/codenexa-logo.svg") center/contain no-repeat;
+  color: transparent;
+  font-size: 0;
+}
+
+.logo-text {
+  letter-spacing: 0.03em;
+}
+
+/* Navbar search pill (optional, for index.html) */
+.nav-search {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 2px solid #04aa6d;
+  border-radius: 999px;
+  padding: 0 0.4rem;
+  margin: 0 1.5rem;
+  max-width: 260px;
+  flex: 1 0 auto;
+}
+
+.nav-search input[type="text"] {
+  border: none;
+  outline: none;
+  padding: 0.35rem 0.4rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  min-width: 0;
+}
+
+.nav-search button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.2rem 0.25rem;
+}
+
+.nav-search button:hover {
+  opacity: 0.8;
+}
+
+/* Topnav links */
+.topnav-links a {
+  color: #f1f1f1;
+  text-decoration: none;
+  margin-left: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.topnav-links a:hover {
+  background: #3f4250;
+}
+
+.topnav-links .active {
+  background: #04aa6d;
+}
+
+.topnav-links a.nav-disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Language bar (home) */
+.langbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1.5rem;
+  background: #111827;
+  color: #f1f1f1;
+}
+
+.langbar a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.4rem;
+  border-radius: 3px;
+}
+
+.langbar a:hover {
+  background: #1f2937;
+}
+
+/* Tutorial layout (inner pages) */
+.layout {
+  display: flex;
+  align-items: stretch;
+  min-height: calc(100vh - 56px);
+}
+
+.sidebar {
+  width: 240px;
+  background: #e7e9eb;
+  padding: 1rem;
+  border-right: 1px solid #d0d3d6;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.sidebar a {
+  display: block;
+  padding: 0.4rem 0.6rem;
+  margin: 0.15rem 0;
+  text-decoration: none;
+  color: #000;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.sidebar a:hover {
+  background: #d5d7da;
+}
+
+.sidebar a.active-link {
+  background: #04aa6d;
+  color: #fff;
+}
+
+.sidebar a.link-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.content {
+  flex: 1;
+  padding: 1.8rem 2rem;
+  max-width: 960px;
+}
+
+.content h1 {
+  font-size: 2rem;
+  margin: 0 0 0.75rem;
+}
+
+.content h2 {
+  font-size: 1.35rem;
+  margin: 1.6rem 0 0.6rem;
+}
+
+.content p {
+  margin: 0.35rem 0 0.9rem;
+  line-height: 1.6;
+}
+
+/* Hero section */
+.home-main {
+  min-height: calc(100vh - 56px - 40px);
+  background: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem 2rem;
+}
+
+.hero {
+  background: #282a35;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  max-width: 720px;
+  text-align: center;
+}
+
+.hero h1 {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Search bar in hero */
+.hero-search {
+  display: flex;
+  align-items: stretch;
+  max-width: 560px;
+  margin: 0 auto 1.5rem;
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 4px;
+}
+
+.hero-search input[type="text"] {
+  flex: 1;
+  border: none;
+  padding: 0.85rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 999px 0 0 999px;
+  outline: none;
+}
+
+.hero-search button {
+  border: none;
+  padding: 0 1.8rem;
+  border-radius: 999px;
+  background: #04aa6d;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.hero-search button:hover {
+  background: #059862;
+}
+
+.hero-cta {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #facc15;
+  text-decoration: underline;
+  font-size: 0.95rem;
+}
+
+/* === Colored topic sections (HTML / CSS / JS) === */
+.topic {
+  padding: 4rem 1.5rem;
+}
+
+.topic--html {
+  background: #d9f0e4; /* light green */
+}
+
+.topic--css {
+  background: #fff4b8; /* light yellow */
+}
+
+.topic--js {
+  background: #111827; /* dark */
+  color: #ffffff;
+}
+
+.topic-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.topic-text {
+  max-width: 360px;
+}
+
+.topic-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.topic-text p {
+  margin-bottom: 1rem;
+}
+
+.topic-example {
+  flex: 1;
+}
+
+/* Code example card */
+.example-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.2);
+}
+
+.topic--js .example-card {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.example-card pre {
+  margin: 0 0 0.75rem;
+  font-family: "Fira Code", "Consolas", monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+/* Reusable example box on tutorial pages */
+.example-box {
+  position: relative;
+  background: #e7e9eb;
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  overflow-x: auto;
+  margin: 0.4rem 0 1.1rem;
+  border: 1px solid #d0d3d6;
+}
+
+.example-box pre {
+  margin: 0;
+  font-family: "Fira Code", "Consolas", monospace;
+  font-size: 0.9rem;
+}
+
+/* Copy button in code box */
+.example-copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  border: none;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+}
+
+.example-copy-btn:hover {
+  background: #f3f3f3;
+}
+
+.example-copy-btn.copied {
+  background: #04aa6d;
+  color: #fff;
+}
+
+/* Tutorial navigation */
+.tutorial-nav {
+  margin-top: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Next topics section */
+.next-topics {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  background: #f0f8f4;
+  border-left: 4px solid #04aa6d;
+  border-radius: 4px;
+}
+
+.next-topics h3 {
+  color: #04aa6d;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.next-topics p {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.next-topics ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.next-topics li {
+  margin-bottom: 0.75rem;
+}
+
+.next-topics a {
+  color: #04aa6d;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.next-topics a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.55rem 1.15rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn.primary {
+  background: #04aa6d;
+  color: #fff;
+}
+
+.btn.secondary {
+  background: #fff;
+  color: #282a35;
+  border: 1px solid #ccc;
+}
+
+.btn.small {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.9rem;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 0.75rem;
+  background: #e7e9eb;
+  font-size: 0.85rem;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .topnav {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .nav-search {
+    order: 3;
+    width: 100%;
+    margin: 0.3rem 0 0.1rem;
+    max-width: none;
+  }
+
+  .topnav-links {
+    width: 100%;
+    text-align: right;
+  }
+
+  .layout {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #d0d3d6;
+  }
+
+  .content {
+    padding: 1.25rem 1.3rem;
+    max-width: none;
+  }
+
+  .tutorial-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-search {
+    flex-direction: column;
+    border-radius: 12px;
+    padding: 0;
+  }
+
+  .hero-search input[type="text"] {
+    border-radius: 12px 12px 0 0;
+  }
+
+  .hero-search button {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .topic-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .topic-text {
+    max-width: none;
+  }
+}
+

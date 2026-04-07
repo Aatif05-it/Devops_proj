@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Dictionaries &amp; Sets - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python Dictionaries &amp; Sets</h1>
+      <p>Dictionaries store data as key–value pairs, while sets store unique, unordered values.</p>
+      <p>Dictionaries are ideal for fast lookups by key; sets are great for membership tests and removing duplicates.</p>
+
+      <h2>Creating and using dictionaries</h2>
+      <div class="example-box">
+<pre><code class="language-python"># Dictionary literal
+user = {
+    "name": "Alice",
+    "age": 21,
+    "skills": ["Python", "SQL"]
+}
+
+print(user["name"])          # Alice
+user["age"] = 22             # update value
+user["city"] = "Mumbai"      # add new key
+print(user.get("email"))     # None (safe access)
+</code></pre>
+      </div>
+      <p>Use square brackets to read or update a key, and <code>dict.get()</code> when you want a safe lookup that returns None or a default instead of raising an error.</p>
+
+      <h2>Dictionary methods</h2>
+      <div class="example-box">
+<pre><code class="language-python">user = {"name": "Alice", "age": 21}
+
+print(user.keys())       # dict_keys(['name', 'age'])
+print(user.values())     # dict_values(['Alice', 21])
+print(user.items())      # dict_items([('name', 'Alice'), ('age', 21)])
+
+for key, value in user.items():
+    print(key, "→", value)
+
+removed_age = user.pop("age")   # remove key and return value
+user.clear()                    # remove all items
+</code></pre>
+      </div>
+      <p><code>keys()</code>, <code>values()</code>, and <code>items()</code> let you iterate over a dictionaryâ€™s structure, while <code>pop()</code> and <code>clear()</code> remove entries.</p>
+
+      <h2>Creating and using sets</h2>
+      <div class="example-box">
+<pre><code class="language-python"># Set literal (duplicates removed)
+langs = {"python", "java", "python", "c++"}
+
+print(langs)                 # {'python', 'java', 'c++'}
+
+langs.add("go")
+langs.remove("java")         # raises KeyError if not present
+langs.discard("rust")        # safe: no error if missing
+
+print("python" in langs)     # membership test
+</code></pre>
+      </div>
+      <p>Sets automatically drop duplicates and support fast membership checks using <code>in</code> and <code>not in</code>.</p>
+
+      <h2>Set operations</h2>
+      <div class="example-box">
+<pre><code class="language-python">backend = {"python", "java", "go"}
+frontend = {"javascript", "typescript", "python"}
+
+print(backend | frontend)   # union
+print(backend &amp; frontend)   # intersection
+print(backend - frontend)   # difference
+print(backend ^ frontend)   # symmetric difference
+</code></pre>
+      </div>
+      <p>Use union, intersection, and difference to combine or compare sets of tags, permissions, or IDs.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-lists-tuples.html" target="_blank">&laquo; Back: Python Lists &amp; Tuples</a>
+        <a class="btn primary" href="python-strings.html" target="_blank">Next: Python Strings &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

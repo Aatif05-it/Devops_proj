@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Output - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="js-intro.html" class="active" target="_blank">JavaScript</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="js"></aside>
+
+    <main class="content">
+      <h1>JS Output</h1>
+      <p>
+        JavaScript can show output in different ways: writing into HTML,
+        showing alert boxes, and logging to the console. 
+      </p>
+
+      <h2>Basic output methods</h2>
+      <p>
+        This example uses <code>innerHTML</code>, <code>alert()</code>, and
+        <code>console.log()</code> to display messages. 
+      </p>
+
+      <div class="example-box">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+  &lt;p id="demo"&gt;&lt;/p&gt;
+
+  &lt;script&gt;
+    const message = "Hello from JavaScript!";
+
+    // Write into HTML
+    document.getElementById("demo").innerHTML = message;
+
+    // Alert box
+    alert(message);
+
+    // Console
+    console.log(message);
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+
+      <p>
+        For debugging, <code>console.log()</code> is often the most useful
+        output method because it does not interrupt the user. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="js-where-to.html" target="_blank">&laquo; Back: JS Where To</a>
+        <a class="btn primary" href="js-syntax.html" target="_blank">Next: JS Syntax &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

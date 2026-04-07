@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Date &amp; Time Functions - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Date &amp; Time Functions</h1>
+      <p>
+        Date and time functions read and manipulate temporal values, supporting operations like adding intervals and extracting year or month parts. 
+      </p>
+      <p>
+        Typical functions are <code>CURRENT_TIMESTAMP</code>, <code>DATEADD()</code>, <code>DATEDIFF()</code>, and extractors such as <code>YEAR()</code>, <code>MONTH()</code>, and <code>DAY()</code>. 
+      </p>
+
+      <h2>Current date and parts</h2>
+      <p>
+        This example shows the current timestamp and its components. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT
+  CURRENT_TIMESTAMP        AS NowValue,
+  YEAR(CURRENT_TIMESTAMP)  AS YearValue,
+  MONTH(CURRENT_TIMESTAMP) AS MonthValue,
+  DAY(CURRENT_TIMESTAMP)   AS DayValue;
+</code></pre>
+      </div>
+
+      <p>
+        These functions are handy for dynamic filters like â€œcurrent yearâ€ without hardâ€‘coding specific dates. 
+      </p>
+
+      <h2>Adding and comparing dates</h2>
+      <p>
+        Many databases support <code>DATEADD</code> and <code>DATEDIFF</code> to work with relative ranges and durations. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- Orders from the last 30 days
+SELECT *
+FROM Orders
+WHERE OrderDate &gt;= DATEADD(DAY, -30, CURRENT_TIMESTAMP);
+
+-- Days between order and shipment
+SELECT
+  OrderID,
+  DATEDIFF(DAY, OrderDate, ShippedDate) AS DaysToShip
+FROM Orders;
+</code></pre>
+      </div>
+
+      <p>
+        Such expressions make it easy to implement reports like â€œlast weekâ€™s salesâ€ or â€œorders that took more than N days to shipâ€. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-string-functions.html" target="_blank">&laquo; Back: SQL String Functions</a>
+        <a class="btn primary" href="sql-numeric-functions.html" target="_blank">Next: SQL Numeric Functions &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

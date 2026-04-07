@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Timers (setTimeout) - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="js-intro.html" class="active" target="_blank">JavaScript</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="js"></aside>
+
+    <main class="content">
+      <h1>JS Timers (setTimeout)</h1>
+      <p>
+        The <code>setTimeout()</code> function runs code once after a specified delay in milliseconds. 
+      </p>
+
+      <h2>Delay a message</h2>
+      <p>
+        This example waits 2 seconds after clicking the button and then updates the text. 
+      </p>
+
+      <div class="example-box">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+  &lt;p id="status"&gt;Click the button to start.&lt;/p&gt;
+  &lt;button id="start"&gt;Start timer&lt;/button&gt;
+
+  &lt;script&gt;
+    const statusEl = document.getElementById("status");
+    const startBtn = document.getElementById("start");
+
+    startBtn.addEventListener("click", function () {
+      statusEl.textContent = "Waiting 2 seconds...";
+      setTimeout(function () {
+        statusEl.textContent = "Timer finished!";
+      }, 2000);
+    });
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+
+      <p>
+        Timers are useful for delays, animations, and temporary messages; use <code>clearTimeout()</code> if you need to cancel a scheduled action. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="js-dom-styling.html" target="_blank">&laquo; Back: JS DOM Styling</a>
+        <a class="btn primary" href="js-forms.html" target="_blank">Next: JS Forms &amp; Validation &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

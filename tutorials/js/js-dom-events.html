@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS DOM Events - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="js-intro.html" class="active" target="_blank">JavaScript</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="js"></aside>
+
+    <main class="content">
+      <h1>JS DOM Events</h1>
+      <p>
+        Events are actions like clicks, key presses, or page loads that JavaScript can listen for and respond to. 
+      </p>
+
+      <h2>Click event example</h2>
+      <p>
+        This example adds a <code>click</code> listener to a button and changes the paragraph text when the event fires. 
+      </p>
+
+      <div class="example-box">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+  &lt;p id="message"&gt;Click the button.&lt;/p&gt;
+  &lt;button id="btn"&gt;Click me&lt;/button&gt;
+
+  &lt;script&gt;
+    const button = document.getElementById("btn");
+    const message = document.getElementById("message");
+
+    button.addEventListener("click", function () {
+      message.textContent = "Button was clicked!";
+    });
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+
+      <p>
+        The <code>addEventListener()</code> method works with many event types such as <code>click</code>, <code>input</code>, and <code>submit</code>. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="js-dom-basics.html" target="_blank">&laquo; Back: JS DOM Basics</a>
+        <a class="btn primary" href="js-dom-styling.html" target="_blank">Next: JS DOM Styling &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

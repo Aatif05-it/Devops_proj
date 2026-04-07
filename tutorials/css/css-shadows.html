@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Shadows - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="css-intro.html" class="active" target="_blank">CSS</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="css"></aside>
+
+    <main class="content">
+      <h1>CSS Shadows</h1>
+      <p>
+        Shadows add depth and separation using <code>box-shadow</code> for
+        elements and <code>text-shadow</code> for text.
+      </p>
+
+      <h2>Box shadows</h2>
+      <div class="example-box">
+        <pre><code>.card {
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+  border-radius: 12px;
+}</code></pre>
+      </div>
+      <p>
+        The values are horizontal offset, vertical offset, blur radius, and
+        color, plus optional spread. 
+      </p>
+
+      <h2>Soft text shadow</h2>
+      <div class="example-box">
+        <pre><code>h1.glow {
+  text-shadow: 0 2px 6px rgba(15, 23, 42, 0.35);
+}</code></pre>
+      </div>
+      <p>
+        Subtle text shadows improve contrast on images but should not reduce
+        readability. [web:89]
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="css-pseudo.html" target="_blank">&laquo; Previous: CSS Pseudo-classes & Elements</a>
+        <a class="btn primary" href="css-flexbox-advanced.html" target="_blank">Next: CSS Flexbox Deep Dive &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

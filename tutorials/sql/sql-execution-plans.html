@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Execution Plans - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Execution Plans</h1>
+      <p>
+        Execution plans show exactly how the database engine executes a query, revealing index usage, join order, and performance bottlenecks. 
+      </p>
+      <p>
+        Use <code>EXPLAIN</code> (MySQL/PostgreSQL) or <code>SHOW PLAN</code> (SQL Server) to analyze and optimize slow queries. 
+      </p>
+
+      <h2>MySQL EXPLAIN basics</h2>
+      <p>
+        <code>EXPLAIN</code> reveals table scans, index usage, row estimates, and join strategies. 
+      </p>
+
+      <div class="example-box">
+<pre><code>EXPLAIN SELECT * FROM Orders o
+JOIN Customers c ON o.CustomerID = c.CustomerID
+WHERE o.OrderDate >= '2025-01-01';
+</code></pre>
+      </div>
+
+      <p>
+        Key columns: <code>type</code> (index, range, ALL), <code>rows</code> (estimated rows scanned), <code>key</code> (index used). 
+      </p>
+
+      <h2>Reading execution plans</h2>
+      <p>
+        Look for red flags: <code>ALL</code> (full table scan), high <code>rows</code> values, <code>Using filesort</code>, <code>Using temporary</code>. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- BAD PLAN (needs index)
++----+-------------+-------+------+---------------+------+---------+------+--------+-------------+
+| id | select_type | table | type | possible_keys | key  | key_len | ref  | rows   | Extra       |
++----+-------------+-------+------+---------------+------+---------+------+--------+-------------+
+|  1 | SIMPLE      | orders| ALL  | NULL          | NULL | NULL    | NULL | 100000 | Using where |
+
+-- GOOD PLAN (uses index)
+|  1 | SIMPLE      | orders| ref  | idx_orderdate | idx_orderdate | 3 | const | 500 | Using index |
+</code></pre>
+      </div>
+
+      <p>
+        <code>ref</code> with index is much faster than <code>ALL</code> scanning 100K+ rows. [
+      </p>
+
+      <h2>SQL Server execution plans</h2>
+      <p>
+        Graphical plans show operators, costs, and estimated rows with color-coded warnings.
+      </p>
+
+      <div class="example-box">
+<pre><code>-- Show actual execution plan
+SET SHOWPLAN_ALL ON;
+-- Or in SSMS: Ctrl+M before executing
+
+-- Common costly operators to avoid:
+-- Table Scan (100% cost)
+-- Hash Match (expensive joins)
+-- Sort (filesort equivalent)
+</code></pre>
+      </div>
+
+      <p>
+        Thick arrows = more rows; red text = warnings; aim to reduce total cost percentage. 
+      </p>
+
+      <h2>Optimization using plans</h2>
+      <p>
+        Add indexes where plans show table scans; rewrite queries to leverage existing indexes. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- BEFORE: Slow correlated subquery
+SELECT CustomerID 
+FROM Orders o
+WHERE NOT EXISTS (
+  SELECT 1 FROM Returns r WHERE r.OrderID = o.OrderID
+);
+
+-- AFTER: Efficient LEFT JOIN (plan shows Index Seek)
+SELECT DISTINCT o.CustomerID
+FROM Orders o
+LEFT JOIN Returns r ON o.OrderID = r.OrderID
+WHERE r.OrderID IS NULL;
+</code></pre>
+      </div>
+
+      <p>
+        Execution plans turn guesswork into data-driven optimization, often yielding 10x+ speedups. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-normalization.html" target="_blank">&laquo; Back: SQL Performance Tuning</a>
+        <a class="btn primary" href="sql-best-practices.html" target="_blank">Next: SQL Best Practices &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

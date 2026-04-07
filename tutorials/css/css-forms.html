@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Forms & Inputs - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="css-intro.html" class="active" target="_blank">CSS</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="css"></aside>
+
+    <main class="content">
+      <h1>CSS Forms &amp; Inputs</h1>
+      <p>
+        Forms collect user input, and CSS helps make inputs clearer, larger,
+        and more usable.
+      </p>
+
+      <h2>Text inputs and labels</h2>
+      <div class="example-box">
+        <pre><code>label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  box-sizing: border-box;
+}</code></pre>
+      </div>
+      <p>
+        Making labels block-level and inputs full width creates clean vertical
+        form layouts.
+      </p>
+
+      <h2>Focus states</h2>
+      <div class="example-box">
+        <pre><code>input:focus,
+textarea:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+  border-color: #2563eb;
+}</code></pre>
+      </div>
+      <p>
+        Clear focus styles improve accessibility and show exactly which field is
+        active. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="css-transitions-transforms.html" target="_blank">&laquo; Previous: CSS Transitions &amp; Transforms</a>
+        <a class="btn primary" href="css-pseudo.html" target="_blank">Next: CSS Pseudo-classes &amp; Elements &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

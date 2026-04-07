@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML Form Advanced - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="../../html-intro.html" class="active" target="_blank">HTML</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="html"></aside>
+
+    <main class="content">
+      <h1>HTML Form Advanced</h1>
+      <p>
+        Advanced form features include modern input types and builtâ€‘in validation
+        attributes that help you get clean data with almost no JavaScript.
+      </p>
+
+      <h2>HTML5 input types</h2>
+      <p>
+        HTML5 added many input types such as <code>email</code>, <code>url</code>,
+        <code>number</code>, <code>date</code>, and <code>range</code> that provide
+        better UI and automatic validation in modern browsers.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;form&gt;
+  &lt;label&gt;Email:
+    &lt;input type=&quot;email&quot; name=&quot;userEmail&quot; required&gt;
+  &lt;/label&gt;
+  &lt;br&gt;
+  &lt;label&gt;Age:
+    &lt;input type=&quot;number&quot; name=&quot;age&quot; min=&quot;18&quot; max=&quot;99&quot;&gt;
+  &lt;/label&gt;
+  &lt;br&gt;
+  &lt;label&gt;Favorite color:
+    &lt;input type=&quot;color&quot; name=&quot;color&quot; value=&quot;#04aa6d&quot;&gt;
+  &lt;/label&gt;
+  &lt;br&gt;
+  &lt;label&gt;Satisfaction:
+    &lt;input type=&quot;range&quot; name=&quot;rating&quot; min=&quot;1&quot; max=&quot;10&quot; value=&quot;5&quot;&gt;
+  &lt;/label&gt;
+  &lt;br&gt;
+  &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+      </div>
+      <p>
+        The browser can show special keyboards on mobile and validate basic formats
+        (for example a valid email address) automatically.
+      </p>
+
+      <h2>Required and length validation</h2>
+      <p>
+        The <code>required</code>, <code>minlength</code>, and
+        <code>maxlength</code> attributes enforce that a field is filled and within
+        a length range before the form can be submitted.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;form&gt;
+  &lt;label&gt;Username:
+    &lt;input type=&quot;text&quot; name=&quot;username&quot;
+           required minlength=&quot;3&quot; maxlength=&quot;15&quot;&gt;
+  &lt;/label&gt;
+  &lt;br&gt;
+  &lt;label&gt;Password:
+    &lt;input type=&quot;password&quot; name=&quot;password&quot;
+           required minlength=&quot;8&quot;&gt;
+  &lt;/label&gt;
+  &lt;br&gt;
+  &lt;button type=&quot;submit&quot;&gt;Create account&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+      </div>
+      <p>
+        If the user leaves a required field empty or the text is too short, the
+        browser shows a builtâ€‘in error message and blocks submission.
+      </p>
+
+      <h2>Pattern attribute for custom formats</h2>
+      <p>
+        Use the <code>pattern</code> attribute with a regular expression when you
+        need a specific format, such as a phone or custom ID.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;form&gt;
+  &lt;label&gt;Phone (123-456-7890):
+    &lt;input type=&quot;tel&quot; name=&quot;phone&quot;
+           pattern=&quot;[0-9]{3}-[0-9]{3}-[0-9]{4}&quot;
+           placeholder=&quot;123-456-7890&quot; required&gt;
+  &lt;/label&gt;
+  &lt;br&gt;
+  &lt;button type=&quot;submit&quot;&gt;Send&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+      </div>
+      <p>
+        When the value does not match the pattern, the browser marks the field as
+        invalid and prevents the form from being submitted.
+      </p>
+
+      <h2>Fieldset and legend for grouped inputs</h2>
+      <p>
+        Group related controls with <code>&lt;fieldset&gt;</code> and label the group
+        using <code>&lt;legend&gt;</code> to improve structure and accessibility.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Contact details&lt;/legend&gt;
+
+    &lt;label&gt;Name:
+      &lt;input type=&quot;text&quot; name=&quot;name&quot; required&gt;
+    &lt;/label&gt;
+    &lt;br&gt;
+    &lt;label&gt;Email:
+      &lt;input type=&quot;email&quot; name=&quot;email&quot; required&gt;
+    &lt;/label&gt;
+  &lt;/fieldset&gt;
+
+  &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+      </div>
+      <p>
+        Fieldsets visually group inputs and give screen readers a clear description
+        of what the grouped fields are about.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="html-iframe-embed.html" target="_blank">&laquo; Previous: HTML Iframe & Embed</a>
+        <a class="btn primary" href="html-accessibility.html" target="_blank">Next: HTML Accessibility Basics &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+
+</body>
+</html>
+
+
+

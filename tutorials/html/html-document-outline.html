@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML Document Outline - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="../../html-intro.html" class="active" target="_blank">HTML</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="html"></aside>
+
+    <main class="content">
+      <h1>HTML Document Outline</h1>
+      <p>
+        A document outline is the logical structure of a page created by its
+        headings and sections, which helps both users and search engines
+        understand the content.
+      </p>
+
+      <h2>Headings define the outline</h2>
+      <p>
+        The <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> elements represent
+        decreasing levels of section headings, where <code>&lt;h1&gt;</code> is
+        the most important.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;h1&gt;Learning Web Development&lt;/h1&gt;
+
+&lt;h2&gt;HTML Basics&lt;/h2&gt;
+&lt;h3&gt;Text elements&lt;/h3&gt;
+&lt;h3&gt;Links and images&lt;/h3&gt;
+
+&lt;h2&gt;CSS Basics&lt;/h2&gt;
+&lt;h3&gt;Selectors&lt;/h3&gt;
+&lt;h3&gt;Layout&lt;/h3&gt;
+</code></pre>
+      </div>
+      <p>
+        Screen readers and other tools can use this hierarchy to provide a
+        navigable outline of the page for users.
+      </p>
+
+      <h2>Use one main heading</h2>
+      <p>
+        Most guidelines recommend using a single <code>&lt;h1&gt;</code> that
+        describes the main topic of the page and then structuring sections with
+        <code>&lt;h2&gt;</code> and below.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;h1&gt;JavaScript Tutorial&lt;/h1&gt;
+
+&lt;h2&gt;Getting started&lt;/h2&gt;
+&lt;h3&gt;What you need&lt;/h3&gt;
+
+&lt;h2&gt;Core concepts&lt;/h2&gt;
+&lt;h3&gt;Variables&lt;/h3&gt;
+&lt;h3&gt;Functions&lt;/h3&gt;
+</code></pre>
+      </div>
+      <p>
+        Keeping one clear top-level heading reduces confusion for assistive
+        technologies and keeps the outline simple.
+      </p>
+
+      <h2>Avoid skipping heading levels</h2>
+      <p>
+        Headings should follow a logical order, like an outline in a textbook:
+        do not jump from <code>&lt;h1&gt;</code> straight to
+        <code>&lt;h4&gt;</code> without intermediate levels.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;!-- Good --&gt;
+&lt;h1&gt;Page title&lt;/h1&gt;
+&lt;h2&gt;Main section&lt;/h2&gt;
+&lt;h3&gt;Subsection&lt;/h3&gt;
+
+&lt;!-- Avoid this --&gt;
+&lt;h1&gt;Page title&lt;/h1&gt;
+&lt;h4&gt;Random subsection&lt;/h4&gt;
+</code></pre>
+      </div>
+      <p>
+        A consistent hierarchy makes it easier to scan the page and improves
+        accessibility for keyboard and screen reader users.
+      </p>
+
+      <h2>Sectioning elements and outline</h2>
+      <p>
+        Elements like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>,
+        <code>&lt;article&gt;</code>, and <code>&lt;section&gt;</code> group
+        related content but still rely on headings for a meaningful outline.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;main&gt;
+  &lt;h1&gt;CodeNexa Academy Blog&lt;/h1&gt;
+
+  &lt;article&gt;
+    &lt;h2&gt;Understanding Flexbox&lt;/h2&gt;
+    &lt;p&gt;...&lt;/p&gt;
+  &lt;/article&gt;
+
+  &lt;article&gt;
+    &lt;h2&gt;CSS Grid in Practice&lt;/h2&gt;
+    &lt;p&gt;...&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
+</code></pre>
+      </div>
+      <p>
+        Modern HTML no longer uses the old â€œoutline algorithm,â€ so heading
+        levels themselves are what define the structure.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="html-form-autocomplete.html" target="_blank">&laquo; Previous: HTML Form Autocomplete</a>
+        <a class="btn primary" href="html-deprecated.html" target="_blank">Next: Deprecated HTML Elements &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+    }
+
+    .academy-layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 1.5rem;
+    }
+
+    /* sidebar */
+    .academy-sidebar {
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+
+    .academy-sidebar-header {
+      padding: 0.6rem 0.8rem;
+      background: #f1f5f9;
+      font-weight: 600;
+    }
+
+    .academy-sidebar-nav a {
+      display: block;
+      padding: 0.45rem 0.8rem;
+      text-decoration: none;
+      color: #111827;
+      border-top: 1px solid #e5e7eb;
+      font-size: 0.83rem;
+    }
+
+    .academy-sidebar-nav a.active {
+      background: #04aa6d;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .academy-sidebar-nav a:hover:not(.active) {
+      background: #f9fafb;
+    }
+
+    /* main content */
+    .academy-main {
+      background: #ffffff;
+      border-radius: 4px;
+      border: 1px solid #d1d5db;
+      padding: 1.6rem 1.8rem 2.4rem;
+    }
+
+    .academy-main h1 {
+      margin: 0 0 1rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .academy-section {
+      margin-top: 1.6rem;
+    }
+
+    .academy-section h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .academy-section p {
+      margin: 0 0 0.5rem;
+      font-size: 0.9rem;
+      color: #374151;
+      line-height: 1.5;
+    }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 0.75rem;
+      margin-top: 0.8rem;
+    }
+
+    .stat-box {
+      border: 1px solid #e5e7eb;
+      border-radius: 4px;
+      padding: 0.7rem 0.8rem;
+      font-size: 0.85rem;
+      background: #f9fafb;
+    }
+
+    .stat-number {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .stat-label {
+      color: #6b7280;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 900px) {
+      .academy-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- reuse your top nav -->
+  <header class="topnav">
+    <div class="logo">
+      <span class="logo-mark">&lt;/&gt;</span>
+      <span class="logo-text">CodeNexa Academy</span>
+    </div>
+
+    <nav class="topnav-links">
+      <a href="index.html">Home</a>
+      <a href="forum.html">Forum</a>
+      <a href="about.html">About</a>
+      <a href="academy.html" class="active">Academy</a>
+      <a href="#" class="nav-disabled">Certificates</a>
+    </nav>
+  </header>
+
+  <main class="academy-layout">
+    <!-- LEFT: sidebar -->
+    <aside class="academy-sidebar">
+      <div class="academy-sidebar-header">Academy Console</div>
+      <nav class="academy-sidebar-nav">
+        <a href="academy.html" class="active">Dashboard</a>
+        <a href="academy-study-plans.html">Study plans</a>
+        <a href="academy-classes.html">Classes</a>
+        <a href="academy-progress.html">Assignments</a>
+        <a href="academy-workspaces.html">Progress &amp; reports</a>
+        <a href="#">Code workspaces</a>
+      </nav>
+
+      <div class="academy-sidebar-header">Resources</div>
+      <nav class="academy-sidebar-nav">
+        <a href="academy-playbooks.html">Teaching playbooks</a>
+        <a href="academy-onboarding.html">Onboarding kit</a>
+        <a href="academy-settings.html">Admin settings</a>
+      </nav>
+    </aside>
+
+    <!-- RIGHT: main content -->
+    <section class="academy-main">
+      <h1>CodeNexa Academy</h1>
+
+      <div class="academy-section">
+        <h2>Tools for teaching coding</h2>
+        <p>CodeNexa Academy is a simple dashboard for teachers who run web development classes.</p>
+        <p>You can plan lessons, give coding assignments, and see how students are progressing in one place.</p>
+      </div>
+
+      <div class="academy-section">
+        <h2>What you can manage</h2>
+        <p>Use study plans to organize the term, connect each class to practical projects, and track submissions.</p>
+        <p>Assignments are autoâ€‘checked in the browser so students get quick feedback while they code.</p>
+      </div>
+
+      <div class="academy-section">
+        <h2>Who is it for?</h2>
+        <p>The academy is made for schools, colleges, and individual instructors who teach HTML, CSS, JavaScript, and related topics.</p>
+        <p>You can start with a single class and grow to multiple groups without changing tools.</p>
+      </div>
+
+      <div class="academy-section">
+        <h2>CodeNexa Academy reach</h2>
+        <div class="stats-row">
+          <div class="stat-box">
+            <div class="stat-number">3.5B+</div>
+            <div class="stat-label">Pages viewed across CodeNexa Academy every year.</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">70M+</div>
+            <div class="stat-label">Monthly visitors learning web development.</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">25+</div>
+            <div class="stat-label">Years of experience building learning tools.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="academy-section">
+        <h2>Get in touch</h2>
+        <p>If you want to try CodeNexa Academy for your class, contact us and share a short description of your course.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"></footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

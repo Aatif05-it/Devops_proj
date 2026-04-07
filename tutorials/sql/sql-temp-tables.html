@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Temporary Tables - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Temporary Tables</h1>
+      <p>
+        Temporary tables store intermediate results during complex queries or sessions, automatically cleaned up when no longer needed. 
+      </p>
+      <p>
+        They support indexes, constraints, and transactions, making them ideal for multi-step data processing. 
+      </p>
+
+      <h2>Session temporary tables</h2>
+      <p>
+        Tables prefixed with <code>#</code> (MySQL) or declared with <code>DECLARE TABLE</code> exist only for the current connection. 
+      </p>
+
+      <div class="example-box">
+<pre><code>CREATE TEMPORARY TABLE TempOrders (
+  OrderID INT PRIMARY KEY,
+  CustomerID INT,
+  TotalAmount DECIMAL(10,2)
+);
+
+INSERT INTO TempOrders 
+SELECT OrderID, CustomerID, TotalAmount 
+FROM Orders 
+WHERE OrderDate >= '2025-01-01';
+</code></pre>
+      </div>
+
+      <p>
+        Other connections cannot see session temp tables, and they disappear when the connection closes. 
+      </p>
+
+      <h2>Using temp tables in complex queries</h2>
+      <p>
+        Break down multi-step calculations into readable, indexed intermediate results. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- Step 1: High-value customers
+CREATE TEMPORARY TABLE HighValueCustomers AS
+SELECT CustomerID, SUM(TotalAmount) AS LifetimeValue
+FROM Orders GROUP BY CustomerID
+HAVING LifetimeValue > 10000;
+
+-- Step 2: Recent orders from high-value customers
+CREATE TEMPORARY TABLE RecentHighValueOrders AS
+SELECT o.*
+FROM Orders o
+JOIN HighValueCustomers h ON o.CustomerID = h.CustomerID
+WHERE o.OrderDate >= DATE_SUB(CURDATE(), INTERVAL 30 DAY);
+
+SELECT * FROM RecentHighValueOrders;
+</code></pre>
+      </div>
+
+      <p>
+        Temp tables with indexes perform better than subqueries or CTEs for repeated intermediate access. 
+      </p>
+
+      <h2>Table variables (SQL Server)</h2>
+      <p>
+        <code>DECLARE @table</code> creates lightweight, memory-based alternatives with limited features. 
+      </p>
+
+      <div class="example-box">
+<pre><code>DECLARE @TopProducts TABLE (
+  ProductID INT,
+  ProductName VARCHAR(100),
+  SalesCount INT
+);
+
+INSERT INTO @TopProducts
+SELECT TOP 10 ProductID, ProductName, COUNT(*) as SalesCount
+FROM OrderItems GROUP BY ProductID, ProductName
+ORDER BY SalesCount DESC;
+</code></pre>
+      </div>
+
+      <p>
+        Table variables have lower overhead but lack statistics, making them suitable for small result sets.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-triggers.html" target="_blank">&laquo; Back: SQL Triggers</a>
+        <a class="btn primary" href="sql-ctes.html" target="_blank">Next: SQL CTEs &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+  <style>
+    body {
+      background: #f3f4f6;
+    }
+
+    .about-layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3.5rem;
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 1.5rem;
+    }
+
+    /* left sidebar */
+    .about-sidebar {
+      background: #ffffff;
+      border-radius: 4px;
+      border: 1px solid #d1d5db;
+      overflow: hidden;
+      font-size: 0.85rem;
+    }
+
+    .about-sidebar-header {
+      padding: 0.55rem 0.75rem;
+      background: #f1f5f9;
+      font-weight: 600;
+    }
+
+    .about-sidebar-nav a {
+      display: block;
+      padding: 0.4rem 0.75rem;
+      text-decoration: none;
+      color: #111827;
+      border-top: 1px solid #e5e7eb;
+      font-size: 0.82rem;
+    }
+
+    .about-sidebar-nav a.active {
+      background: #04aa6d;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .about-sidebar-nav a:hover:not(.active) {
+      background: #f9fafb;
+    }
+
+    /* main column */
+    .about-main {
+      background: #ffffff;
+      border-radius: 4px;
+      border: 1px solid #d1d5db;
+      padding: 1.6rem 1.8rem 2.4rem;
+    }
+
+    .about-main h1 {
+      margin: 0 0 1.1rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .about-main-section {
+      margin-top: 1.6rem;
+    }
+
+    .about-main-section h2 {
+      margin: 0 0 0.55rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .about-main-section p {
+      margin: 0 0 0.6rem;
+      font-size: 0.9rem;
+      color: #374151;
+      line-height: 1.5;
+    }
+
+    /* simple table like W3Schools demographics */
+    .about-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      margin-top: 0.6rem;
+    }
+
+    .about-table th,
+    .about-table td {
+      border: 1px solid #e5e7eb;
+      padding: 0.35rem 0.55rem;
+      text-align: left;
+    }
+
+    .about-table th {
+      background: #f3f4f6;
+      font-weight: 600;
+    }
+
+    .about-table tr:nth-child(even) td {
+      background: #f9fafb;
+    }
+
+    .about-home-btn {
+      margin-top: 1.6rem;
+    }
+
+    .about-home-btn .btn {
+      padding: 0.45rem 1.4rem;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 900px) {
+      .about-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- reuse top nav -->
+  <header class="topnav">
+    <div class="logo">
+      <span class="logo-mark">&lt;/&gt;</span>
+      <span class="logo-text">CodeNexa Academy</span>
+    </div>
+
+    <nav class="topnav-links">
+      <a href="index.html">Home</a>
+      <a href="forum.html">Forum</a>
+      <a href="about.html" class="active">About</a>
+      <a href="#" class="nav-disabled">Tutorials</a>
+      <a href="#" class="nav-disabled">Certificates</a>
+    </nav>
+  </header>
+
+  <main class="about-layout">
+
+    <!-- LEFT: sidebar -->
+    <aside class="about-sidebar">
+      <div class="about-sidebar-header">About Us</div>
+      <nav class="about-sidebar-nav">
+      <a href="about.html" class="active">About CodeNexa Academy</a>
+      <a href="terms.html">About Terms</a>
+      <a href="privacy.html">About Privacy</a>
+     <a href="cookies.html">About Cookies</a>
+</nav>
+
+      </nav>
+    </aside>
+
+    <!-- RIGHT: main content -->
+    <section class="about-main">
+      <h1>About CodeNexa Academy</h1>
+
+      <div class="about-main-section">
+        <h2>What is CodeNexa Academy?</h2>
+        <p>CodeNexa Academy creates simplified and interactive learning experiences for web development.</p>
+        <p>Learning web development should be easy to understand and available for everyone, everywhere.</p>
+        <p>CodeNexa Academy is a school for web developers, covering all the main aspects of modern web development.</p>
+      </div>
+
+      <div class="about-main-section">
+        <h2>Easy Learning</h2>
+        <p>CodeNexa Academy has a strong focus on simplicity.</p>
+        <p>Lessons use small code examples and short explanations to help you understand quickly.</p>
+        <p>You can start from the basics and continue all the way up to more advanced, professional topics.</p>
+      </div>
+
+      <div class="about-main-section">
+        <h2>Try It Yourself</h2>
+        <p>CodeNexa Academy includes thousands of code examples.</p>
+        <p>Using the builtâ€‘in editors, you can edit the code and run it directly in your browser before using it in real projects.</p>
+      </div>
+
+      <div class="about-main-section">
+        <h2>CodeNexa Academy is Free</h2>
+        <p>CodeNexa Academy is, and will always be, a completely free developer resource.</p>
+      </div>
+
+      <div class="about-main-section">
+        <h2>CodeNexa Academy Demographics</h2>
+        <table class="about-table">
+          <thead>
+            <tr>
+              <th>Region</th>
+              <th>Percent</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Asia</td><td>38%</td></tr>
+            <tr><td>Americas</td><td>30%</td></tr>
+            <tr><td>Europe</td><td>27%</td></tr>
+            <tr><td>Africa</td><td>3%</td></tr>
+            <tr><td>Oceania</td><td>2%</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.75rem;color:#6b7280;margin-top:0.3rem;">
+          Source: internal analytics (example data).
+        </p>
+      </div>
+
+      <div class="about-home-btn">
+        <a href="index.html" class="btn primary">Home</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- big footer from your site -->
+  <footer class="site-footer">
+    <!-- paste the same footer HTML used on index.html here -->
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Stored Procedures - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Stored Procedures</h1>
+      <p>
+        Stored procedures are precompiled SQL routines stored in the database, callable by name with parameters for reusable business logic. 
+      </p>
+      <p>
+        They improve security, performance, and maintainability by centralizing complex operations on the server. 
+      </p>
+
+      <h2>Creating a procedure</h2>
+      <p>
+        This procedure creates an order and updates inventory in a single transaction. 
+      </p>
+
+      <div class="example-box">
+<pre><code>CREATE PROCEDURE CreateOrder(
+  IN customer_id INT,
+  IN product_id INT,
+  IN quantity INT
+)
+BEGIN
+  START TRANSACTION;
+  
+  INSERT INTO Orders (CustomerID, ProductID, Quantity)
+  VALUES (customer_id, product_id, quantity);
+  
+  UPDATE Products 
+  SET Stock = Stock - quantity 
+  WHERE ProductID = product_id;
+  
+  COMMIT;
+END;
+</code></pre>
+      </div>
+
+      <p>
+        The <code>BEGIN...END</code> block contains the procedure logic, with <code>IN</code> parameters passed when calling.
+      </p>
+
+      <h2>Calling procedures</h2>
+      <p>
+        Execute with <code>CALL</code> (MySQL) or <code>EXEC</code> (SQL Server), passing required arguments. 
+      </p>
+
+      <div class="example-box">
+<pre><code>CALL CreateOrder(101, 25, 3);
+-- Creates order #auto-generated, deducts 3 from Product 25 stock
+</code></pre>
+      </div>
+
+      <p>
+        Applications call procedures instead of embedding multi-step SQL, reducing network traffic and errors. 
+      </p>
+
+      <h2>Procedures with output parameters</h2>
+      <p>
+        Use <code>OUT</code> parameters to return computed values to the caller. 
+      </p>
+
+      <div class="example-box">
+<pre><code>CREATE PROCEDURE GetCustomerStats(
+  IN customer_id INT,
+  OUT total_orders INT,
+  OUT avg_order_value DECIMAL(10,2)
+)
+BEGIN
+  SELECT COUNT(*), AVG(TotalAmount)
+  INTO total_orders, avg_order_value
+  FROM Orders
+  WHERE CustomerID = customer_id;
+END;
+
+-- Usage:
+CALL GetCustomerStats(101, @order_count, @avg_value);
+SELECT @order_count, @avg_value;
+</code></pre>
+      </div>
+
+      <p>
+        Output parameters let procedures return multiple values without result sets, useful for status checks.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-acid-isolation.html" target="_blank">&laquo; Back: SQL ACID &amp; Isolation</a>
+        <a class="btn primary" href="sql-functions.html" target="_blank">Next: SQL User-Defined Functions &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Operators - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python Operators</h1>
+      <p>Operators are symbols that perform operations on values and variables, such as arithmetic, comparison, and logical checks.</p>
+      <p>Python groups operators into categories: arithmetic, assignment, comparison, logical, bitwise, identity, and membership.</p>
+
+      <h2>Arithmetic operators</h2>
+      <div class="example-box">
+<pre><code class="language-python">a = 15
+b = 4
+
+print("a + b =", a + b)   # 19
+print("a - b =", a - b)   # 11
+print("a * b =", a * b)   # 60
+print("a / b =", a / b)   # 3.75 (float division)
+print("a // b =", a // b) # 3   (floor division)
+print("a % b =", a % b)   # 3
+print("a ** b =", a ** b) # 15^4
+</code></pre>
+      </div>
+      <p>Use <code>//</code> for integer division and <code>**</code> for exponentiation, which often replace manual math.</p>
+
+      <h2>Comparison and logical operators</h2>
+      <div class="example-box">
+<pre><code class="language-python">x = 10
+y = 20
+
+print(x == y)   # False
+print(x != y)   # True
+print(x &lt; y)    # True
+print(x &gt;= 5)   # True
+
+is_adult = True
+has_ticket = False
+
+print(is_adult and has_ticket)  # False
+print(is_adult or has_ticket)   # True
+print(not is_adult)             # False
+</code></pre>
+      </div>
+      <p>Comparison operators return booleans, which chain naturally with <code>and</code>, <code>or</code>, and <code>not</code> in conditions.</p>
+
+      <h2>Assignment and augmented assignment</h2>
+      <div class="example-box">
+<pre><code class="language-python">count = 0      # simple assignment
+count += 1     # count = count + 1
+count *= 2     # count = count * 2
+count -= 3     # count = count - 3
+
+print(count)
+</code></pre>
+      </div>
+      <p>Augmented assignments like <code>+=</code> and <code>*=</code> update a variable in place and make code shorter.</p>
+
+      <h2>Identity and membership</h2>
+      <div class="example-box">
+<pre><code class="language-python">nums = [1, 2, 3]
+a = nums
+b = [1, 2, 3]
+
+print(a is nums)       # True (same object)
+print(b is nums)       # False (different list)
+print(a == b)          # True (same contents)
+
+print(2 in nums)       # True
+print(5 not in nums)   # True
+</code></pre>
+      </div>
+      <p><code>is</code> checks whether two variables reference the same object, while <code>==</code> compares values; <code>in</code> tests membership inside sequences.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-data-types.html" target="_blank">&laquo; Back: Python Data Types</a>
+        <a class="btn primary" href="python-lists-tuples.html" target="_blank">Next: Python Lists &amp; Tuples &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

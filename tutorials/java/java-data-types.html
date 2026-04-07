@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Java Data Types - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="java-intro.html" class="active" target="_blank">Java</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="java"></aside>
+
+    <main class="content">
+      <h1>Java Data Types</h1>
+      <p>Java is statically typed: every variable/parameter must declare type. Two categories: <strong>Primitive</strong> (8 types, value stored directly) vs <strong>Reference</strong> (objects like String, arrays).</p>
+      <p>Primitives faster/smaller memory; reference types have methods.</p>
+
+      <h2>Primitive Data Types</h2>
+      <div class="example-box">
+<pre><code class="language-java">// Integer types
+byte  range = 127;     // -128 to 127 (1 byte)
+short age = 25;        // -32,768 to 32,767 (2 bytes)
+int   salary = 75000;  // -2^31 to 2^31-1 (4 bytes) DEFAULT
+long  population = 8000000000L;  // -2^63 to 2^63-1 (8 bytes)
+
+// Floating point
+float price = 19.99f;  // 32-bit precision
+double total = 123.456;  // 64-bit precision DEFAULT
+
+// Character
+char grade = 'A';      // Unicode 16-bit
+
+// Boolean
+boolean isActive = true;  // true/false</code></pre>
+      </div>
+
+      <h2>Type Conversion</h2>
+      <p><strong>Widening</strong> (auto/safe): byte → short → int → long → float → double</p>
+      <div class="example-box">
+<pre><code class="language-java">int i = 100;
+long l = i;  // automatic
+double d = l;  // automatic</code></pre>
+      </div>
+      <p><strong>Narrowing</strong> (explicit): <code>double → float → long → int → short → byte</code></p>
+      <div class="example-box">
+<pre><code class="language-java">double d = 9.99;
+int i = (int) d;  // 9 (truncates)</code></pre>
+      </div>
+
+      <h2>Reference Types Example</h2>
+      <div class="example-box">
+<pre><code class="language-java">String name = "Java Developer";  // Reference type
+int[] numbers = {1, 2, 3};      // Array reference
+
+System.out.println(name.length());  // 15
+System.out.println(numbers[0]);     // 1</code></pre>
+      </div>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="java-syntax-variables.html" target="_blank">&laquo; Back: Java Syntax & Variables</a>
+        <a class="btn primary" href="java-operators.html" target="_blank">Next: Java Operators &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

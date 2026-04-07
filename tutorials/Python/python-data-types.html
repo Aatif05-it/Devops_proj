@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Data Types - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python Data Types</h1>
+      <p>Python has builtâ€‘in data types for numbers, text, sequences, mappings, sets, booleans, and binary data.</p>
+      <p>Because everything in Python is an object, data types are actually classes and variables are instances of those classes.</p>
+
+      <h2>Builtâ€‘in data type categories</h2>
+      <ul>
+        <li><strong>Numeric</strong>: int, float, complex.</li>
+        <li><strong>Text</strong>: str (string).</li>
+        <li><strong>Sequence</strong>: list, tuple, range.</li>
+        <li><strong>Mapping</strong>: dict (keyâ€‘value pairs).</li>
+        <li><strong>Set</strong>: set, frozenset.</li>
+        <li><strong>Boolean</strong>: bool (True or False).</li>
+        <li><strong>Binary</strong>: bytes, bytearray, memoryview.</li>
+        <li><strong>None</strong>: NoneType for â€œno valueâ€.</li>
+      </ul>
+
+      <h2>Numeric and string examples</h2>
+      <div class="example-box">
+<pre><code class="language-python"># Numeric types
+age = 21              # int
+pi = 3.14159          # float
+z = 2 + 3j            # complex
+
+# String type
+name = "Alice"
+message = "Hello, " + name
+
+print(type(age))      # &lt;class 'int'&gt;
+print(type(pi))       # &lt;class 'float'&gt;
+print(type(z))        # &lt;class 'complex'&gt;
+print(type(name))     # &lt;class 'str'&gt;
+</code></pre>
+      </div>
+      <p>The <code>type()</code> function shows the class of any object, which is helpful when learning types.</p>
+
+      <h2>Sequence, mapping, and set examples</h2>
+      <div class="example-box">
+<pre><code class="language-python"># List (mutable sequence)
+numbers = [1, 2, 3]
+
+# Tuple (immutable sequence)
+point = (10, 20)
+
+# Range (sequence of integers)
+evens = range(0, 10, 2)
+
+# Dictionary (mapping)
+user = {"name": "Alice", "age": 21}
+
+# Set (unique items, unordered)
+tags = {"python", "backend", "web"}
+
+print(len(numbers))  # 3
+print(user["name"])  # Alice
+print("python" in tags)  # True
+</code></pre>
+      </div>
+      <p>Lists and dictionaries are the most common structures for collections, while sets are great for uniqueness and membership tests.</p>
+
+      <h2>Type conversion (casting)</h2>
+      <div class="example-box">
+<pre><code class="language-python">num_str = "42"
+num = int(num_str)        # "42" → 42
+pi_str = "3.14"
+pi = float(pi_str)        # "3.14" → 3.14
+
+flag = bool(0)            # False
+text = str(123)           # "123"
+
+print(num, type(num))
+print(pi, type(pi))
+print(flag, type(flag))
+print(text, type(text))
+</code></pre>
+      </div>
+      <p>Constructor functions like <code>int()</code>, <code>float()</code>, <code>str()</code>, and <code>bool()</code> convert between compatible types.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-syntax-variables.html" target="_blank">&laquo; Back: Python Syntax &amp; Variables</a>
+        <a class="btn primary" href="python-operators.html" target="_blank">Next: Python Operators &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

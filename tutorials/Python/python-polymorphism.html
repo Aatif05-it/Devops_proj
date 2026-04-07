@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Polymorphism - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python Polymorphism</h1>
+      <p>Polymorphism means â€œmany formsâ€ and allows the same interface to be used for different underlying types.</p>
+      <p>In Python this is often done via method overriding and duck typing.</p>
+
+      <h2>Method overriding in inheritance</h2>
+      <div class="example-box">
+<pre><code class="language-python">class Animal:
+    def speak(self):
+        print("Some generic sound")
+
+class Dog(Animal):
+    def speak(self):
+        print("Woof!")
+
+class Cat(Animal):
+    def speak(self):
+        print("Meow!")
+
+animals = [Dog(), Cat(), Animal()]
+for a in animals:
+    a.speak()
+</code></pre>
+      </div>
+      <p>Each subclass provides its own version of speak(), but the same call a.speak() works for every object.</p>
+
+      <h2>Duck typing</h2>
+      <div class="example-box">
+<pre><code class="language-python">class PdfReport:
+    def render(self):
+        print("Rendering PDF...")
+
+class HtmlReport:
+    def render(self):
+        print("Rendering HTML...")
+
+def generate(report):
+    # works with any object that has a render() method
+    report.render()
+
+generate(PdfReport())
+generate(HtmlReport())
+</code></pre>
+      </div>
+      <p>Python focuses on behavior instead of types: â€œif it walks like a duck and quacks like a duck, treat it like a duckâ€.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-inheritance.html" target="_blank">&laquo; Back: Python Inheritance</a>
+        <a class="btn primary" href="python-comprehensions.html" target="_blank">Next: Python List Comprehensions &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML Images Advanced - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="../../html-intro.html" class="active" target="_blank">HTML</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="html"></aside>
+
+    <main class="content">
+      <h1>HTML Images Advanced</h1>
+      <p>
+        Beyond the basic <code>&lt;img&gt;</code> tag, HTML supports responsive
+        images, captions, and highâ€‘resolution displays so pictures look sharp on
+        different devices.
+      </p>
+
+      <h2>Figure and figcaption</h2>
+      <p>
+        Wrap an image and its caption in <code>&lt;figure&gt;</code> and
+        <code>&lt;figcaption&gt;</code> so they are treated as a single unit.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;figure&gt;
+  &lt;img src=&quot;mountain.jpg&quot; alt=&quot;Snowy mountain at sunset&quot; width=&quot;600&quot;&gt;
+  &lt;figcaption&gt;A mountain landscape at sunset.&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+      </div>
+      <p>
+        Captions help explain images and improve accessibility, especially when
+        the picture carries important information.
+      </p>
+
+      <h2>Responsive images with srcset</h2>
+      <p>
+        Use the <code>srcset</code> and <code>sizes</code> attributes so the
+        browser can pick the best image file for the userâ€™s screen size.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;img
+  src=&quot;hero-800.jpg&quot;
+  srcset=&quot;hero-400.jpg 400w,
+          hero-800.jpg 800w,
+          hero-1200.jpg 1200w&quot;
+  sizes=&quot;(max-width: 600px) 100vw, 800px&quot;
+  alt=&quot;Developer working on a laptop&quot;&gt;
+</code></pre>
+      </div>
+      <p>
+        The browser chooses the smallest file that still looks good at the
+        current viewport width, saving bandwidth on mobile devices.
+      </p>
+
+      <h2>Highâ€‘resolution images (retina)</h2>
+      <p>
+        You can also use <code>srcset</code> with pixel density descriptors such
+        as <code>1x</code> and <code>2x</code> for highâ€‘DPI screens.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;img
+  src=&quot;logo-1x.png&quot;
+  srcset=&quot;logo-1x.png 1x, logo-2x.png 2x&quot;
+  alt=&quot;CodeNexa Academy logo&quot; width=&quot;120&quot;&gt;
+</code></pre>
+      </div>
+      <p>
+        On regular screens the browser uses the 1x image, and on highâ€‘resolution
+        screens it automatically uses the sharper 2x version.
+      </p>
+
+      <h2>Lazy loading images</h2>
+      <p>
+        The <code>loading=&quot;lazy&quot;</code> attribute tells the browser to
+        delay loading images until they are near the viewport, improving
+        performance for long pages.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;img
+  src=&quot;gallery-photo.jpg&quot;
+  alt=&quot;Photo in the gallery&quot;
+  loading=&quot;lazy&quot;&gt;
+</code></pre>
+      </div>
+      <p>
+        Lazy loading is especially helpful on imageâ€‘heavy pages like galleries or
+        long tutorials with many screenshots.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="html-description-lists.html" target="_blank">&laquo; Previous: HTML Description Lists</a>
+        <a class="btn primary" href="html-form-file-upload.html" target="_blank">Next: HTML Form File Upload &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Borders & Outlines - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="css-intro.html" class="active" target="_blank">CSS</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar: built from JSON -->
+    <aside class="sidebar" id="sidebar" data-section="css"></aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <h1>CSS Borders & Outlines</h1>
+      <p>
+        Borders appear inside the elementâ€™s box, while outlines sit outside and
+        do not affect layout.
+      </p>
+
+      <h2>Basic borders</h2>
+      <div class="example-box">
+        <pre><code>.card {
+  border: 1px solid #d0d3d6;
+  border-radius: 8px;
+}</code></pre>
+      </div>
+      <p>
+        The <code>border</code> shorthand sets width, style, and color. Use
+        <code>border-radius</code> for rounded corners.
+      </p>
+
+      <h2>Individual sides</h2>
+      <div class="example-box">
+        <pre><code>.underline {
+  border-bottom: 2px solid #04aa6d;
+}</code></pre>
+      </div>
+      <p>
+        You can style individual sides with <code>border-top</code>,
+        <code>border-right</code>, <code>border-bottom</code>, and
+        <code>border-left</code>.
+      </p>
+
+      <h2>Outlines for focus</h2>
+      <div class="example-box">
+        <pre><code>button:focus {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}</code></pre>
+      </div>
+      <p>
+        Outlines are often used to show keyboard focus. Avoid removing focus
+        outlines without providing an accessible replacement.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="css-links-buttons.html" target="_blank">&laquo; Previous: CSS Links &amp; Buttons</a>
+        <a class="btn primary" href="css-margin-padding.html" target="_blank">Next: CSS Margin &amp; Padding &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

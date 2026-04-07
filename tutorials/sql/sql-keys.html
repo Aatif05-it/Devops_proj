@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Primary &amp; Foreign Keys - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Primary &amp; Foreign Keys</h1>
+      <p>
+        A primary key uniquely identifies each row in a table, while a foreign key references the primary key of another table to link related data. 
+      </p>
+      <p>
+        Good key design enables reliable joins and prevents orphaned rows by enforcing referential integrity. 
+      </p>
+
+      <h2>Defining a primary key</h2>
+      <p>
+        A primary key can be declared inline with a column or as a separate tableâ€‘level constraint. 
+      </p>
+
+      <div class="example-box">
+<pre><code>CREATE TABLE Customers (
+  CustomerID   INT PRIMARY KEY,
+  CustomerName VARCHAR(100) NOT NULL
+);
+</code></pre>
+      </div>
+
+      <p>
+        Primary key columns must be unique and not NULL so that every row is addressable by a single value. 
+      </p>
+
+      <h2>Foreign key relationship</h2>
+      <p>
+        Foreign keys ensure that child rows reference existing parent rows, such as orders pointing to valid customers. 
+      </p>
+
+      <div class="example-box">
+<pre><code>CREATE TABLE Orders (
+  OrderID    INT PRIMARY KEY,
+  OrderDate  DATE NOT NULL,
+  CustomerID INT NOT NULL,
+  CONSTRAINT fk_orders_customers
+    FOREIGN KEY (CustomerID)
+    REFERENCES Customers(CustomerID)
+);
+</code></pre>
+      </div>
+
+      <p>
+        With this constraint in place, inserting an order for a nonâ€‘existent customer id will fail instead of silently corrupting data. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-constraints.html" target="_blank">&laquo; Back: SQL Constraints Basics</a>
+        <a class="btn primary" href="sql-unique-check.html" target="_blank">Next: SQL UNIQUE &amp; CHECK &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Aliases - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Aliases</h1>
+      <p>
+        An alias is a temporary name for a column or table used only for the duration of a query, created with the <code>AS</code> keyword or a space. [web:401][web:411]
+      </p>
+      <p>
+        Aliases make long names shorter, improve readability, and help distinguish columns when multiple tables share the same column name. 
+      </p>
+
+      <h2>Column aliases</h2>
+      <p>
+        This example renames columns in the result set to more userâ€‘friendly labels. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT
+  CustomerID   AS ID,
+  CustomerName AS Customer
+FROM Customers;
+</code></pre>
+      </div>
+
+      <p>
+        If an alias contains spaces or special characters, it must be quoted, for example <code>AS "Contact Person"</code>. 
+      </p>
+
+      <h2>Table aliases</h2>
+      <p>
+        Table aliases are especially useful in joins, where they shorten long table names and clarify which table each column comes from. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT
+  c.CustomerName,
+  o.OrderDate
+FROM Customers AS c
+JOIN Orders AS o
+  ON c.CustomerID = o.CustomerID;
+</code></pre>
+      </div>
+
+      <p>
+        After defining <code>Customers AS c</code>, the alias <code>c</code> can be used anywhere in the query instead of the full table name. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-having.html" target="_blank">&laquo; Back: SQL HAVING</a>
+        <a class="btn primary" href="sql-joins-basics.html" target="_blank">Next: SQL Basic Joins &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

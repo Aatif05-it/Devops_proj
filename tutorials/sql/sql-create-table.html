@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Tables (CREATE) - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Tables (CREATE)</h1>
+      <p>
+        Tables store data as rows and columns, and are created with the <code>CREATE TABLE</code> statement by listing each column and its data type. 
+      </p>
+      <p>
+        A good table design includes a primary key column that uniquely identifies every row and uses appropriate data types for each attribute. 
+      </p>
+
+      <h2>Create a simple table</h2>
+      <p>
+        This example creates a <code>Customers</code> table with a primary key and some basic columns. 
+      </p>
+
+      <div class="example-box">
+<pre><code>CREATE TABLE Customers (
+  CustomerID   INT PRIMARY KEY,
+  CustomerName VARCHAR(100) NOT NULL,
+  City         VARCHAR(50),
+  Country      VARCHAR(50)
+);
+</code></pre>
+      </div>
+
+      <p>
+        The <code>PRIMARY KEY</code> constraint on <code>CustomerID</code> ensures each customer has a unique identifier, while <code>NOT NULL</code> prevents missing names. 
+      </p>
+
+      <h2>Table with auto-increment key</h2>
+      <p>
+        Many databases support an auto-incrementing integer key to generate ids automatically. Syntax varies slightly across systems. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- MySQL-style auto-increment
+CREATE TABLE Orders (
+  OrderID   INT AUTO_INCREMENT PRIMARY KEY,
+  OrderDate DATE NOT NULL,
+  CustomerID INT NOT NULL
+);
+</code></pre>
+      </div>
+
+      <p>
+        Auto-increment keys reduce the chance of duplicate identifiers and simplify inserts because you do not need to specify the key manually. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-create-drop-db.html" target="_blank">&laquo; Back: SQL Create &amp; Drop DB</a>
+        <a class="btn primary" href="sql-alter-drop-table.html" target="_blank">Next: SQL ALTER &amp; DROP TABLE &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

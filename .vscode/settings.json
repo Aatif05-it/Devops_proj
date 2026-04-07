@@ -1,0 +1,12 @@
+{
+  "liveServer.settings.host": "localhost",
+  "liveServer.settings.port": 5443,
+  "liveServer.settings.useLocalIp": false,
+  "liveServer.settings.https": {
+    "enable": true,
+    "cert": "C:/Users/KHAN/Desktop/mydevschool/.certs/localhost.pem",
+    "key": "C:/Users/KHAN/Desktop/mydevschool/.certs/localhost.key",
+    "passphrase": ""
+  },
+  "liveServer.settings.NoBrowser": false
+}

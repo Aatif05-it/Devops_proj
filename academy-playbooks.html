@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teaching playbooks – CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+
+  <style>
+    body {
+      margin: 0;
+      background: #f3f4f6;
+      font-family: Arial, sans-serif;
+    }
+
+    .academy-layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 1.5rem;
+    }
+
+    .academy-sidebar {
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+      font-size: 0.9rem;
+    }
+
+    .academy-sidebar-header {
+      padding: 0.6rem 0.8rem;
+      background: #f1f5f9;
+      font-weight: 600;
+    }
+
+    .academy-sidebar-nav a {
+      display: block;
+      padding: 0.6rem 0.8rem;
+      text-decoration: none;
+      color: #111827;
+      border-top: 1px solid #e5e7eb;
+      font-size: 0.9rem;
+    }
+
+    .academy-sidebar-nav a.active {
+      background: #04aa6d;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .academy-sidebar-nav a:hover:not(.active) {
+      background: #f9fafb;
+    }
+
+    .academy-main {
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      padding: 1.6rem 1.8rem 2.2rem;
+    }
+
+    .academy-main h1 {
+      margin: 0 0 1rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .academy-main h2 {
+      margin: 1.4rem 0 0.5rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .academy-main p,
+    .academy-main li {
+      font-size: 0.9rem;
+      color: #374151;
+      line-height: 1.5;
+    }
+
+    .academy-main ul {
+      margin: 0.25rem 0 0.75rem 1.1rem;
+      padding: 0;
+    }
+
+    @media (max-width: 900px) {
+      .academy-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- same topnav as other academy pages -->
+  <header class="topnav">
+    <div class="logo">
+      <span class="logo-mark">&lt;/&gt;</span>
+      <span class="logo-text">CodeNexa Academy</span>
+    </div>
+    <nav class="topnav-links">
+      <a href="index.html">Home</a>
+      <a href="forum.html">Forum</a>
+      <a href="about.html">About</a>
+      <a href="academy.html" class="active">Academy</a>
+    </nav>
+  </header>
+
+  <main class="academy-layout">
+    <aside class="academy-sidebar">
+      <div class="academy-sidebar-header">Academy Console</div>
+      <nav class="academy-sidebar-nav">
+        <a href="academy.html">Dashboard</a>
+        <a href="academy-study-plans.html">Study plans</a>
+        <a href="academy-classes.html">Classes</a>
+        <a href="academy-assignments.html">Assignments</a>
+        <a href="academy-progress.html">Progress &amp; reports</a>
+        <a href="academy-workspaces.html">Code workspaces</a>
+      </nav>
+
+      <div class="academy-sidebar-header">Resources</div>
+      <nav class="academy-sidebar-nav">
+        <a href="academy-playbooks.html" class="active">Teaching playbooks</a>
+        <a href="academy-onboarding.html">Onboarding kit</a>
+        <a href="academy-settings.html">Admin settings</a>
+      </nav>
+    </aside>
+
+    <section class="academy-main">
+      <h1>Teaching playbooks</h1>
+      <p>Teaching playbooks collect the best ways to run your webâ€‘development classes into short, repeatable guides.</p>
+      <p>They help every instructor follow the same highâ€‘quality structure while still allowing personal teaching style. [web:416][web:430]</p>
+
+      <h2>What a playbook includes</h2>
+      <ul>
+        <li>Lesson flow for a full module (for example HTML basics or JavaScript DOM).</li>
+        <li>Key teaching techniques to use in that lesson, such as short demos and pairâ€‘coding. [web:416]</li>
+        <li>Checklists for preparation, delivery, and followâ€‘up so nothing important is missed.</li>
+      </ul>
+
+      <h2>How to use playbooks</h2>
+      <ul>
+        <li>Start from an existing playbook when planning a new class or cohort.</li>
+        <li>Adapt the examples and timing to your own students and add notes after each run. [web:416]</li>
+        <li>Share updated versions with other instructors so the material improves over time.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer"></footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Data Types - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="js-intro.html" class="active" target="_blank">JavaScript</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="js"></aside>
+
+    <main class="content">
+      <h1>JS Data Types</h1>
+      <p>
+        JavaScript variables can hold different data types, including primitives like strings, numbers, and booleans, and reference types like objects. 
+      </p>
+
+      <h2>Common types</h2>
+      <p>
+        This example declares several values of different types and prints their <code>typeof</code> results. 
+      </p>
+
+      <div class="example-box">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+  &lt;pre id="info"&gt;&lt;/pre&gt;
+
+  &lt;script&gt;
+    const name = "Alex";          // string
+    const age = 21;               // number
+    const isStudent = true;       // boolean
+    let nickname;                 // undefined
+    const score = null;           // null
+    const user = { name: "Alex" } // object
+
+    const output =
+      "name: " + name + " (" + typeof name + ")" + "\\n" +
+      "age: " + age + " (" + typeof age + ")" + "\\n" +
+      "isStudent: " + isStudent + " (" + typeof isStudent + ")" + "\\n" +
+      "nickname: " + nickname + " (" + typeof nickname + ")" + "\\n" +
+      "score: " + score + " (" + typeof score + ")" + "\\n" +
+      "user: " + JSON.stringify(user) + " (" + typeof user + ")";
+
+    document.getElementById("info").textContent = output;
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+
+      <p>
+        Remember that <code>typeof null</code> returns <code>"object"</code> for historical reasons, even though null is a primitive value.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="js-let-const.html" target="_blank">&laquo; Back: JS Let &amp; Const</a>
+        <a class="btn primary" href="js-operators.html" target="_blank">Next: JS Operators &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Basic Joins - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Basic Joins</h1>
+      <p>
+        Joins combine columns from two or more tables based on related values, such as a customer id shared between <code>Customers</code> and <code>Orders</code>. 
+      </p>
+      <p>
+        The main join types are INNER, LEFT, RIGHT, and FULL; each controls whether unmatched rows from either table appear in the result set. 
+      </p>
+
+      <h2>Inner join overview</h2>
+      <p>
+        An inner join returns only rows that have matching keys in both tables. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT
+  c.CustomerName,
+  o.OrderID,
+  o.OrderDate
+FROM Customers AS c
+INNER JOIN Orders AS o
+  ON c.CustomerID = o.CustomerID;
+</code></pre>
+      </div>
+
+      <p>
+        If a customer has no orders, that customer does not appear in the result because there is no matching row in <code>Orders</code>. 
+      </p>
+
+      <h2>Join types summary</h2>
+      <p>
+        Thinking about joins in terms of Venn diagrams can help: INNER is the intersection, LEFT and RIGHT keep one full side, and FULL keeps everything. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- Generic syntax
+SELECT ...
+FROM A
+JOIN B ON A.key = B.key;       -- INNER JOIN
+
+SELECT ...
+FROM A
+LEFT JOIN B ON A.key = B.key;  -- LEFT OUTER JOIN
+
+SELECT ...
+FROM A
+RIGHT JOIN B ON A.key = B.key; -- RIGHT OUTER JOIN
+
+SELECT ...
+FROM A
+FULL JOIN B ON A.key = B.key;  -- FULL OUTER JOIN
+</code></pre>
+      </div>
+
+      <p>
+        Later pages dive into each join type in detail with more examples for typical reporting queries. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-aliases.html" target="_blank">&laquo; Back: SQL Aliases</a>
+        <a class="btn primary" href="sql-inner-join.html" target="_blank">Next: SQL INNER JOIN &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

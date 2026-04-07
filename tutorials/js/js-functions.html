@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Functions - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="js-intro.html" class="active" target="_blank">JavaScript</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="js"></aside>
+
+    <main class="content">
+      <h1>JS Functions</h1>
+      <p>
+        Functions group reusable code into a single block that can be called with different inputs to produce results. 
+      </p>
+
+      <h2>Function declaration</h2>
+      <p>
+        This example defines a function that adds two numbers and then displays the result. 
+      </p>
+
+      <div class="example-box">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+  &lt;p id="result"&gt;&lt;/p&gt;
+
+  &lt;script&gt;
+    function add(a, b) {
+      return a + b;
+    }
+
+    const sum = add(5, 7);
+
+    document.getElementById("result").textContent =
+      "5 + 7 = " + sum;
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+
+      <p>
+        Functions can take parameters, return values, and help keep code organized by avoiding duplication. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="js-loops.html" target="_blank">&laquo; Back: JS Loops</a>
+        <a class="btn primary" href="js-arrays.html" target="_blank">Next: JS Arrays &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

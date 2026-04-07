@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS This &amp; Context - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="js-intro.html" class="active" target="_blank">JavaScript</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="js"></aside>
+
+    <main class="content">
+      <h1>JS This &amp; Context</h1>
+      <p>
+        The value of <code>this</code> depends on how a function is called and usually refers to the current object. 
+      </p>
+
+      <h2>this in a method</h2>
+      <p>
+        In an object method, <code>this</code> points to the object that owns the method. 
+      </p>
+
+      <div class="example-box">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+  &lt;p id="info"&gt;&lt;/p&gt;
+
+  &lt;script&gt;
+    const user = {
+      name: "Alex",
+      sayHello: function () {
+        return "Hello, I am " + this.name;
+      }
+    };
+
+    document.getElementById("info").textContent = user.sayHello();
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+
+      <p>
+        Arrow functions do not have their own <code>this</code>; they inherit it from the surrounding scope, which is useful in many callbacks.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="js-errors.html" target="_blank">&laquo; Back: JS Error Handling</a>
+        <a class="btn primary" href="js-arrow-fn.html" target="_blank">Next: JS Arrow Functions &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

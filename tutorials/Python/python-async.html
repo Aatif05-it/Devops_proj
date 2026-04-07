@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Async/Await - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python Async/Await</h1>
+      <p>Async/await enables asynchronous, nonâ€‘blocking code using coroutines and the asyncio event loop.</p>
+      <p>It is ideal for many concurrent I/O operations such as HTTP calls or database queries.</p>
+
+      <h2>Basic async function</h2>
+      <div class="example-box">
+<pre><code class="language-python">import asyncio
+
+async def say_after(delay, message):
+    await asyncio.sleep(delay)
+    print(message)
+
+async def main():
+    await say_after(1, "Hello")
+    await say_after(1, "World")
+
+asyncio.run(main())
+</code></pre>
+      </div>
+      <p>async defines a coroutine; await pauses it until the awaited operation completes.</p>
+
+      <h2>Running tasks concurrently</h2>
+      <div class="example-box">
+<pre><code class="language-python">import asyncio
+
+async def worker(name, delay):
+    print(name, "started")
+    await asyncio.sleep(delay)
+    print(name, "finished")
+
+async def main():
+    tasks = [
+        asyncio.create_task(worker("A", 2)),
+        asyncio.create_task(worker("B", 2)),
+    ]
+    await asyncio.gather(*tasks)
+
+asyncio.run(main())
+</code></pre>
+      </div>
+      <p>create_task schedules coroutines to run concurrently on the same event loop.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-threading.html" target="_blank">&laquo; Back: Python Multithreading</a>
+        <a class="btn primary" href="python-numpy.html" target="_blank">Next: Python NumPy Basics &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

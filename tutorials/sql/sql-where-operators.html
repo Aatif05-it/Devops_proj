@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL WHERE &amp; Operators - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL WHERE &amp; Operators</h1>
+      <p>
+        The <code>WHERE</code> clause filters rows so that only records matching given conditions are returned or affected. 
+      </p>
+      <p>
+        Comparison and special operators such as <code>=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>BETWEEN</code>, <code>LIKE</code>, and <code>IN</code> express these conditions. 
+      </p>
+
+      <h2>WHERE with comparison operators</h2>
+      <p>
+        This example selects customers from France whose customer id is greater than 100. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT CustomerID, CustomerName, Country
+FROM Customers
+WHERE Country = 'France'
+  AND CustomerID &gt; 100;
+</code></pre>
+      </div>
+
+      <p>
+        Operators like <code>&gt;</code> and <code>&gt;=</code> are often combined with equality tests to narrow results to precise ranges. 
+      </p>
+
+      <h2>BETWEEN, LIKE, and IN</h2>
+      <p>
+        These operators help express ranges, pattern matches, and membership tests more clearly than multiple comparisons. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- Between a numeric range
+SELECT *
+FROM Orders
+WHERE TotalAmount BETWEEN 100 AND 500;
+
+-- Pattern match for names starting with 'A'
+SELECT *
+FROM Customers
+WHERE CustomerName LIKE 'A%';
+
+-- Match any of several countries
+SELECT *
+FROM Customers
+WHERE Country IN ('France', 'Germany', 'Spain');
+</code></pre>
+      </div>
+
+      <p>
+        Using <code>BETWEEN</code>, <code>LIKE</code>, and <code>IN</code> keeps queries shorter and easier to maintain than writing many separate conditions. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-select-distinct.html" target="_blank">&laquo; Back: SQL SELECT DISTINCT</a>
+        <a class="btn primary" href="sql-and-or-not.html" target="_blank">Next: SQL AND, OR, NOT &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CodeNexa Academy Forum</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+ <style>
+  body {
+    background: #f3f4f6;
+  }
+
+  .forum-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;           /* center card vertically */
+    justify-content: center;
+    padding: 4.5rem 1.5rem;
+  }
+
+  .forum-card {
+    max-width: 960px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 22px 60px rgba(15, 23, 42, 0.18);
+    padding: 3rem 2.6rem 3rem;
+    text-align: center;
+  }
+
+  .forum-card h1 {
+    margin: 0 0 0.8rem;
+    font-size: 2.2rem;
+    color: #111827;
+  }
+
+  .forum-card p {
+    margin: 0;
+    font-size: 0.96rem;
+    color: #4b5563;
+  }
+
+  .forum-card small {
+    display: block;
+    margin: 1.2rem 0 2.0rem;
+    color: #6b7280;
+    font-size: 0.8rem;
+  }
+
+  .forum-screenshot {
+    max-width: 720px;
+    margin: 1.8rem auto 2.1rem;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 26px 70px rgba(15, 23, 42, 0.45);
+  }
+
+  .forum-screenshot img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .forum-cta-main,
+  .forum-cta-secondary {
+    margin-top: 0.3rem;
+  }
+
+  .forum-cta-main .btn,
+  .forum-cta-secondary .btn {
+    border-radius: 999px;
+    padding: 0.65rem 2.3rem;
+    font-size: 0.9rem;
+  }
+
+  .forum-cta-secondary {
+    margin-top: 0.9rem;
+  }
+
+  .forum-note {
+    margin-top: 1.6rem;
+    font-size: 0.82rem;
+    color: #6b7280;
+  }
+
+  .captcha-wrap {
+    margin: 1.2rem auto 0.4rem;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.85rem;
+  }
+
+  .captcha-status {
+    margin: 0;
+    font-size: 0.84rem;
+    color: #475569;
+  }
+
+  .forum-protected-btn {
+    border: none;
+    border-radius: 999px;
+    padding: 0.68rem 2.3rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    background: #04aa6d;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  .forum-protected-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 768px) {
+    .forum-page {
+      padding: 3.5rem 1.25rem;
+      align-items: flex-start;
+    }
+
+    .forum-card {
+      padding: 2.2rem 1.5rem 2.4rem;
+    }
+
+    .forum-card h1 {
+      font-size: 1.8rem;
+    }
+  }
+</style>
+
+</head>
+<body data-force-consent-banner="true">
+
+  <!-- reuse your top navbar -->
+  <header class="topnav">
+    <div class="logo">
+      <span class="logo-mark">&lt;/&gt;</span>
+      <span class="logo-text">CodeNexa Academy</span>
+    </div>
+
+    <nav class="topnav-links">
+      <a href="index.html">Home</a>
+      <a href="forum.html" class="active">Forum</a>
+      <a href="#" class="nav-disabled">Tutorials</a>
+      <a href="#" class="nav-disabled">References</a>
+      <a href="#" class="nav-disabled">Certificates</a>
+    </nav>
+  </header>
+
+  <main class="forum-page">
+    <section class="forum-card">
+      <h1>CodeNexa Academy Forum Has Moved</h1>
+      <p>
+        The CodeNexa Academy discussion forum is no longer available at this address.
+      </p>
+      <small>
+        Our community has moved to Discord, where you can ask questions, share projects,
+        and get help from other learners and developers.
+      </small>
+
+      <div class="forum-cta-main">
+        <p class="captcha-status" id="captcha-status">
+          Complete the security verification popup first, then join the Discord community.
+        </p>
+      </div>
+
+      <div class="forum-cta-secondary captcha-wrap">
+        <button id="join-discord-btn" class="forum-protected-btn" type="button">
+          Join CodeNexa Discord
+        </button>
+      </div>
+
+      <div class="forum-screenshot">
+        <!-- use your own screenshot image here -->
+        <img src="assets/images/forum-discord-preview.svg"
+             alt="Discord server preview" />
+      </div>
+
+      <p class="forum-note">
+        You need a free Discord account to join the community.
+      </p>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      var joinBtn = document.getElementById("join-discord-btn");
+
+      if (joinBtn) {
+        joinBtn.addEventListener("click", function () {
+          window.open("https://discord.com", "_blank", "noopener,noreferrer");
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
+

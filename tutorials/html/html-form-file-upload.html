@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML Form File Upload - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="../../html-intro.html" class="active" target="_blank">HTML</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="html"></aside>
+
+    <main class="content">
+      <h1>HTML Form File Upload</h1>
+      <p>
+        File uploads in HTML are handled with the <code>&lt;input type="file"&gt;</code>
+        element inside a form, usually with the form encoded as
+        <code>multipart/form-data</code>.
+      </p>
+
+      <h2>Basic file upload field</h2>
+      <p>
+        To let a user choose a single file, add an <code>input</code> with
+        <code>type="file"</code> and make sure the form has
+        <code>enctype="multipart/form-data"</code>.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;form action="/upload" method="post" enctype="multipart/form-data"&gt;
+  &lt;label for="resume"&gt;Upload your resume:&lt;/label&gt;
+  &lt;input type="file" id="resume" name="resume"&gt;
+
+  &lt;button type="submit"&gt;Upload&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+      </div>
+      <p>
+        Without the correct <code>enctype</code>, the browser will not send the
+        file data properly to the server.
+      </p>
+
+      <h2>Allowing multiple files</h2>
+      <p>
+        Add the boolean <code>multiple</code> attribute to let users select more
+        than one file from the file picker dialog.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;form action="/upload-photos" method="post" enctype="multipart/form-data"&gt;
+  &lt;label for="photos"&gt;Select photos:&lt;/label&gt;
+  &lt;input
+    type="file"
+    id="photos"
+    name="photos"
+    multiple&gt;
+
+  &lt;button type="submit"&gt;Upload Photos&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+      </div>
+      <p>
+        The server will receive a collection of files under the same field name
+        and can loop over them when processing the upload.
+      </p>
+
+      <h2>Restricting allowed file types</h2>
+      <p>
+        Use the <code>accept</code> attribute to hint which file types the user
+        can select, such as only images or PDFs.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;form action="/upload-documents" method="post" enctype="multipart/form-data"&gt;
+  &lt;label for="docs"&gt;Upload documents (PDF only):&lt;/label&gt;
+  &lt;input
+    type="file"
+    id="docs"
+    name="documents"
+    accept=".pdf"&gt;
+
+  &lt;button type="submit"&gt;Upload Documents&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+      </div>
+      <p>
+        Remember that <code>accept</code> is only a client-side filter, so the
+        server must still validate all uploaded files securely.
+      </p>
+
+      <h2>Adding simple client-side preview</h2>
+      <p>
+        With JavaScript and the File API, you can show a preview of selected
+        files before submitting the form.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;form&gt;
+  &lt;label for="avatar"&gt;Choose a profile picture:&lt;/label&gt;
+  &lt;input type="file" id="avatar" name="avatar" accept="image/*"&gt;
+
+  &lt;div id="preview"&gt;&lt;/div&gt;
+&lt;/form&gt;
+
+&lt;script&gt;
+  const input = document.getElementById('avatar');
+  const preview = document.getElementById('preview');
+
+  input.addEventListener('change', () =&gt; {
+    preview.innerHTML = '';
+
+    const file = input.files[0];
+    if (!file) return;
+
+    const img = document.createElement('img');
+    img.src = URL.createObjectURL(file);
+    img.alt = file.name;
+    img.style.maxWidth = '200px';
+
+    preview.appendChild(img);
+  });
+&lt;/script&gt;
+</code></pre>
+      </div>
+      <p>
+        This makes the upload experience clearer for users, especially when
+        selecting profile photos or gallery images.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="html-images-advanced.html" target="_blank">&laquo; Previous: HTML Images Advanced</a>
+        <a class="btn primary" href="html-form-autocomplete.html" target="_blank">Next: HTML Form Autocomplete &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+
+</body>
+</html>
+
+
+

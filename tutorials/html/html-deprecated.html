@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Deprecated HTML Elements - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="../../html-intro.html" class="active" target="_blank">HTML</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="html"></aside>
+
+    <main class="content">
+      <h1>Deprecated HTML Elements</h1>
+      <p>
+        Deprecated and obsolete elements are old HTML features that should no longer
+        be used because better, more semantic alternatives exist in HTML5 and CSS.
+      </p>
+
+      <h2>What does deprecated mean?</h2>
+      <p>
+        A deprecated element may still work in browsers but is not recommended and
+        can disappear from future standards or tools.
+      </p>
+      <p>
+        New code should avoid deprecated tags and attributes and use modern,
+        semantic HTML and CSS instead.
+      </p>
+
+      <h2>Common deprecated tags</h2>
+      <p>
+        Many deprecated tags were purely presentational, such as
+        <code>&lt;font&gt;</code>, <code>&lt;center&gt;</code>, and
+        <code>&lt;big&gt;</code>.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;!-- Deprecated --&gt;
+&lt;center&gt;
+  &lt;font face="Arial" color="red" size="4"&gt;
+    Welcome to CodeNexa Academy
+  &lt;/font&gt;
+&lt;/center&gt;
+
+&lt;!-- Recommended --&gt;
+&lt;h1 class="page-title"&gt;Welcome to CodeNexa Academy&lt;/h1&gt;
+</code></pre>
+      </div>
+      <p>
+        Use semantic elements like headings plus CSS for alignment and typography
+        instead of old presentational tags.
+      </p>
+
+      <h2>Use CSS instead of presentational HTML</h2>
+      <p>
+        Attributes such as <code>bgcolor</code>, <code>border</code>, and
+        <code>align</code> are deprecated in favor of CSS properties like
+        <code>background-color</code>, <code>border</code>, and
+        <code>text-align</code>.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;!-- Deprecated attributes --&gt;
+&lt;table border="1" bgcolor="#f5f5f5"&gt;
+  ...
+&lt;/table&gt;
+
+&lt;!-- Recommended with CSS --&gt;
+&lt;table class="data-table"&gt;
+  ...
+&lt;/table&gt;
+
+/* CSS */
+.data-table {
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+}
+</code></pre>
+      </div>
+      <p>
+        Separating content (HTML) from presentation (CSS) makes pages easier to
+        maintain and more accessible.
+      </p>
+
+      <h2>Obsolete layout techniques</h2>
+      <p>
+        Elements like <code>&lt;frame&gt;</code>, <code>&lt;frameset&gt;</code>,
+        and heavy table-based layouts are obsolete for page layout.[web:323][web:326]
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;!-- Old frameset layout (obsolete) --&gt;
+&lt;frameset cols="200,*"&gt;
+  &lt;frame src="menu.html"&gt;
+  &lt;frame src="content.html"&gt;
+&lt;/frameset&gt;
+
+&lt;!-- Modern layout example (simplified) --&gt;
+&lt;div class="layout"&gt;
+  &lt;aside class="sidebar"&gt;...&lt;/aside&gt;
+  &lt;main class="content"&gt;...&lt;/main&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
+      <p>
+        Modern sites use semantic containers and CSS layout techniques such as
+        Flexbox and Grid instead of frames.
+      </p>
+
+      <h2>Why avoiding deprecated HTML matters</h2>
+      <p>
+        Removing deprecated elements improves accessibility, makes your markup
+        easier to understand, and keeps it compatible with future tools.
+      </p>
+      <p>
+        When working on older code, replace deprecated tags step by step with
+        semantic HTML and CSS so the page stays visually consistent.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="html-document-outline.html" target="_blank">&laquo; Previous: HTML Document Outline</a>
+        <a class="btn primary" href="../../index.html" target="_blank">Back to Home &raquo;</a>
+      </div>
+
+      <div class="next-topics">
+        <h3>Continue Learning with CSS</h3>
+        <p>Now that you've mastered HTML, learn how to style your websites with CSS:</p>
+        <ul>
+          <li><a href="../css/css-intro.html" target="_blank">CSS Introduction</a> - Learn CSS basics and syntax</li>
+          <li><a href="../css/css-syntax.html" target="_blank">CSS Syntax</a> - Understand CSS selectors and properties</li>
+          <li><a href="../css/css-selectors.html" target="_blank">CSS Selectors</a> - Master CSS selectors for targeting elements</li>
+          <li><a href="../css/css-colors.html" target="_blank">CSS Colors</a> - Style your content with colors</li>
+          <li><a href="../css/css-fonts.html" target="_blank">CSS Fonts</a> - Control typography with CSS</li>
+          <li><a href="../css/css-box-model.html" target="_blank">CSS Box Model</a> - Learn margins, padding, and borders</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+
+</body>
+</html>
+
+
+

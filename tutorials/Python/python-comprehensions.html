@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python List Comprehensions - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python List Comprehensions</h1>
+      <p>List comprehensions provide a concise way to create lists from iterables.</p>
+      <p>They often replace simple forâ€‘loops with a single readable expression.</p>
+
+      <h2>Basic syntax</h2>
+      <div class="example-box">
+<pre><code class="language-python">numbers = [1, 2, 3, 4]
+squares = [n * n for n in numbers]
+
+print(squares)  # [1, 4, 9, 16]
+</code></pre>
+      </div>
+      <p>The pattern is <code>[expression for item in iterable]</code>, which builds a new list.</p>
+
+      <h2>With condition (filtering)</h2>
+      <div class="example-box">
+<pre><code class="language-python">nums = [1, 2, 3, 4, 5, 6, 7, 8]
+evens = [n for n in nums if n % 2 == 0]
+
+print(evens)  # [2, 4, 6, 8]
+</code></pre>
+      </div>
+      <p>You can add an <code>if</code> clause to keep only items that match a condition.</p>
+
+      <h2>Nested comprehensions</h2>
+      <div class="example-box">
+<pre><code class="language-python">matrix = [[1, 2, 3],
+          [4, 5, 6]]
+
+flattened = [num for row in matrix for num in row]
+print(flattened)  # [1, 2, 3, 4, 5, 6]
+</code></pre>
+      </div>
+      <p>Multiple <code>for</code> clauses support nested loops and flattening structures.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-polymorphism.html" target="_blank">&laquo; Back: Python Polymorphism</a>
+        <a class="btn primary" href="python-generators.html" target="_blank">Next: Python Generators &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

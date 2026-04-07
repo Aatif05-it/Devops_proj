@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL CTEs - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL CTEs (Common Table Expressions)</h1>
+      <p>
+        CTEs define temporary result sets within a single query using <code>WITH</code>, improving readability for complex multi-step logic.
+      </p>
+      <p>
+        Unlike subqueries, CTEs can be referenced multiple times and support recursion for hierarchical data. 
+      </p>
+
+      <h2>Simple CTE example</h2>
+      <p>
+        This CTE breaks a complex query into readable steps: first find high-value customers, then their recent orders. 
+      </p>
+
+      <div class="example-box">
+<pre><code>WITH HighValueCustomers AS (
+  SELECT CustomerID, SUM(TotalAmount) AS LifetimeValue
+  FROM Orders 
+  GROUP BY CustomerID 
+  HAVING LifetimeValue > 5000
+),
+RecentOrders AS (
+  SELECT o.*
+  FROM Orders o
+  JOIN HighValueCustomers h ON o.CustomerID = h.CustomerID
+  WHERE o.OrderDate >= DATE_SUB(CURDATE(), INTERVAL 30 DAY)
+)
+SELECT * FROM RecentOrders ORDER BY OrderDate DESC;
+</code></pre>
+      </div>
+
+      <p>
+        Each CTE builds on the previous one, making the logic easier to follow than nested subqueries. 
+      </p>
+
+      <h2>Recursive CTE for hierarchies</h2>
+      <p>
+        Recursive CTEs traverse tree structures like employee-manager relationships or product categories.
+      </p>
+
+      <div class="example-box">
+<pre><code>WITH RECURSIVE EmployeeHierarchy AS (
+  -- Anchor: Top-level employees (no manager)
+  SELECT EmployeeID, EmployeeName, ManagerID, 1 AS Level
+  FROM Employees 
+  WHERE ManagerID IS NULL
+  
+  UNION ALL
+  
+  -- Recursive: Employees reporting to previous level
+  SELECT e.EmployeeID, e.EmployeeName, e.ManagerID, eh.Level + 1
+  FROM Employees e
+  JOIN EmployeeHierarchy eh ON e.ManagerID = eh.EmployeeID
+)
+SELECT * FROM EmployeeHierarchy ORDER BY Level, EmployeeName;
+</code></pre>
+      </div>
+
+      <p>
+        The <code>UNION ALL</code> combines the anchor (base case) with recursive steps until no more rows match.
+      </p>
+
+      <h2>Multiple CTEs in one query</h2>
+      <p>
+        CTEs can run in parallel and reference each other, creating modular query pipelines.
+      </p>
+
+      <div class="example-box">
+<pre><code>WITH CustomerStats AS (
+  SELECT CustomerID, COUNT(*) AS OrderCount, AVG(TotalAmount) AS AvgOrder
+  FROM Orders GROUP BY CustomerID
+),
+ProductStats AS (
+  SELECT ProductID, COUNT(*) AS OrderCount
+  FROM OrderItems GROUP BY ProductID
+)
+SELECT c.CustomerName, cs.OrderCount, cs.AvgOrder
+FROM Customers c
+JOIN CustomerStats cs ON c.CustomerID = cs.CustomerID
+WHERE cs.OrderCount > 10;
+</code></pre>
+      </div>
+
+      <p>
+        CTEs exist only for this query and are automatically cleaned up, unlike temporary tables. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-temp-tables.html" target="_blank">&laquo; Back: SQL Temporary Tables</a>
+        <a class="btn primary" href="sql-window-functions.html" target="_blank">Next: SQL Window Functions &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

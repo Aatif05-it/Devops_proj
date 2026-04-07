@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Decorators - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python Decorators</h1>
+      <p>Decorators are functions that wrap other functions to extend or modify their behavior.</p>
+      <p>They are often used for logging, timing, authentication, and caching.</p>
+
+      <h2>Basic decorator</h2>
+      <div class="example-box">
+<pre><code class="language-python">def logger(func):
+    def wrapper(*args, **kwargs):
+        print(f"Calling {func.__name__}")
+        result = func(*args, **kwargs)
+        print(f"{func.__name__} returned {result}")
+        return result
+    return wrapper
+
+@logger
+def add(a, b):
+    return a + b
+
+add(2, 3)
+</code></pre>
+      </div>
+      <p>The <code>@logger</code> syntax is shorthand for <code>add = logger(add)</code>.</p>
+
+      <h2>Preserving function metadata with wraps</h2>
+      <div class="example-box">
+<pre><code class="language-python">import functools
+
+def timer(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        import time
+        start = time.time()
+        result = func(*args, **kwargs)
+        duration = time.time() - start
+        print(f"{func.__name__} took {duration:.4f} seconds")
+        return result
+    return wrapper
+
+@timer
+def slow():
+    sum(range(1_000_000))
+
+slow()
+</code></pre>
+      </div>
+      <p><code>functools.wraps</code> keeps the original functionâ€™s name and docstring after decoration.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-generators.html" target="_blank">&laquo; Back: Python Generators</a>
+        <a class="btn primary" href="python-context-managers.html" target="_blank">Next: Python Context Managers &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

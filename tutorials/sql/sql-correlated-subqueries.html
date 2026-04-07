@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Correlated Subqueries - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Correlated Subqueries</h1>
+      <p>
+        A correlated subquery references columns from the outer query, so it is evaluated once per row rather than just once overall. 
+      </p>
+      <p>
+        These subqueries are powerful for rowâ€‘byâ€‘row comparisons, but they can be slower than joins if not carefully written. 
+      </p>
+
+      <h2>Customers with aboveâ€‘average orders</h2>
+      <p>
+        This example keeps orders whose total is higher than that customerâ€™s average order value. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT OrderID, CustomerID, TotalAmount
+FROM Orders AS o
+WHERE TotalAmount &gt; (
+  SELECT AVG(TotalAmount)
+  FROM Orders AS i
+  WHERE i.CustomerID = o.CustomerID
+);
+</code></pre>
+      </div>
+
+      <p>
+        The inner query runs once per outer row, computing the average for the same customer id and comparing it with the current orderâ€™s amount. 
+      </p>
+
+      <h2>Correlated EXISTS subquery</h2>
+      <p>
+        <code>EXISTS</code> with a correlated subquery is often used to test whether a related row exists without caring about its exact values. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT CustomerID, CustomerName
+FROM Customers AS c
+WHERE EXISTS (
+  SELECT 1
+  FROM Orders AS o
+  WHERE o.CustomerID = c.CustomerID
+);
+</code></pre>
+      </div>
+
+      <p>
+        This query returns only customers who have at least one matching order, similar to an inner join but expressed with <code>EXISTS</code>. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-subqueries.html" target="_blank">&laquo; Back: SQL Subqueries Basics</a>
+        <a class="btn primary" href="sql-case.html" target="_blank">Next: SQL CASE Expression &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

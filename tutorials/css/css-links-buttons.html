@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Links & Buttons - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="css-intro.html" class="active" target="_blank">CSS</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar: built from JSON -->
+    <aside class="sidebar" id="sidebar" data-section="css"></aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <h1>CSS Links & Buttons</h1>
+      <p>
+        Links and buttons are key interactive elements. Good styling makes them
+        clear and easy to use.
+      </p>
+
+      <h2>Basic link styling</h2>
+      <div class="example-box">
+        <pre><code>a {
+  color: #04aa6d;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}</code></pre>
+      </div>
+      <p>
+        Removing the default underline and reâ€‘adding it on hover gives a cleaner
+        look while keeping a clear hover state.
+      </p>
+
+      <h2>Button-like links</h2>
+      <div class="example-box">
+        <pre><code>.btn-link {
+  display: inline-block;
+  padding: 0.55rem 1.15rem;
+  border-radius: 999px;
+  background-color: #04aa6d;
+  color: #ffffff;
+}</code></pre>
+      </div>
+      <p>
+        Turning a link into an inlineâ€‘block and adding padding, background, and
+        border radius makes it look like a button.
+      </p>
+
+      <h2>Styling &lt;button&gt; elements</h2>
+      <div class="example-box">
+        <pre><code>button.primary {
+  border: none;
+  border-radius: 999px;
+  padding: 0.55rem 1.15rem;
+  background-color: #04aa6d;
+  color: #ffffff;
+  cursor: pointer;
+}</code></pre>
+      </div>
+      <p>
+        Use <code>cursor: pointer;</code> on interactive controls so users get a
+        clear visual cue.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="css-typography.html" target="_blank">&laquo; Previous: CSS Typography</a>
+        <a class="btn primary" href="css-borders-outlines.html" target="_blank">Next: CSS Borders &amp; Outlines &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

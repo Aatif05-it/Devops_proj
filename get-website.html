@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Get Your Own Website - CodeNexa Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #ffffff;
+            display: flex;
+            min-height: 100vh;
+            color: #1a1a1a;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: #f8f9fa;
+            padding: 20px 0;
+            border-right: 1px solid #e0e0e0;
+            overflow-y: auto;
+            position: fixed;
+            height: 100vh;
+            left: 0;
+            top: 0;
+        }
+
+        .sidebar-title {
+            padding: 15px 20px;
+            font-weight: 700;
+            font-size: 14px;
+            color: #1a1a1a;
+            border-bottom: 2px solid #4CAF50;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+        }
+
+        .sidebar-menu li {
+            padding: 0;
+        }
+
+        .sidebar-menu a {
+            display: block;
+            padding: 12px 20px;
+            color: #555;
+            text-decoration: none;
+            border-left: 3px solid transparent;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+
+        .sidebar-menu a:hover {
+            background: #e8f5e9;
+            border-left-color: #4CAF50;
+            color: #4CAF50;
+        }
+
+        .sidebar-menu a.active {
+            background: #e8f5e9;
+            border-left-color: #4CAF50;
+            color: #4CAF50;
+            font-weight: 600;
+        }
+
+        .main-content {
+            flex: 1;
+            margin-left: 250px;
+            padding: 0;
+            background: #ffffff;
+            overflow-y: auto;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 60px;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 52px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 14px 36px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .features-section {
+            padding: 80px 60px;
+            background: #f9f9f9;
+        }
+
+        .features-section h2 {
+            text-align: center;
+            font-size: 38px;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .features-subtitle {
+            text-align: center;
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature {
+            background: white;
+            padding: 35px 30px;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+            transform-origin: left;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .feature:hover {
+            border-color: #667eea;
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .feature h3 {
+            color: #1a1a1a;
+            font-size: 20px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .feature p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .steps-section {
+            padding: 80px 60px;
+            background: white;
+        }
+
+        .steps-section h2 {
+            text-align: center;
+            font-size: 38px;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .steps-subtitle {
+            text-align: center;
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .step {
+            text-align: center;
+            padding: 40px 30px;
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .step:hover {
+            border-color: #667eea;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            transform: translateY(-4px);
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .step h3 {
+            color: #1a1a1a;
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .step p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        .step a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        .step a:hover {
+            color: #764ba2;
+            transform: translateX(4px);
+        }
+
+        .step a.disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        .cta-section {
+            padding: 100px 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .cta-section .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .cta-section .btn-primary:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+
+            .main-content {
+                margin-left: 200px;
+            }
+
+            .hero-section {
+                padding: 60px 30px;
+            }
+
+            .hero-section h1 {
+                font-size: 36px;
+            }
+
+            .features-section,
+            .steps-section,
+            .cta-section {
+                padding: 60px 30px;
+            }
+
+            .features-section h2,
+            .steps-section h2,
+            .cta-section h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-title">CodeNexa Academy</div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tutorials/html/html-intro.html">HTML Tutorial</a></li>
+            <li><a href="tutorials/css/css-intro.html">CSS Tutorial</a></li>
+            <li><a href="tutorials/js/js-intro.html">JavaScript Tutorial</a></li>
+            <li><a href="editor/frontend-editor.html">Code Editor</a></li>
+            <li><a href="get-website.html" class="active">Get Your Website</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="hero-section">
+            <h1>Create Your Own Website</h1>
+            <p>Learn web development from scratch and build professional websites. Start your coding journey today.</p>
+            <a href="editor/frontend-editor.html" class="btn-primary">Start Building Now</a>
+        </div>
+
+        <div class="features-section">
+            <h2>Why CodeNexa Academy?</h2>
+            <p class="features-subtitle">Everything you need to master web development</p>
+            <div class="features">
+                <div class="feature">
+                    <h3>Structured Learning</h3>
+                    <p>Follow a carefully designed curriculum that takes you from beginner to intermediate developer in weeks.</p>
+                </div>
+                <div class="feature">
+                    <h3>Code Live</h3>
+                    <p>Write and test HTML, CSS, and JavaScript directly in your browser with instant live preview.</p>
+                </div>
+                <div class="feature">
+                    <h3>Deploy Online</h3>
+                    <p>Publish your websites to the internet and build a professional portfolio that impresses employers.</p>
+                </div>
+                <div class="feature">
+                    <h3>Project Based</h3>
+                    <p>Build real websites from day one with practical projects you can showcase to the world.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="steps-section">
+            <h2>Your Learning Path</h2>
+            <p class="steps-subtitle">Four simple steps to become a web developer</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Learn Fundamentals</h3>
+                    <p>Master HTML, CSS, and JavaScript basics. Understanding the foundations is key to becoming great.</p>
+                    <a href="tutorials/html/html-intro.html">Start Learning →</a>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Practice Code</h3>
+                    <p>Use our interactive editor to write real code. Hands-on practice is the best way to learn.</p>
+                    <a href="editor/frontend-editor.html">Open Editor →</a>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Build Projects</h3>
+                    <p>Create complete websites from scratch. Build a portfolio of projects that demonstrate your skills.</p>
+                    <a href="editor/frontend-editor.html">Start Now →</a>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Go Live</h3>
+                    <p>Deploy your website to the internet and share your work with the world.</p>
+                    <a href="#" class="disabled">Learn to Deploy →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Ready to Learn Web Development?</h2>
+            <p>Join thousands of students who are building amazing websites with CodeNexa Academy. Start your journey today.</p>
+            <a href="editor/frontend-editor.html" class="btn-primary">Start Free Today</a>
+        </div>
+    </div>
+</body>
+</html>
+

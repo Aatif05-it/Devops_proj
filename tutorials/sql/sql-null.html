@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL NULL &amp; IS NULL - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL NULL &amp; IS NULL</h1>
+      <p>
+        In SQL, <code>NULL</code> represents an unknown or missing value, not zero, an empty string, or a space.
+      </p>
+      <p>
+        Because <code>NULL</code> is a special marker, comparisons use <code>IS NULL</code> or <code>IS NOT NULL</code> instead of the usual equality operators. 
+      </p>
+
+      <h2>Finding NULL values</h2>
+      <p>
+        This example returns customers whose email has not been filled in yet. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT CustomerID, CustomerName, Email
+FROM Customers
+WHERE Email IS NULL;
+</code></pre>
+      </div>
+
+      <p>
+        Using <code>= NULL</code> would not match any rows; only <code>IS NULL</code> and <code>IS NOT NULL</code> correctly test for missing values.
+      </p>
+
+      <h2>Exclude NULL values</h2>
+      <p>
+        You can also filter out NULLs to work only with rows that have valid data in a given column. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT CustomerID, CustomerName, Phone
+FROM Customers
+WHERE Phone IS NOT NULL;
+</code></pre>
+      </div>
+
+      <p>
+        Being explicit about whether queries should include or exclude NULLs avoids subtle bugs in reports and aggregations. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-delete.html" target="_blank">&laquo; Back: SQL DELETE</a>
+        <a class="btn primary" href="sql-aggregates.html" target="_blank">Next: SQL Aggregate Functions &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

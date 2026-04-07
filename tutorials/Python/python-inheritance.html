@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Inheritance - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python Inheritance</h1>
+      <p>Inheritance lets a child class reuse and extend behavior from a parent class.</p>
+      <p>This supports code reuse and models â€œisâ€‘aâ€ relationships such as Student is a Person.</p>
+
+      <h2>Single inheritance</h2>
+      <div class="example-box">
+<pre><code class="language-python">class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def introduce(self):
+        print(f"Hi, I am {self.name}")
+
+class Student(Person):          # Student inherits Person
+    def __init__(self, name, roll_no):
+        super().__init__(name)  # call parent constructor
+        self.roll_no = roll_no
+
+    def details(self):
+        print(f"{self.name} → Roll no: {self.roll_no}")
+
+s = Student("Alice", 101)
+s.introduce()   # from Person
+s.details()     # from Student
+</code></pre>
+      </div>
+      <p>Use <code>super()</code> to call parent methods like <code>__init__</code> from the child class.</p>
+
+      <h2>Multiple inheritance</h2>
+      <div class="example-box">
+<pre><code class="language-python">class Loggable:
+    def log(self, message):
+        print("[LOG]", message)
+
+class Timestamped:
+    def timestamp(self):
+        import datetime
+        return datetime.datetime.now()
+
+class Service(Loggable, Timestamped):
+    def process(self):
+        self.log(f"Started at {self.timestamp()}")
+
+service = Service()
+service.process()
+</code></pre>
+      </div>
+      <p>Python supports multiple inheritance; the method resolution order (MRO) decides which parent method is used when names collide.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-classes.html" target="_blank">&laquo; Back: Python Classes &amp; Objects</a>
+        <a class="btn primary" href="python-polymorphism.html" target="_blank">Next: Python Polymorphism &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL UNION &amp; UNION ALL - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL UNION &amp; UNION ALL</h1>
+      <p>
+        <code>UNION</code> and <code>UNION ALL</code> combine the results of multiple <code>SELECT</code> statements into a single result set. 
+      </p>
+      <p>
+        <code>UNION</code> automatically removes duplicates, while <code>UNION ALL</code> keeps all rows and is usually faster because it skips deâ€‘duplication. 
+      </p>
+
+      <h2>UNION example</h2>
+      <p>
+        This query returns a distinct list of cities where either customers or suppliers are located. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT City FROM Customers
+UNION
+SELECT City FROM Suppliers
+ORDER BY City;
+</code></pre>
+      </div>
+
+      <p>
+        Because <code>UNION</code> applies a distinct step, each city appears only once even if it exists in both tables. 
+      </p>
+
+      <h2>UNION ALL example</h2>
+      <p>
+        <code>UNION ALL</code> simply stacks results, keeping duplicates, which is useful when you will aggregate later. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT City FROM Customers
+UNION ALL
+SELECT City FROM Suppliers;
+</code></pre>
+      </div>
+
+      <p>
+        Because no distinct operation is performed, <code>UNION ALL</code> can significantly improve performance on large datasets. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-full-self-join.html" target="_blank">&laquo; Back: SQL FULL &amp; SELF JOIN</a>
+        <a class="btn primary" href="sql-set-ops.html" target="_blank">Next: SQL Set Operators &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

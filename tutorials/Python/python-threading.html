@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Multithreading - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python Multithreading</h1>
+      <p>Multithreading lets you run multiple tasks seemingly at the same time within a single process.</p>
+      <p>In CPython it is best used for I/Oâ€‘bound tasks like network requests or file operations.</p>
+
+      <h2>Creating basic threads</h2>
+      <div class="example-box">
+<pre><code class="language-python">import threading
+import time
+
+def worker(name):
+    print(f"{name} starting")
+    time.sleep(1)
+    print(f"{name} done")
+
+t1 = threading.Thread(target=worker, args=("Thread 1",))
+t2 = threading.Thread(target=worker, args=("Thread 2",))
+
+t1.start()
+t2.start()
+
+t1.join()
+t2.join()
+
+print("All threads finished")
+</code></pre>
+      </div>
+      <p>start() begins the threadâ€™s work, and join() waits for it to finish before continuing.</p>
+
+      <h2>Using Lock for shared data</h2>
+      <div class="example-box">
+<pre><code class="language-python">import threading
+
+counter = 0
+lock = threading.Lock()
+
+def increment():
+    global counter
+    for _ in range(100000):
+        with lock:
+            counter += 1
+
+t1 = threading.Thread(target=increment)
+t2 = threading.Thread(target=increment)
+
+t1.start(); t2.start()
+t1.join(); t2.join()
+
+print("Counter:", counter)
+</code></pre>
+      </div>
+      <p>A Lock ensures only one thread at a time updates shared state, preventing race conditions.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-context-managers.html" target="_blank">&laquo; Back: Python Context Managers</a>
+        <a class="btn primary" href="python-async.html" target="_blank">Next: Python Async/Await &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+python-async.html
+
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL User-Defined Functions - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL User-Defined Functions</h1>
+      <p>
+        User-defined functions (UDFs) return computed values based on input parameters, usable anywhere built-in functions appear in queries.
+      </p>
+      <p>
+        Scalar UDFs return single values; table-valued UDFs return result sets for use in <code>FROM</code> clauses. 
+      </p>
+
+      <h2>Scalar function example</h2>
+      <p>
+        This function calculates tax based on amount and rate, reusable across queries. 
+      </p>
+
+      <div class="example-box">
+<pre><code>CREATE FUNCTION CalculateTax(
+  amount DECIMAL(10,2),
+  rate DECIMAL(4,2)
+)
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+RETURN amount * (rate / 100);
+</code></pre>
+      </div>
+
+      <p>
+        Use in <code>SELECT</code> like any function: <code>CalculateTax(1000, 18.5)</code> returns 185.00. 
+      </p>
+
+      <h2>Using the function</h2>
+      <p>
+        Functions integrate naturally into expressions, joins, and aggregations. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT
+  ProductName,
+  Price,
+  CalculateTax(Price, 18.5) AS TaxAmount,
+  Price + CalculateTax(Price, 18.5) AS Total
+FROM Products;
+</code></pre>
+      </div>
+
+      <p>
+        Marking functions <code>DETERMINISTIC</code> helps the optimizer cache results and improve query plans. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-procedures.html" target="_blank">&laquo; Back: SQL Stored Procedures</a>
+        <a class="btn primary" href="sql-triggers.html" target="_blank">Next: SQL Triggers &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

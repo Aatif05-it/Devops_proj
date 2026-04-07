@@ -1,0 +1,19 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/settings.json
+
+# Python local server cache
+__pycache__/
+*.pyc
+
+# DevOps artifacts
+*.log
+*.tmp
+.env
+.env.*
+
+# Kubernetes / local tools
+.kube/
+minikube/

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Selectors - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="css-intro.html" class="active" target="_blank">CSS</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar: built from JSON -->
+    <aside class="sidebar" id="sidebar" data-section="css"></aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <h1>CSS Selectors</h1>
+      <p>
+        Selectors decide which HTML elements a CSS rule applies to. Different
+        selector types let you target elements in flexible ways.
+      </p>
+
+      <h2>Type selector</h2>
+      <p>Targets all elements with a given tag name.</p>
+      <div class="example-box">
+        <pre><code>p {
+  color: #333;
+}</code></pre>
+      </div>
+      <p>
+        This rule styles every <code>&lt;p&gt;</code> element on the page.
+      </p>
+
+      <h2>Class selector</h2>
+      <p>Targets elements that share the same class attribute.</p>
+      <div class="example-box">
+        <pre><code>.highlight {
+  background-color: yellow;
+}</code></pre>
+      </div>
+      <p>
+        Any element with <code>class="highlight"</code> gets a yellow
+        background.
+      </p>
+
+      <h2>ID selector</h2>
+      <p>Targets a single unique element with a specific id.</p>
+      <div class="example-box">
+        <pre><code>#main-title {
+  font-size: 2rem;
+}</code></pre>
+      </div>
+      <p>
+        Only the element with <code>id="main-title"</code> is affected by this
+        rule.
+      </p>
+
+      <h2>Descendant selector</h2>
+      <p>
+        Targets elements that are inside other elements, matching a structure.
+      </p>
+      <div class="example-box">
+        <pre><code>nav a {
+  color: #04aa6d;
+}</code></pre>
+      </div>
+      <p>
+        This styles all <code>&lt;a&gt;</code> links that live inside a
+        <code>&lt;nav&gt;</code> element.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="css-syntax.html" target="_blank">&laquo; Previous: CSS Syntax</a>
+        <a class="btn primary" href="css-colors.html" target="_blank">Next: CSS Colors &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

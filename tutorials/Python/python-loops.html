@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python For &amp; While Loops - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python For &amp; While Loops</h1>
+      <p>Loops let you repeat a block of code multiple times. Python has two main loop types: for and while.</p>
+      <p>Use for loops when you know how many items to iterate; use while loops when you loop until a condition changes.</p>
+
+      <h2>For loop over sequences</h2>
+      <div class="example-box">
+<pre><code class="language-python">fruits = ["apple", "banana", "cherry"]
+
+for fruit in fruits:
+    print(fruit)
+
+# Loop with index using enumerate()
+for index, fruit in enumerate(fruits):
+    print(index, fruit)
+</code></pre>
+      </div>
+      <p>The for loop iterates directly over items in a list, string, or other iterable.</p>
+
+      <h2>Using range()</h2>
+      <div class="example-box">
+<pre><code class="language-python"># 0 to 4
+for i in range(5):
+    print(i)
+
+# 1 to 10, step 2
+for i in range(1, 11, 2):
+    print(i)
+</code></pre>
+      </div>
+      <p>range() generates a sequence of numbers and is commonly used in for loops.</p>
+
+      <h2>While loop basics</h2>
+      <div class="example-box">
+<pre><code class="language-python">count = 1
+
+while count &lt;= 5:
+    print("Count:", count)
+    count += 1
+</code></pre>
+      </div>
+      <p>A while loop runs as long as its condition stays true. Always make sure something changes inside to avoid infinite loops.</p>
+
+      <h2>break and continue</h2>
+      <div class="example-box">
+<pre><code class="language-python"># break: stop the loop early
+for i in range(1, 10):
+    if i == 5:
+        break
+    print(i)
+
+# continue: skip this iteration
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print(i)
+</code></pre>
+      </div>
+      <p>break exits the loop completely; continue jumps to the next iteration.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-if-else.html" target="_blank">&laquo; Back: Python Ifâ€‘Else Statements</a>
+        <a class="btn primary" href="python-functions.html" target="_blank">Next: Python Functions &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

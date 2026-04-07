@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL INSERT - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL INSERT</h1>
+      <p>
+        The <code>INSERT</code> statement adds new rows to a table by providing values for one or more columns. 
+      </p>
+      <p>
+        You can insert a single row, multiple rows at once, or copy rows from another table using <code>INSERT ... SELECT</code>. 
+      </p>
+
+      <h2>Insert one row</h2>
+      <p>
+        This example inserts a new customer, explicitly listing the target columns in the <code>Customers</code> table.
+      </p>
+
+      <div class="example-box">
+<pre><code>INSERT INTO Customers (CustomerID, CustomerName, City, Country)
+VALUES (101, 'Alex Patel', 'Mumbai', 'India');
+</code></pre>
+      </div>
+
+      <p>
+        Listing column names makes the statement more robust to future schema changes and avoids mistakes with column order. 
+      </p>
+
+      <h2>Insert multiple rows</h2>
+      <p>
+        Many databases support inserting several rows in a single statement by providing multiple value lists. 
+      </p>
+
+      <div class="example-box">
+<pre><code>INSERT INTO Customers (CustomerName, City, Country)
+VALUES
+  ('Maria Gomez', 'Madrid', 'Spain'),
+  ('John Smith', 'London', 'UK'),
+  ('Sara Khan', 'Delhi', 'India');
+</code></pre>
+      </div>
+
+      <p>
+        Batch inserts reduce round trips to the database and are more efficient than sending separate <code>INSERT</code> statements for each row. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-limit-top.html" target="_blank">&laquo; Back: SQL LIMIT / TOP</a>
+        <a class="btn primary" href="sql-update.html" target="_blank">Next: SQL UPDATE &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

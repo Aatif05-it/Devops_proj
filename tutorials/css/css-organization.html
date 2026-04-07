@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Naming & Organization - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+  <link rel="stylesheet" href="../../assets/css/navigation.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="css-intro.html" class="active" target="_blank">CSS</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="css"></aside>
+
+    <main class="content">
+      <h1>CSS Naming &amp; Organization</h1>
+      <p>
+        Organizing CSS with a naming convention makes large projects easier to
+        read and maintain. 
+      </p>
+
+      <h2>BEM-style class names</h2>
+      <div class="example-box">
+        <pre><code>.card { ... }               /* Block */
+.card__title { ... }        /* Element */
+.card--featured { ... }     /* Modifier */</code></pre>
+      </div>
+      <p>
+        BEM (Block Element Modifier) uses double underscores and double hyphens
+        to show component structure. 
+      </p>
+
+      <h2>File structure</h2>
+      <div class="example-box">
+        <pre><code>assets/css/
+  base.css      /* reset, typography */
+  layout.css    /* grid, header, footer */
+  components.css/* cards, buttons, forms */
+  pages.css     /* page-specific tweaks */</code></pre>
+      </div>
+      <p>
+        Splitting styles into base, layout, components, and pages keeps your
+        CSS scalable as the site grows.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="css-grid-advanced.html" target="_blank">&laquo; Previous: CSS Grid Deep Dive</a>
+        <a class="btn primary" href="../../index.html" target="_blank">Back to Home &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+  <script src="../../assets/js/navigation.js"></script>
+</body>
+</html>
+
+
+

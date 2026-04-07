@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Transitions & Transforms - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="css-intro.html" class="active" target="_blank">CSS</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="css"></aside>
+
+    <main class="content">
+      <h1>CSS Transitions &amp; Transforms</h1>
+      <p>
+        Transforms change how elements look or where they sit; transitions make
+        those changes animate smoothly over time. 
+      </p>
+
+      <h2>Basic transition</h2>
+      <div class="example-box">
+        <pre><code>.btn-animate {
+  background-color: #04aa6d;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-animate:hover {
+  background-color: #028557;
+}</code></pre>
+      </div>
+      <p>
+        A transition needs at least a property and a duration, and can also
+        define timing function and delay.
+      </p>
+
+      <h2>Using transforms</h2>
+      <div class="example-box">
+        <pre><code>.card-hover {
+  transition: transform 0.25s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px) scale(1.02);
+}</code></pre>
+      </div>
+      <p>
+        The <code>transform</code> property can move, scale, rotate, or skew
+        elements, often combined with transitions for smooth hover effects.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="css-overflow.html" target="_blank">&laquo; Previous: CSS Overflow</a>
+        <a class="btn primary" href="css-forms.html" target="_blank">Next: CSS Forms &amp; Inputs &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

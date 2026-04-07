@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Lambda Functions - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python Lambda Functions</h1>
+      <p>Lambda functions are small anonymous functions defined with the lambda keyword.</p>
+      <p>They are useful for short oneâ€‘line operations, especially when used with map, filter, or sorted.</p>
+
+      <h2>Basic lambda syntax</h2>
+      <div class="example-box">
+<pre><code class="language-python"># Regular function
+def square(x):
+    return x * x
+
+# Equivalent lambda
+square_lambda = lambda x: x * x
+
+print(square(5))
+print(square_lambda(5))
+</code></pre>
+      </div>
+      <p>A lambda expression has arguments on the left and a single expression on the right: lambda args: expression.</p>
+
+      <h2>Using lambda with map()</h2>
+      <div class="example-box">
+<pre><code class="language-python">numbers = [1, 2, 3, 4]
+
+squares = list(map(lambda n: n * n, numbers))
+print(squares)   # [1, 4, 9, 16]
+</code></pre>
+      </div>
+      <p>map() applies the lambda to every item in the iterable and returns a new iterator.</p>
+
+      <h2>Using lambda with filter() and sorted()</h2>
+      <div class="example-box">
+<pre><code class="language-python">nums = [5, 1, 8, 3, 2]
+
+evens = list(filter(lambda n: n % 2 == 0, nums))
+print(evens)  # [8, 2]
+
+students = [
+    {"name": "Alice", "score": 92},
+    {"name": "Bob", "score": 75},
+    {"name": "Cara", "score": 88},
+]
+
+# sort by score descending
+students_sorted = sorted(students, key=lambda s: s["score"], reverse=True)
+print(students_sorted)
+</code></pre>
+      </div>
+      <p>Lambdas make it easy to define quick sort keys and filter conditions without creating full function definitions.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-functions.html" target="_blank">&laquo; Back: Python Functions</a>
+        <a class="btn primary" href="python-modules.html" target="_blank">Next: Python Modules &amp; Packages &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

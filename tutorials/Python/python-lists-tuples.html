@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Lists &amp; Tuples - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python Lists &amp; Tuples</h1>
+      <p>Lists are mutable sequences, while tuples are immutable sequences used for fixed collections of items.</p>
+      <p>Both support indexing, slicing, iteration, and many of the same functions like <code>len()</code>, <code>min()</code>, <code>max()</code>, and <code>sum()</code>.</p>
+
+      <h2>Creating lists and tuples</h2>
+      <div class="example-box">
+<pre><code class="language-python"># List (mutable)
+fruits = ["apple", "banana", "cherry"]
+
+# Tuple (immutable)
+point = (10, 20)
+
+print(fruits[0])   # apple
+print(point[1])    # 20
+</code></pre>
+      </div>
+      <p>Use lists when you need to modify contents; use tuples when data should not change or to represent fixed records.</p>
+
+      <h2>Common list operations</h2>
+      <div class="example-box">
+<pre><code class="language-python">numbers = [10, 20, 30]
+
+numbers.append(40)        # add to end
+numbers.insert(1, 15)     # insert at index 1
+numbers.remove(20)        # remove first 20
+popped = numbers.pop()    # remove last element
+
+print(numbers)            # [10, 15, 30]
+print(popped)             # 40
+</code></pre>
+      </div>
+      <p>Methods like <code>append()</code>, <code>insert()</code>, <code>remove()</code>, and <code>pop()</code> make lists flexible for dynamic data.</p>
+
+      <h2>Slicing and iteration</h2>
+      <div class="example-box">
+<pre><code class="language-python">nums = [1, 2, 3, 4, 5]
+
+print(nums[1:4])    # [2, 3, 4]
+print(nums[:3])     # [1, 2, 3]
+print(nums[::2])    # [1, 3, 5]
+
+for n in nums:
+    print(n)
+</code></pre>
+      </div>
+      <p>Slices create new lists from parts of an existing sequence, while <code>for</code> loops are the standard way to traverse items.</p>
+
+      <h2>Converting between list and tuple</h2>
+      <div class="example-box">
+<pre><code class="language-python">t = (1, 2, 3)
+lst = list(t)       # tuple → list
+lst.append(4)
+
+back_to_tuple = tuple(lst)  # list → tuple
+
+print(t)             # (1, 2, 3)
+print(lst)           # [1, 2, 3, 4]
+print(back_to_tuple) # (1, 2, 3, 4)
+</code></pre>
+      </div>
+      <p>Converting tuples to lists allows modification, while converting back to tuples freezes the data again.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-operators.html" target="_blank">&laquo; Back: Python Operators</a>
+        <a class="btn primary" href="python-dicts-sets.html" target="_blank">Next: Python Dictionaries &amp; Sets &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

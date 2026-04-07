@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Security, CAPTCHA, HTTPS and Privacy Consent Report</title>
+  <style>
+    body {
+      font-family: Calibri, Arial, sans-serif;
+      font-size: 12pt;
+      line-height: 1.4;
+      color: #111;
+      margin: 0.7in;
+    }
+    h1, h2, h3 {
+      margin: 0 0 10px;
+      color: #0f172a;
+    }
+    p { margin: 0 0 8px; }
+    .meta p { margin: 0 0 4px; }
+    .section { margin-top: 14px; }
+    .caption {
+      margin-top: 8px;
+      font-size: 10.5pt;
+      color: #334155;
+    }
+    img {
+      width: 100%;
+      max-width: 980px;
+      border: 1px solid #cbd5e1;
+    }
+    .page-break {
+      page-break-before: always;
+      break-before: page;
+      height: 0;
+      margin: 0;
+      border: 0;
+    }
+    ul, ol { margin: 0 0 10px 18px; }
+  </style>
+</head>
+<body>
+  <h1>Implementation Report: HTTPS, CAPTCHA and Privacy Consent Flow</h1>
+  <div class="meta">
+    <p><strong>Project:</strong> CodeNexa Academy</p>
+    <p><strong>Prepared By:</strong> Development Team</p>
+    <p><strong>Date:</strong> 07 April 2026</p>
+  </div>
+
+  <div class="section">
+    <h2>Aim</h2>
+    <p>To implement a secure website access and consent process where a visitor must pass CAPTCHA verification before interacting with the page, and then provide explicit privacy consent through Accept/Reject actions.</p>
+  </div>
+
+  <div class="section">
+    <h2>Software Required</h2>
+    <ul>
+      <li>Visual Studio Code</li>
+      <li>Modern browser (Chrome/Firefox/Edge)</li>
+      <li>Python 3 (for local web server)</li>
+      <li>.NET SDK tool: <em>dotnet dev-certs</em> (local HTTPS certificate)</li>
+      <li>Node.js (for HTTPS proxy when required)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Theory</h2>
+    <p>Web security combines transport security, bot protection, and user consent management:</p>
+    <ol>
+      <li><strong>HTTPS:</strong> Protects data in transit using TLS encryption.</li>
+      <li><strong>CAPTCHA:</strong> Blocks automated bot actions by requiring human verification.</li>
+      <li><strong>Privacy Consent:</strong> Provides user-controlled choice to accept or reject consent-related storage behavior.</li>
+    </ol>
+    <p>In this implementation, CAPTCHA is shown before page usage, and Accept/Reject appears only after successful CAPTCHA, matching production-style security flow.</p>
+  </div>
+
+  <div class="section">
+    <h2>Procedure</h2>
+    <ol>
+      <li>Configured HTTPS for localhost using trusted development certificate.</li>
+      <li>Added pre-load CAPTCHA gate that blocks interaction until successful verification.</li>
+      <li>Implemented refreshable CAPTCHA challenge and new challenge generation on failure.</li>
+      <li>Removed case-sensitivity issues by switching to numeric CAPTCHA code.</li>
+      <li>Displayed privacy consent controls only after CAPTCHA verification.</li>
+      <li>Captured evidence screenshots for each state: wrong input, refresh, correct solve, accept, and reject.</li>
+    </ol>
+  </div>
+
+  <img src="report_screenshots/01_https_gate.png" alt="HTTPS page with CAPTCHA gate" />
+  <p class="caption"><strong>Figure 1:</strong> HTTPS page loaded with pre-load CAPTCHA gate.</p>
+
+  <div class="page-break"></div>
+  <h2>Evidence 2: Wrong CAPTCHA Attempt</h2>
+  <img src="report_screenshots/02_captcha_wrong.png" alt="Wrong CAPTCHA attempt" />
+  <p class="caption"><strong>Figure 2:</strong> Incorrect CAPTCHA input blocks progression and displays failure state.</p>
+
+  <div class="page-break"></div>
+  <h2>Evidence 3: CAPTCHA Refresh</h2>
+  <img src="report_screenshots/03_captcha_refresh.png" alt="CAPTCHA refresh button" />
+  <p class="caption"><strong>Figure 3:</strong> Refresh button generates a new CAPTCHA challenge for retry.</p>
+
+  <div class="page-break"></div>
+  <h2>Evidence 4: Correct CAPTCHA and Page Unlock</h2>
+  <img src="report_screenshots/04_captcha_correct_unlocked.png" alt="Correct CAPTCHA solved" />
+  <p class="caption"><strong>Figure 4:</strong> Correct CAPTCHA allows page access and continues to consent stage.</p>
+
+  <div class="page-break"></div>
+  <h2>Evidence 5: Accept/Reject Visible After Verification</h2>
+  <img src="report_screenshots/05_consent_accept_reject_visible.png" alt="Consent options visible" />
+  <p class="caption"><strong>Figure 5:</strong> Privacy consent options are shown only after CAPTCHA verification.</p>
+
+  <div class="page-break"></div>
+  <h2>Evidence 6: Consent Accepted</h2>
+  <img src="report_screenshots/06_after_accept.png" alt="After accept action" />
+  <p class="caption"><strong>Figure 6:</strong> Accept action processed successfully.</p>
+
+  <div class="page-break"></div>
+  <h2>Evidence 7: Consent Rejected</h2>
+  <img src="report_screenshots/07_after_reject.png" alt="After reject action" />
+  <p class="caption"><strong>Figure 7:</strong> Reject action processed successfully.</p>
+
+  <div class="section">
+    <h2>Conclusion</h2>
+    <p>The website now follows a stricter and clearer security sequence: HTTPS transport, pre-load CAPTCHA verification, and privacy consent decision. The flow prevents automatic/bot access before interaction and ensures consent appears only after human verification. All required states (wrong CAPTCHA, refreshed challenge, correct CAPTCHA, accept, and reject) were validated and documented.</p>
+  </div>
+</body>
+</html>

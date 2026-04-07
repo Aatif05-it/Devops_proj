@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML Entities - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="../../html-intro.html" class="active" target="_blank">HTML</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="html"></aside>
+
+    <main class="content">
+      <h1>HTML Entities</h1>
+      <p>
+        HTML entities are special codes that display characters which are reserved in HTML
+        or difficult to type on a keyboard.
+      </p>
+
+      <h2>Why entities are needed</h2>
+      <p>
+        Characters like <code>&lt;</code> and <code>&gt;</code> are used to mark tags,
+        so when you want to show them as text you must use an entity.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;p&gt;This will show &amp;amp; and &amp;lt; and &amp;gt; on the page.&lt;/p&gt;
+</code></pre>
+      </div>
+      <p>
+        Here <code>&amp;amp;</code> shows <code>&amp;</code>,
+        <code>&amp;lt;</code> shows <code>&lt;</code>,
+        and <code>&amp;gt;</code> shows <code>&gt;</code>.
+      </p>
+
+      <h2>Common HTML entities</h2>
+      <p>Some useful entities for symbols and currency:</p>
+      <div class="example-box">
+        <pre><code>&lt;p&gt;Copyright: &amp;copy; 2025 CodeNexa Academy&lt;/p&gt;
+&lt;p&gt;Registered trademark: &amp;reg;&lt;/p&gt;
+&lt;p&gt;Euro price: &amp;euro; 10&lt;/p&gt;
+</code></pre>
+      </div>
+      <p>
+        <code>&amp;copy;</code> displays ©, <code>&amp;reg;</code> displays Â®,
+        and <code>&amp;euro;</code> displays â‚¬.
+      </p>
+
+      <h2>Nonâ€‘breaking spaces</h2>
+      <p>
+        Browsers collapse multiple spaces into one. Use <code>&amp;nbsp;</code>
+        (nonâ€‘breaking space) when you really need an extra space or want to keep
+        words together.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;p&gt;Price: 100&amp;nbsp;USD&lt;/p&gt;
+&lt;p&gt;One&amp;nbsp;&amp;nbsp;Two&amp;nbsp;&amp;nbsp;Three&lt;/p&gt;
+</code></pre>
+      </div>
+      <p>
+        Nonâ€‘breaking spaces are common between a number and its unit, like
+        <code>100&amp;nbsp;USD</code>, so they do not split across lines.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="html-audio-video.html" target="_blank">&laquo; Previous: HTML Audio &amp; Video</a>
+        <a class="btn primary" href="html-iframe-embed.html" target="_blank">Next: HTML Iframe &amp; Embed &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+
+</body>
+</html>
+
+
+

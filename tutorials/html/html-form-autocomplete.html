@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML Form Autocomplete - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="../../html-intro.html" class="active" target="_blank">HTML</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="html"></aside>
+
+    <main class="content">
+      <h1>HTML Form Autocomplete</h1>
+      <p>
+        The <code>autocomplete</code> attribute controls whether the browser may
+        remember and prefill values in a form or for a specific input field.
+      </p>
+
+      <h2>Autocomplete on the form</h2>
+      <p>
+        Set <code>autocomplete="on"</code> or <code>autocomplete="off"</code> on
+        the <code>&lt;form&gt;</code> element to affect all its controls by
+        default.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;form action="/signup" method="post" autocomplete="on"&gt;
+  &lt;label for="name"&gt;Full name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name"&gt;
+
+  &lt;label for="email"&gt;Email address:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email"&gt;
+
+  &lt;button type="submit"&gt;Sign up&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+      </div>
+      <p>
+        When autocomplete is on, the browser may suggest stored values such as
+        previous names or email addresses as the user types.
+      </p>
+
+      <h2>Autocomplete on individual fields</h2>
+      <p>
+        You can override the formâ€™s setting on specific inputs by adding
+        <code>autocomplete</code> directly to the control.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;form action="/login" method="post" autocomplete="on"&gt;
+  &lt;label for="username"&gt;Username:&lt;/label&gt;
+  &lt;input
+    type="text"
+    id="username"
+    name="username"
+    autocomplete="username"&gt;
+
+  &lt;label for="password"&gt;Password:&lt;/label&gt;
+  &lt;input
+    type="password"
+    id="password"
+    name="password"
+    autocomplete="current-password"&gt;
+
+  &lt;button type="submit"&gt;Log in&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+      </div>
+      <p>
+        Using specific tokens like <code>username</code> or
+        <code>current-password</code> helps browsers and password managers fill
+        in the correct values.
+      </p>
+
+      <h2>Disabling autocomplete</h2>
+      <p>
+        For sensitive fields, you can request that the browser not store or
+        suggest values by setting <code>autocomplete="off"</code>.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;form action="/payment" method="post" autocomplete="off"&gt;
+  &lt;label for="card-number"&gt;Card number:&lt;/label&gt;
+  &lt;input
+    type="text"
+    id="card-number"
+    name="card-number"
+    autocomplete="off"&gt;
+
+  &lt;label for="cvc"&gt;CVC:&lt;/label&gt;
+  &lt;input
+    type="password"
+    id="cvc"
+    name="cvc"
+    autocomplete="off"&gt;
+
+  &lt;button type="submit"&gt;Pay now&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+      </div>
+      <p>
+        Some browsers may still apply their own rules for highly sensitive
+        fields, so disabling autocomplete is only one part of securing a form.
+      </p>
+
+      <h2>Improving accessibility with autocomplete</h2>
+      <p>
+        Correct autocomplete tokens can make forms faster and more accessible,
+        especially for users relying on assistive technologies.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;form action="/shipping" method="post" autocomplete="on"&gt;
+  &lt;label for="shipping-name"&gt;Full name&lt;/label&gt;
+  &lt;input
+    type="text"
+    id="shipping-name"
+    name="shipping-name"
+    autocomplete="name"&gt;
+
+  &lt;label for="shipping-address"&gt;Street address&lt;/label&gt;
+  &lt;input
+    type="text"
+    id="shipping-address"
+    name="shipping-address"
+    autocomplete="shipping street-address"&gt;
+
+  &lt;label for="postal-code"&gt;Postal code&lt;/label&gt;
+  &lt;input
+    type="text"
+    id="postal-code"
+    name="postal-code"
+    autocomplete="shipping postal-code"&gt;
+
+  &lt;button type="submit"&gt;Place order&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+      </div>
+      <p>
+        These tokens tell the browser what each field represents so it can offer
+        accurate suggestions from the userâ€™s saved addresses.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="html-form-file-upload.html" target="_blank">&laquo; Previous: HTML  File Upload</a>
+        <a class="btn primary" href="html-document-outline.html" target="_blank">Next: HTML Document Outline &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+
+</body>
+</html>
+
+
+

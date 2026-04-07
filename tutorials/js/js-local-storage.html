@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Local Storage - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="js-intro.html" class="active" target="_blank">JavaScript</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="js"></aside>
+
+    <main class="content">
+      <h1>JS Local Storage</h1>
+      <p>
+        Local storage allows web pages to store key–value pairs in the browser that persist across reloads. 
+      </p>
+
+      <h2>Save and load a value</h2>
+      <p>
+        This example saves a username in <code>localStorage</code> and reads it back when the script runs. 
+      </p>
+
+      <div class="example-box">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+  &lt;p id="greeting"&gt;&lt;/p&gt;
+
+  &lt;script&gt;
+    // Save value
+    localStorage.setItem("username", "Alex");
+
+    // Read value
+    const name = localStorage.getItem("username");
+
+    document.getElementById("greeting").textContent =
+      "Hello, " + name + " (from localStorage)";
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+
+      <p>
+        Because local storage only stores strings, complex objects should be converted with <code>JSON.stringify()</code> and <code>JSON.parse()</code>.
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="js-fetch.html" target="_blank">&laquo; Back: JS Fetch API</a>
+        <a class="btn primary" href="js-es6.html" target="_blank">Next: JS ES6+ Features &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

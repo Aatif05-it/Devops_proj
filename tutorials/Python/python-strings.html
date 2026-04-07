@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Strings - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python Strings</h1>
+      <p>Strings represent textual data and are sequences of Unicode characters.</p>
+      <p>You can create them with single quotes, double quotes, or triple quotes for multiâ€‘line text.</p>
+
+      <h2>Creating and accessing strings</h2>
+      <div class="example-box">
+<pre><code class="language-python">single = 'Hello'
+double = "World"
+multi = """This is
+a multi-line string."""
+
+message = single + " " + double
+print(message)        # Hello World
+print(message[0])     # 'H'
+print(message[-1])    # 'd'
+</code></pre>
+      </div>
+      <p>Strings are zeroâ€‘indexed, and negative indexes count from the end.</p>
+
+      <h2>Slicing strings</h2>
+      <div class="example-box">
+<pre><code class="language-python">text = "Python Programming"
+
+print(text[0:6])     # 'Python'
+print(text[7:])      # 'Programming'
+print(text[:6])      # 'Python'
+print(text[::2])     # 'Pto rgamn'
+</code></pre>
+      </div>
+      <p>Slices let you extract substrings using the pattern <code>[start:stop:step]</code>.</p>
+
+      <h2>Useful string methods</h2>
+      <div class="example-box">
+<pre><code class="language-python">name = "  alice  "
+
+print(name.upper())          # '  ALICE  '
+print(name.strip())          # 'alice'
+print(name.replace("a", "A"))# '  Alice  '
+
+sentence = "python is awesome"
+print(sentence.title())      # 'Python Is Awesome'
+print(sentence.split())      # ['python', 'is', 'awesome']
+</code></pre>
+      </div>
+      <p>Methods like <code>upper()</code>, <code>lower()</code>, <code>strip()</code>, <code>replace()</code>, and <code>split()</code> cover most daily string cleaning needs.</p>
+
+      <h2>fâ€‘Strings (formatted strings)</h2>
+      <div class="example-box">
+<pre><code class="language-python">name = "Alice"
+age = 21
+score = 95.6789
+
+message = f"Hi {name}, age {age}, score {score:.2f}"
+print(message)  # Hi Alice, age 21, score 95.68
+</code></pre>
+      </div>
+      <p>fâ€‘Strings let you embed expressions directly inside string literals with curly braces.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-dicts-sets.html" target="_blank">&laquo; Back: Python Dictionaries &amp; Sets</a>
+        <a class="btn primary" href="python-if-else.html" target="_blank">Next: Python Ifâ€‘Else Statements &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

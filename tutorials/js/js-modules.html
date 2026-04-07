@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Modules - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="js-intro.html" class="active" target="_blank">JavaScript</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="js"></aside>
+
+    <main class="content">
+      <h1>JS Modules</h1>
+      <p>
+        ES modules let you split code into files and share functions or values using <code>export</code> and <code>import</code>. 
+      </p>
+
+      <h2>Simple module example</h2>
+      <p>
+        This example shows a small <code>math.js</code> module and an HTML file that imports it. 
+      </p>
+
+      <div class="example-box">
+<pre><code>&lt;!-- math.js --&gt;
+export function add(a, b) {
+  return a + b;
+}
+
+&lt;!-- index.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+  &lt;p id="result"&gt;&lt;/p&gt;
+
+  &lt;script type="module"&gt;
+    import { add } from "./math.js";
+
+    const sum = add(2, 3);
+    document.getElementById("result").textContent =
+      "2 + 3 = " + sum;
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+
+      <p>
+        Modules load in strict mode and each module has its own scope, which helps avoid global variable conflicts.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="js-classes.html" target="_blank">&laquo; Back: JS Classes</a>
+        <a class="btn primary" href="js-json.html" target="_blank">Next: JS JSON &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

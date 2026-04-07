@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Subqueries Basics - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Subqueries Basics</h1>
+      <p>
+        A subquery is a query nested inside another statement, often in the <code>WHERE</code>, <code>FROM</code>, or <code>SELECT</code> clause. 
+      </p>
+      <p>
+        Subqueries can return a single value, a single row, or a full result set that other parts of the query use as input. 
+      </p>
+
+      <h2>Subquery in WHERE</h2>
+      <p>
+        This example finds customers whose total spending is greater than a fixed threshold by using a subquery that sums orders. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT CustomerID, CustomerName
+FROM Customers
+WHERE CustomerID IN (
+  SELECT CustomerID
+  FROM Orders
+  GROUP BY CustomerID
+  HAVING SUM(TotalAmount) &gt; 1000
+);
+</code></pre>
+      </div>
+
+      <p>
+        The inner query computes total spending per customer, and the outer query restricts the customers table to those ids. 
+      </p>
+
+      <h2>Subquery in FROM (derived table)</h2>
+      <p>
+        Placing a subquery in the <code>FROM</code> clause creates a derived table that can be further filtered or joined. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT
+  t.CustomerID,
+  t.TotalSpent
+FROM (
+  SELECT CustomerID, SUM(TotalAmount) AS TotalSpent
+  FROM Orders
+  GROUP BY CustomerID
+) AS t
+WHERE t.TotalSpent &gt; 1000;
+</code></pre>
+      </div>
+
+      <p>
+        This pattern is helpful when you want to reuse an aggregated result or apply additional filters after computing totals. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-set-ops.html" target="_blank">&laquo; Back: SQL Set Operators</a>
+        <a class="btn primary" href="sql-correlated-subqueries.html" target="_blank">Next: SQL Correlated Subqueries &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

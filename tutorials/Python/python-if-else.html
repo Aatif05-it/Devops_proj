@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python Ifâ€‘Else Statements - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python Ifâ€‘Else Statements</h1>
+      <p>Ifâ€‘else statements let your program make decisions based on conditions.</p>
+      <p>Python uses indentation instead of braces to define the blocks for if, elif, and else.</p>
+
+      <h2>Basic if and ifâ€‘else</h2>
+      <div class="example-box">
+<pre><code class="language-python">age = 18
+
+if age &gt;= 18:
+    print("You are an adult")
+else:
+    print("You are a minor")
+</code></pre>
+      </div>
+      <p>The code under <code>if</code> runs when the condition is true; otherwise the <code>else</code> block runs.</p>
+
+      <h2>ifâ€‘elifâ€‘else ladder</h2>
+      <div class="example-box">
+<pre><code class="language-python">score = 82
+
+if score &gt;= 90:
+    grade = "A"
+elif score &gt;= 80:
+    grade = "B"
+elif score &gt;= 70:
+    grade = "C"
+else:
+    grade = "D"
+
+print("Grade:", grade)
+</code></pre>
+      </div>
+      <p>Use <code>elif</code> when you have multiple mutually exclusive conditions to check.</p>
+
+      <h2>Nested conditions and short form</h2>
+      <div class="example-box">
+<pre><code class="language-python">num = 5
+
+if num &gt; 0:
+    if num % 2 == 0:
+        print("Positive even")
+    else:
+        print("Positive odd")
+else:
+    print("Zero or negative")
+
+# Short conditional expression (ternary)
+result = "even" if num % 2 == 0 else "odd"
+print(result)
+</code></pre>
+      </div>
+      <p>Nested ifâ€‘else handles more complex logic, while the conditional expression is handy for simple assignments.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-strings.html" target="_blank">&laquo; Back: Python Strings</a>
+        <a class="btn primary" href="python-loops.html" target="_blank">Next: Python For &amp; While Loops &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

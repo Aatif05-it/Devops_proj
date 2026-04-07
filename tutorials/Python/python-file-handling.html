@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Python File Handling - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="python-intro.html" class="active" target="_blank">Python</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" data-section="python"></aside>
+
+    <main class="content">
+      <h1>Python File Handling</h1>
+      <p>File handling lets your programs read from and write to files on disk.</p>
+      <p>The builtâ€‘in <code>open()</code> function returns a file object you can use to read, write, or append data.</p>
+
+      <h2>Opening and reading files</h2>
+      <div class="example-box">
+<pre><code class="language-python"># Read entire file
+with open("notes.txt", "r", encoding="utf-8") as f:
+    content = f.read()
+    print(content)
+
+# Read line by line
+with open("notes.txt", "r", encoding="utf-8") as f:
+    for line in f:
+        print(line.strip())
+</code></pre>
+      </div>
+      <p>The <code>with</code> statement automatically closes the file when the block ends, even if errors occur.</p>
+
+      <h2>Writing and appending</h2>
+      <div class="example-box">
+<pre><code class="language-python"># Write (overwrite) file
+with open("output.txt", "w", encoding="utf-8") as f:
+    f.write("First line\n")
+    f.write("Second line\n")
+
+# Append to existing file
+with open("output.txt", "a", encoding="utf-8") as f:
+    f.write("Appended line\n")
+</code></pre>
+      </div>
+      <p>Use mode <code>"w"</code> to create/overwrite a file, <code>"a"</code> to append, and <code>"r"</code> to read.</p>
+
+      <h2>Working with paths</h2>
+      <div class="example-box">
+<pre><code class="language-python">from pathlib import Path
+
+base_dir = Path(__file__).parent
+data_file = base_dir / "data" / "users.csv"
+
+with data_file.open("r", encoding="utf-8") as f:
+    for line in f:
+        print(line.strip().split(","))
+</code></pre>
+      </div>
+      <p><code>pathlib.Path</code> makes it easy to build OSâ€‘independent file paths using the <code>/</code> operator.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="python-modules.html" target="_blank">&laquo; Back: Python Modules &amp; Packages</a>
+        <a class="btn primary" href="python-exceptions.html" target="_blank">Next: Python Exception Handling &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

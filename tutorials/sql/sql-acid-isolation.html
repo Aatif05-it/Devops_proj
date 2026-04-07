@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL ACID &amp; Isolation - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL ACID &amp; Isolation</h1>
+      <p>
+        ACID properties guarantee reliable transactions: Atomicity ensures all-or-nothing execution, Consistency maintains data rules, Isolation prevents interference, and Durability persists changes.
+      </p>
+      <p>
+        Isolation levels control how transactions see each other's changes, balancing consistency with performance. 
+      </p>
+
+      <h2>ACID properties explained</h2>
+      <p>
+        Atomicity rolls back partial failures, consistency enforces constraints, isolation hides concurrent work, and durability survives crashes. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- Bank transfer transaction (Atomicity + Consistency)
+START TRANSACTION;
+UPDATE Accounts SET Balance = Balance - 100 WHERE ID = 1;
+UPDATE Accounts SET Balance = Balance + 100 WHERE ID = 2;
+COMMIT;  -- Both succeed or both fail
+</code></pre>
+      </div>
+
+      <p>
+        If the second <code>UPDATE</code> fails, the entire transfer is undone, keeping balances consistent.
+      </p>
+
+      <h2>Isolation levels</h2>
+      <p>
+        Common levels are READ UNCOMMITTED (dirty reads), READ COMMITTED (no dirty reads), REPEATABLE READ, and SERIALIZABLE (full isolation). 
+      </p>
+
+      <div class="example-box">
+<pre><code>SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+-- Queries see only committed data from other transactions
+</code></pre>
+      </div>
+
+      <p>
+        Higher isolation prevents anomalies but may increase locking and deadlocks in busy systems. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-transactions.html" target="_blank">&laquo; Back: SQL Transactions</a>
+        <a class="btn primary" href="sql-procedures.html" target="_blank">Next: SQL Stored Procedures &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

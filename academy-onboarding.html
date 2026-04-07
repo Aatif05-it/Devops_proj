@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Onboarding kit – CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+
+  <style>
+    body {
+      margin: 0;
+      background: #f3f4f6;
+      font-family: Arial, sans-serif;
+    }
+
+    .academy-layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 1.5rem;
+    }
+
+    .academy-sidebar {
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+      font-size: 0.9rem;
+    }
+
+    .academy-sidebar-header {
+      padding: 0.6rem 0.8rem;
+      background: #f1f5f9;
+      font-weight: 600;
+    }
+
+    .academy-sidebar-nav a {
+      display: block;
+      padding: 0.6rem 0.8rem;
+      text-decoration: none;
+      color: #111827;
+      border-top: 1px solid #e5e7eb;
+      font-size: 0.9rem;
+    }
+
+    .academy-sidebar-nav a.active {
+      background: #04aa6d;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .academy-sidebar-nav a:hover:not(.active) {
+      background: #f9fafb;
+    }
+
+    .academy-main {
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      padding: 1.6rem 1.8rem 2.2rem;
+    }
+
+    .academy-main h1 {
+      margin: 0 0 1rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .academy-main p {
+      font-size: 0.9rem;
+      color: #374151;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .academy-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">
+      <span class="logo-mark">&lt;/&gt;</span>
+      <span class="logo-text">CodeNexa Academy</span>
+    </div>
+    <nav class="topnav-links">
+      <a href="index.html">Home</a>
+      <a href="forum.html">Forum</a>
+      <a href="about.html">About</a>
+      <a href="academy.html" class="active">Academy</a>
+    </nav>
+  </header>
+
+  <main class="academy-layout">
+    <aside class="academy-sidebar">
+      <div class="academy-sidebar-header">Academy Console</div>
+      <nav class="academy-sidebar-nav">
+        <a href="academy.html">Dashboard</a>
+        <a href="academy-study-plans.html">Study plans</a>
+        <a href="academy-classes.html">Classes</a>
+        <a href="academy-assignments.html">Assignments</a>
+        <a href="academy-progress.html">Progress &amp; reports</a>
+        <a href="academy-workspaces.html">Code workspaces</a>
+      </nav>
+
+      <div class="academy-sidebar-header">Resources</div>
+      <nav class="academy-sidebar-nav">
+        <a href="academy-playbooks.html">Teaching playbooks</a>
+        <a href="academy-onboarding.html" class="active">Onboarding kit</a>
+        <a href="academy-settings.html">Admin settings</a>
+      </nav>
+    </aside>
+
+    <section class="academy-main">
+      <h1>Onboarding kit</h1>
+      <p>The onboarding kit helps new teachers and students get started with CodeNexa Academy quickly.</p>
+      <p>Share short guides, checklists, and firstâ€‘week activities so everyone understands how to join classes and submit work.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"></footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

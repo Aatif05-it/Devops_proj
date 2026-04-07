@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Backup &amp; Restore - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Backup &amp; Restore</h1>
+      <p>
+        Backups create database copies for disaster recovery, while restore operations recover data from those backups to a specific point in time.
+      </p>
+      <p>
+        Full, differential, and transaction log backups provide different recovery strategies balancing storage and recovery time.
+      </p>
+
+      <h2>MySQL backup and restore</h2>
+      <p>
+        <code>mysqldump</code> creates logical backups; <code>mysql</code> restores them. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- Full database backup
+mysqldump -u root -p mydatabase > mydatabase_backup.sql
+
+-- Single table backup
+mysqldump -u root -p mydatabase Customers > customers_backup.sql
+
+-- Restore backup
+mysql -u root -p mydatabase < mydatabase_backup.sql
+</code></pre>
+      </div>
+
+      <p>
+        Logical backups are portable across MySQL versions but slower for large databases. 
+      </p>
+
+      <h2>SQL Server backup strategies</h2>
+      <p>
+        SQL Server supports full, differential, and transaction log backups with point-in-time recovery.
+      </p>
+
+      <div class="example-box">
+<pre><code>-- Full backup
+BACKUP DATABASE MyDatabase 
+TO DISK = 'C:\Backups\MyDatabase_Full.bak';
+
+-- Differential backup (changes since last full)
+BACKUP DATABASE MyDatabase 
+TO DISK = 'C:\Backups\MyDatabase_Diff.bak'
+WITH DIFFERENTIAL;
+
+-- Transaction log backup
+BACKUP LOG MyDatabase 
+TO DISK = 'C:\Backups\MyDatabase_Log.trn';
+</code></pre>
+      </div>
+
+      <p>
+        Full + differential + log chain enables recovery to any transaction within the backup window. 
+      </p>
+
+      <h2>Restoring SQL Server backups</h2>
+      <p>
+        Restore sequence: full → differentials → logs, with <code>NORECOVERY</code> between steps. 
+      </p>
+
+      <div class="example-box">
+<pre><code>-- Restore full backup
+RESTORE DATABASE MyDatabase 
+FROM DISK = 'MyDatabase_Full.bak'
+WITH REPLACE, NORECOVERY;
+
+-- Apply differential
+RESTORE DATABASE MyDatabase 
+FROM DISK = 'MyDatabase_Diff.bak'
+WITH NORECOVERY;
+
+-- Apply transaction log (point-in-time)
+RESTORE LOG MyDatabase 
+FROM DISK = 'MyDatabase_Log.trn'
+WITH RECOVERY, STOPAT = '2025-12-22 10:30:00';
+</code></pre>
+      </div>
+
+      <p>
+        <code>WITH RECOVERY</code> brings the database online; <code>STOPAT</code> recovers to exact time. 
+      </p>
+
+      <h2>Automated backup script</h2>
+      <p>
+        Schedule regular backups using cron (Linux) or Task Scheduler (Windows). 
+      </p>
+
+      <div class="example-box">
+<pre><code>#!/bin/bash
+# Daily backup script
+DATE=$(date +%Y%m%d)
+mysqldump -u root -p$DB_PASS mydatabase > /backups/mydatabase_$DATE.sql
+gzip /backups/mydatabase_$DATE.sql
+
+# Keep 7 days
+find /backups -name "mydatabase_*.sql.gz" -mtime +7 -delete
+</code></pre>
+      </div>
+
+      <p>
+        Automation with retention policies ensures consistent protection without manual intervention. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-permissions.html" target="_blank">&laquo; Back: SQL Permissions &amp; Users</a>
+        <a class="btn primary" href="sql-normalization.html" target="_blank">Next: SQL Normalization&raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

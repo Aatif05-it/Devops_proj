@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Set Operators - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Set Operators</h1>
+      <p>
+        Set operators extend <code>UNION</code> and <code>UNION ALL</code> with <code>INTERSECT</code> and <code>EXCEPT</code> (or <code>MINUS</code>), letting you compare result sets. 
+      </p>
+      <p>
+        These operators require the participating queries to return the same number of columns with compatible data types in the same order. 
+      </p>
+
+      <h2>INTERSECT example</h2>
+      <p>
+        This query finds cities that appear in both the <code>Customers</code> and <code>Suppliers</code> tables. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT City FROM Customers
+INTERSECT
+SELECT City FROM Suppliers;
+</code></pre>
+      </div>
+
+      <p>
+        Only cities present in both result sets are returned, with duplicates removed automatically. 
+      </p>
+
+      <h2>EXCEPT / MINUS example</h2>
+      <p>
+        <code>EXCEPT</code> (or <code>MINUS</code> in some databases) returns rows from the first query that do not appear in the second. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT City FROM Customers
+EXCEPT
+SELECT City FROM Suppliers;
+</code></pre>
+      </div>
+
+      <p>
+        This pattern is useful for questions like â€œcustomers we have in cities where we do not yet have a supplier.â€ 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-union.html" target="_blank">&laquo; Back: SQL UNION &amp; UNION ALL</a>
+        <a class="btn primary" href="sql-subqueries.html" target="_blank">Next: SQL Subqueries Basics &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

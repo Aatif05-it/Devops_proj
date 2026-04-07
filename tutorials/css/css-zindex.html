@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Z-Index & Stacking - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="css-intro.html" class="active" target="_blank">CSS</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="css"></aside>
+
+    <main class="content">
+      <h1>CSS Z-Index &amp; Stacking</h1>
+      <p>
+        When elements overlap, the <code>z-index</code> property controls which
+        one appears on top along the zâ€‘axis.
+      </p>
+
+      <h2>Basic z-index</h2>
+      <div class="example-box">
+        <pre><code>.box-a {
+  position: relative;
+  z-index: 1;
+}
+
+.box-b {
+  position: relative;
+  z-index: 2; /* on top of .box-a */
+}</code></pre>
+      </div>
+      <p>
+        <code>z-index</code> only works on positioned elements
+        (<code>position</code> not <code>static</code>). Higher values sit above
+        lower values.
+      </p>
+
+      <h2>Stacking context</h2>
+      <div class="example-box">
+        <pre><code>.parent {
+  position: relative;
+  z-index: 1; /* creates a stacking context */
+}
+
+.child {
+  position: absolute;
+  z-index: 999; /* still limited to its parent context */
+}</code></pre>
+      </div>
+      <p>
+        A stacking context is like a local 3D layer group: children are stacked
+        relative to the parent, not the whole page.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="css-positioning.html" target="_blank">&laquo; Previous: CSS Positioning</a>
+        <a class="btn primary" href="css-overflow.html" target="_blank">Next: CSS Overflow &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

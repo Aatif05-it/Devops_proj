@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL INNER JOIN - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL INNER JOIN</h1>
+      <p>
+        <code>INNER JOIN</code> returns rows where the join condition matches in both tables and discards rows without a match.
+      </p>
+      <p>
+        It is the most commonly used join, ideal for combining entities that must have a corresponding record, such as orders with valid customers. 
+      </p>
+
+      <h2>Orders with customer names</h2>
+      <p>
+        This query lists orders along with the name of the customer who placed each one. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT
+  o.OrderID,
+  o.OrderDate,
+  c.CustomerName
+FROM Orders AS o
+INNER JOIN Customers AS c
+  ON o.CustomerID = c.CustomerID;
+</code></pre>
+      </div>
+
+      <p>
+        If an order has a <code>CustomerID</code> that does not exist in <code>Customers</code>, that row is omitted from the result set. 
+      </p>
+
+      <h2>Inner join with additional filter</h2>
+      <p>
+        Joins can be combined with <code>WHERE</code> to further restrict which joined rows are returned. 
+      </p>
+
+      <div class="example-box">
+<pre><code>SELECT
+  o.OrderID,
+  o.OrderDate,
+  c.CustomerName,
+  c.Country
+FROM Orders AS o
+INNER JOIN Customers AS c
+  ON o.CustomerID = c.CustomerID
+WHERE c.Country = 'India';
+</code></pre>
+      </div>
+
+      <p>
+        Here only orders from customers in India are listed, even though the join condition may match customers from other countries. 
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-joins-basics.html" target="_blank">&laquo; Back: SQL Basic Joins</a>
+        <a class="btn primary" href="sql-left-right-join.html" target="_blank">Next: SQL LEFT &amp; RIGHT JOIN &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

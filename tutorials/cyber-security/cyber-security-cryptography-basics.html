@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cryptography Basics - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="cyber-security-intro.html" class="active" target="_blank">Cyber Security</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="cyber-security"></aside>
+
+    <main class="content">
+      <h1>Cryptography Basics</h1>
+      <p>Cryptography protects confidentiality, integrity, and authenticity using encryption, hashing, and digital signatures.</p>
+
+      <h2>Example</h2>
+      <div class="example-box">
+<pre><code># Hashing for password storage (concept)
+password_hash = HASH(password + salt)
+
+# Symmetric encryption for data-at-rest
+ciphertext = AES_Encrypt(secret_key, plaintext)
+</code></pre>
+      </div>
+
+      <h2>What You Will Learn</h2>
+      <ul>
+        <li>Difference between symmetric and asymmetric encryption.</li>
+        <li>When to use hashing, salting, and key derivation.</li>
+        <li>How TLS certificates help secure client-server communication.</li>
+      </ul>
+
+      <h2>Practice Task</h2>
+      <p>Create a table mapping security goals to controls: confidentiality to encryption, integrity to hashes, and authenticity to digital signatures.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="cyber-security-auth-access-control.html" target="_blank">&laquo; Previous</a>
+        <a class="btn primary" href="cyber-security-privacy-protection.html" target="_blank">Next &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+

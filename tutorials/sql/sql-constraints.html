@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SQL Constraints Basics - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="sql-intro.html" class="active" target="_blank">SQL</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="sql"></aside>
+
+    <main class="content">
+      <h1>SQL Constraints Basics</h1>
+      <p>
+        Constraints enforce rules on table columns so that data stays valid and consistent, such as requiring unique ids or preventing missing values.
+      </p>
+      <p>
+        Common constraint types are <code>PRIMARY KEY</code>, <code>FOREIGN KEY</code>, <code>UNIQUE</code>, <code>CHECK</code>, <code>DEFAULT</code>, and <code>NOT NULL</code>. 
+      </p>
+
+      <h2>Declaring constraints</h2>
+      <p>
+        Constraints can be defined inline with the column or as separate tableâ€‘level definitions. 
+      </p>
+
+      <div class="example-box">
+<pre><code>CREATE TABLE Customers (
+  CustomerID   INT PRIMARY KEY,
+  CustomerName VARCHAR(100) NOT NULL,
+  Email        VARCHAR(100) UNIQUE,
+  Age          INT CHECK (Age &gt;= 18)
+);
+</code></pre>
+      </div>
+
+      <p>
+        Here the primary key uniquely identifies each row, the name cannot be NULL, the email must be unique, and the age must be at least 18.
+      </p>
+
+      <h2>Adding constraints later</h2>
+      <p>
+        Existing tables can gain new constraints using <code>ALTER TABLE</code>, which is common as schemas evolve.
+      </p>
+
+      <div class="example-box">
+<pre><code>ALTER TABLE Customers
+ADD CONSTRAINT chk_age CHECK (Age &gt;= 18);
+</code></pre>
+      </div>
+
+      <p>
+        Giving constraints descriptive names makes it easier to reference or drop them in future migrations.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="sql-numeric-functions.html" target="_blank">&laquo; Back: SQL Numeric Functions</a>
+        <a class="btn primary" href="sql-keys.html" target="_blank">Next: SQL Primary &amp; Foreign Keys &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+

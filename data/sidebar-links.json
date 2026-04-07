@@ -1,0 +1,2869 @@
+﻿{
+    "sections":  [
+                     {
+                         "id":  "html",
+                         "title":  "HTML Tutorial",
+                         "description":  "Learn the basics of HTML for building web pages.",
+                         "icon":  "code",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "HTML Introduction",
+                                           "file":  "html-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Basic",
+                                           "file":  "html-basic.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Elements",
+                                           "file":  "html-elements.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Attributes",
+                                           "file":  "html-attributes.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Headings",
+                                           "file":  "html-headings.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Paragraphs",
+                                           "file":  "html-paragraphs.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Links",
+                                           "file":  "html-links.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Images",
+                                           "file":  "html-images.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Lists",
+                                           "file":  "html-lists.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Tables",
+                                           "file":  "html-tables.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Forms",
+                                           "file":  "html-forms.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Semantic HTML",
+                                           "file":  "html-semantic.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Text Formatting",
+                                           "file":  "html-text-formatting.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Head \u0026 Meta",
+                                           "file":  "html-head-meta.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Audio \u0026 Video",
+                                           "file":  "html-audio-video.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Entities",
+                                           "file":  "html-entities.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Iframe \u0026 Embed",
+                                           "file":  "html-iframe-embed.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Form Advanced",
+                                           "file":  "html-form-advanced.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Accessibility Basics",
+                                           "file":  "html-accessibility.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Block vs Inline Elements",
+                                           "file":  "html-block-inline.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Data Attributes",
+                                           "file":  "html-data-attributes.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Comments",
+                                           "file":  "html-comments-best-practices.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Tables Advanced",
+                                           "file":  "html-tables-advanced.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Description Lists",
+                                           "file":  "html-description-lists.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Images Advanced",
+                                           "file":  "html-images-advanced.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML File Upload",
+                                           "file":  "html-form-file-upload.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Autocomplete \u0026 Hints",
+                                           "file":  "html-form-autocomplete.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "HTML Document Outline",
+                                           "file":  "html-document-outline.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Deprecated HTML Elements",
+                                           "file":  "html-deprecated.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "css",
+                         "title":  "CSS Tutorial",
+                         "description":  "Style your pages with colors, layouts, and typography.",
+                         "icon":  "palette",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "CSS Introduction",
+                                           "file":  "css-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Syntax",
+                                           "file":  "css-syntax.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Selectors",
+                                           "file":  "css-selectors.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Colors",
+                                           "file":  "css-colors.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Backgrounds",
+                                           "file":  "css-backgrounds.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Box Model",
+                                           "file":  "css-box-model.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Flexbox",
+                                           "file":  "css-flexbox.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Grid",
+                                           "file":  "css-grid.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Responsive Design",
+                                           "file":  "css-responsive.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Units",
+                                           "file":  "css-units.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Typography",
+                                           "file":  "css-typography.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Links \u0026 Buttons",
+                                           "file":  "css-links-buttons.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Borders \u0026 Outlines",
+                                           "file":  "css-borders-outlines.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Margin \u0026 Padding",
+                                           "file":  "css-margin-padding.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Display \u0026 Visibility",
+                                           "file":  "css-display-visibility.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Positioning",
+                                           "file":  "css-positioning.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Z-Index \u0026 Stacking",
+                                           "file":  "css-zindex.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Overflow",
+                                           "file":  "css-overflow.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Transitions \u0026 Transforms",
+                                           "file":  "css-transitions-transforms.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Forms \u0026 Inputs",
+                                           "file":  "css-forms.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Pseudo-classes \u0026 Elements",
+                                           "file":  "css-pseudo.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Shadows",
+                                           "file":  "css-shadows.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Flexbox Deep Dive",
+                                           "file":  "css-flexbox-advanced.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Grid Deep Dive",
+                                           "file":  "css-grid-advanced.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Naming \u0026 Organization",
+                                           "file":  "css-organization.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "js",
+                         "title":  "JavaScript Tutorial",
+                         "description":  "Make your website interactive with JavaScript.",
+                         "icon":  "bolt",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "JS Introduction",
+                                           "file":  "js-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS DOM",
+                                           "file":  "js-dom.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Where To",
+                                           "file":  "js-where-to.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Output",
+                                           "file":  "js-output.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Syntax",
+                                           "file":  "js-syntax.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Comments",
+                                           "file":  "js-comments.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Variables",
+                                           "file":  "js-variables.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Let \u0026 Const",
+                                           "file":  "js-let-const.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Data Types",
+                                           "file":  "js-data-types.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Operators",
+                                           "file":  "js-operators.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Conditionals",
+                                           "file":  "js-conditionals.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Loops",
+                                           "file":  "js-loops.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Functions",
+                                           "file":  "js-functions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Arrays",
+                                           "file":  "js-arrays.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Objects",
+                                           "file":  "js-objects.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS DOM Basics",
+                                           "file":  "js-dom-basics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS DOM Events",
+                                           "file":  "js-dom-events.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS DOM Styling",
+                                           "file":  "js-dom-styling.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Timers (setTimeout)",
+                                           "file":  "js-timers.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Forms \u0026 Validation",
+                                           "file":  "js-forms.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Error Handling",
+                                           "file":  "js-errors.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS This \u0026 Context",
+                                           "file":  "js-this.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Arrow Functions",
+                                           "file":  "js-arrow-fn.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Classes",
+                                           "file":  "js-classes.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Modules",
+                                           "file":  "js-modules.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS JSON",
+                                           "file":  "js-json.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Promises",
+                                           "file":  "js-promises.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Async \u0026 Await",
+                                           "file":  "js-async-await.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Fetch API",
+                                           "file":  "js-fetch.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS Local Storage",
+                                           "file":  "js-local-storage.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JS ES6+ Features",
+                                           "file":  "js-es6.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "sql",
+                         "title":  "SQL Tutorial",
+                         "description":  "Learn SQL from basic queries to advanced database features.",
+                         "icon":  "database",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "SQL Introduction",
+                                           "file":  "sql-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Syntax \u0026 Data Types",
+                                           "file":  "sql-syntax-datatypes.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Database Basics",
+                                           "file":  "sql-database-basics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Create \u0026 Drop DB",
+                                           "file":  "sql-create-drop-db.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Tables (CREATE)",
+                                           "file":  "sql-create-table.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL ALTER \u0026 DROP TABLE",
+                                           "file":  "sql-alter-drop-table.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL SELECT",
+                                           "file":  "sql-select.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL SELECT DISTINCT",
+                                           "file":  "sql-select-distinct.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL WHERE \u0026 Operators",
+                                           "file":  "sql-where-operators.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL AND, OR, NOT",
+                                           "file":  "sql-and-or-not.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL ORDER BY",
+                                           "file":  "sql-order-by.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL LIMIT / TOP",
+                                           "file":  "sql-limit-top.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL INSERT",
+                                           "file":  "sql-insert.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL UPDATE",
+                                           "file":  "sql-update.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL DELETE",
+                                           "file":  "sql-delete.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL NULL \u0026 IS NULL",
+                                           "file":  "sql-null.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Aggregate Functions",
+                                           "file":  "sql-aggregates.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL GROUP BY",
+                                           "file":  "sql-group-by.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL HAVING",
+                                           "file":  "sql-having.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Aliases",
+                                           "file":  "sql-aliases.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Basic Joins",
+                                           "file":  "sql-joins-basics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL INNER JOIN",
+                                           "file":  "sql-inner-join.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL LEFT \u0026 RIGHT JOIN",
+                                           "file":  "sql-left-right-join.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL FULL \u0026 SELF JOIN",
+                                           "file":  "sql-full-self-join.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL UNION \u0026 UNION ALL",
+                                           "file":  "sql-union.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Set Operators",
+                                           "file":  "sql-set-ops.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Subqueries Basics",
+                                           "file":  "sql-subqueries.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Correlated Subqueries",
+                                           "file":  "sql-correlated-subqueries.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL CASE Expression",
+                                           "file":  "sql-case.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL String Functions",
+                                           "file":  "sql-string-functions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Date \u0026 Time Functions",
+                                           "file":  "sql-date-functions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Numeric Functions",
+                                           "file":  "sql-numeric-functions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Constraints Basics",
+                                           "file":  "sql-constraints.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Primary \u0026 Foreign Keys",
+                                           "file":  "sql-keys.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL UNIQUE \u0026 CHECK",
+                                           "file":  "sql-unique-check.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL DEFAULT \u0026 NOT NULL",
+                                           "file":  "sql-default-notnull.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Views",
+                                           "file":  "sql-views.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Indexes",
+                                           "file":  "sql-indexes.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Transactions",
+                                           "file":  "sql-transactions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL ACID \u0026 Isolation",
+                                           "file":  "sql-acid-isolation.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Stored Procedures",
+                                           "file":  "sql-stored-procedures.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL User-Defined Functions",
+                                           "file":  "sql-user-functions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Triggers",
+                                           "file":  "sql-triggers.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Temporary Tables",
+                                           "file":  "sql-temp-tables.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL CTEs (WITH)",
+                                           "file":  "sql-ctes.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Window Functions",
+                                           "file":  "sql-window-functions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Pivot \u0026 Unpivot",
+                                           "file":  "sql-pivot.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Permissions \u0026 Users",
+                                           "file":  "sql-permissions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Backup \u0026 Restore",
+                                           "file":  "sql-backup-restore.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Normalization Basics",
+                                           "file":  "sql-normalization.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Performance Tuning",
+                                           "file":  "sql-performance.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Execution Plans",
+                                           "file":  "sql-execution-plans.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SQL Best Practices",
+                                           "file":  "sql-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "python",
+                         "title":  "Python Tutorial",
+                         "description":  "Learn Python from basic syntax to advanced programming concepts.",
+                         "icon":  "python",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "Python Introduction",
+                                           "file":  "python-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python Syntax \u0026 Variables",
+                                           "file":  "python-syntax-variables.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python Data Types",
+                                           "file":  "python-data-types.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python Operators",
+                                           "file":  "python-operators.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python Lists \u0026 Tuples",
+                                           "file":  "python-lists-tuples.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python Dictionaries \u0026 Sets",
+                                           "file":  "python-dicts-sets.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python Strings",
+                                           "file":  "python-strings.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python If-Else Statements",
+                                           "file":  "python-if-else.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python For \u0026 While Loops",
+                                           "file":  "python-loops.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python Functions",
+                                           "file":  "python-functions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python Lambda Functions",
+                                           "file":  "python-lambda.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python Modules \u0026 Packages",
+                                           "file":  "python-modules.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python File Handling",
+                                           "file":  "python-file-handling.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python Exception Handling",
+                                           "file":  "python-exceptions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python Classes \u0026 Objects",
+                                           "file":  "python-classes.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python Inheritance",
+                                           "file":  "python-inheritance.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python Polymorphism",
+                                           "file":  "python-polymorphism.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python List Comprehensions",
+                                           "file":  "python-comprehensions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python Generators",
+                                           "file":  "python-generators.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python Decorators",
+                                           "file":  "python-decorators.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python Context Managers",
+                                           "file":  "python-context-managers.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python Multithreading",
+                                           "file":  "python-threading.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python Async/Await",
+                                           "file":  "python-async.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python NumPy Basics",
+                                           "file":  "python-numpy.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python Pandas Basics",
+                                           "file":  "python-pandas.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python Best Practices",
+                                           "file":  "python-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "java",
+                         "title":  "Java Tutorial",
+                         "description":  "Learn Java from basic syntax to advanced programming concepts.",
+                         "icon":  "java",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "Java Introduction",
+                                           "file":  "java-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Syntax \u0026 Variables",
+                                           "file":  "java-syntax-variables.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Data Types",
+                                           "file":  "java-data-types.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Operators",
+                                           "file":  "java-operators.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Arrays",
+                                           "file":  "java-arrays.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Strings",
+                                           "file":  "java-strings.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java If-Else Statements",
+                                           "file":  "java-if-else.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Switch Statements",
+                                           "file":  "java-switch.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java For \u0026 While Loops",
+                                           "file":  "java-loops.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Methods",
+                                           "file":  "java-methods.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Classes \u0026 Objects",
+                                           "file":  "java-classes.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Constructors",
+                                           "file":  "java-constructors.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Inheritance",
+                                           "file":  "java-inheritance.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Polymorphism",
+                                           "file":  "java-polymorphism.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Abstraction",
+                                           "file":  "java-abstraction.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Encapsulation",
+                                           "file":  "java-encapsulation.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Interfaces",
+                                           "file":  "java-interfaces.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Packages",
+                                           "file":  "java-packages.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Exception Handling",
+                                           "file":  "java-exceptions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java File I/O",
+                                           "file":  "java-file-io.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Collections",
+                                           "file":  "java-collections.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Generics",
+                                           "file":  "java-generics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Lambda Expressions",
+                                           "file":  "java-lambda.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Streams API",
+                                           "file":  "java-streams.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Multithreading",
+                                           "file":  "java-threading.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Java Best Practices",
+                                           "file":  "java-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "c",
+                         "title":  "C Tutorial",
+                         "description":  "Learn C from basic syntax to advanced systems programming.",
+                         "icon":  "terminal",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "C Introduction",
+                                           "file":  "c-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Syntax \u0026 Variables",
+                                           "file":  "c-syntax-variables.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Data Types",
+                                           "file":  "c-data-types.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Operators",
+                                           "file":  "c-operators.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Input \u0026 Output",
+                                           "file":  "c-input-output.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Conditionals",
+                                           "file":  "c-conditionals.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Loops",
+                                           "file":  "c-loops.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Functions",
+                                           "file":  "c-functions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Arrays",
+                                           "file":  "c-arrays.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Strings",
+                                           "file":  "c-strings.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Pointers",
+                                           "file":  "c-pointers.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Memory Management",
+                                           "file":  "c-memory-management.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Structures",
+                                           "file":  "c-structures.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Unions",
+                                           "file":  "c-unions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Enums",
+                                           "file":  "c-enums.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C File Handling",
+                                           "file":  "c-files.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Preprocessor",
+                                           "file":  "c-preprocessor.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Header Files",
+                                           "file":  "c-header-files.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Dynamic Memory",
+                                           "file":  "c-dynamic-memory.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Recursion",
+                                           "file":  "c-recursion.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Linked List",
+                                           "file":  "c-linked-list.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Stacks \u0026 Queues",
+                                           "file":  "c-stacks-queues.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Sorting",
+                                           "file":  "c-sorting.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Searching",
+                                           "file":  "c-searching.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C Best Practices",
+                                           "file":  "c-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "cpp",
+                         "title":  "C++ Tutorial",
+                         "description":  "Learn C++ from fundamentals to modern advanced concepts.",
+                         "icon":  "cpu",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "C++ Introduction",
+                                           "file":  "cpp-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ Syntax \u0026 Variables",
+                                           "file":  "cpp-syntax-variables.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ Data Types",
+                                           "file":  "cpp-data-types.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ Operators",
+                                           "file":  "cpp-operators.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ Control Flow",
+                                           "file":  "cpp-control-flow.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ Functions",
+                                           "file":  "cpp-functions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ Arrays \u0026 Strings",
+                                           "file":  "cpp-arrays-strings.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ Pointers \u0026 References",
+                                           "file":  "cpp-pointers-references.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ Classes \u0026 Objects",
+                                           "file":  "cpp-classes-objects.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ Constructors \u0026 Destructors",
+                                           "file":  "cpp-constructors-destructors.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ Inheritance",
+                                           "file":  "cpp-inheritance.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ Polymorphism",
+                                           "file":  "cpp-polymorphism.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ Abstraction",
+                                           "file":  "cpp-abstraction.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ Encapsulation",
+                                           "file":  "cpp-encapsulation.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ Templates",
+                                           "file":  "cpp-templates.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ STL Vector",
+                                           "file":  "cpp-stl-vectors.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ STL Map",
+                                           "file":  "cpp-stl-maps.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ Exceptions",
+                                           "file":  "cpp-exceptions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ File I/O",
+                                           "file":  "cpp-file-io.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ Smart Pointers",
+                                           "file":  "cpp-smart-pointers.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ Lambda",
+                                           "file":  "cpp-lambda.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ Multithreading",
+                                           "file":  "cpp-multithreading.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ Move Semantics",
+                                           "file":  "cpp-move-semantics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C++ Best Practices",
+                                           "file":  "cpp-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "csharp",
+                         "title":  "C# Tutorial",
+                         "description":  "Learn C# from basics to enterprise-grade application patterns.",
+                         "icon":  "layers",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "C# Introduction",
+                                           "file":  "csharp-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Syntax \u0026 Variables",
+                                           "file":  "csharp-syntax-variables.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Data Types",
+                                           "file":  "csharp-data-types.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Operators",
+                                           "file":  "csharp-operators.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Conditionals",
+                                           "file":  "csharp-conditionals.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Loops",
+                                           "file":  "csharp-loops.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Methods",
+                                           "file":  "csharp-methods.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Arrays \u0026 Collections",
+                                           "file":  "csharp-arrays-collections.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Strings",
+                                           "file":  "csharp-strings.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Classes \u0026 Objects",
+                                           "file":  "csharp-classes-objects.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Constructors",
+                                           "file":  "csharp-constructors.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Inheritance",
+                                           "file":  "csharp-inheritance.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Polymorphism",
+                                           "file":  "csharp-polymorphism.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Abstraction",
+                                           "file":  "csharp-abstraction.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Interfaces",
+                                           "file":  "csharp-interfaces.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Exception Handling",
+                                           "file":  "csharp-exception-handling.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Generics",
+                                           "file":  "csharp-generics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# LINQ",
+                                           "file":  "csharp-linq.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# File I/O",
+                                           "file":  "csharp-file-io.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Async/Await",
+                                           "file":  "csharp-async-await.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Delegates \u0026 Events",
+                                           "file":  "csharp-delegates-events.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Nullable Reference Types",
+                                           "file":  "csharp-nullable.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Dependency Injection",
+                                           "file":  "csharp-dependency-injection.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "C# Best Practices",
+                                           "file":  "csharp-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "php",
+                         "title":  "PHP Tutorial",
+                         "description":  "Learn PHP from basics to practical web development.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "PHP Introduction",
+                                           "file":  "php-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "PHP Syntax \u0026 Variables",
+                                           "file":  "php-syntax-variables.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "PHP Data Types",
+                                           "file":  "php-data-types.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "PHP Operators",
+                                           "file":  "php-operators.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "PHP Conditionals \u0026 Loops",
+                                           "file":  "php-conditionals-loops.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "PHP Functions",
+                                           "file":  "php-functions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "PHP Arrays",
+                                           "file":  "php-arrays.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "PHP Forms \u0026 Validation",
+                                           "file":  "php-forms-validation.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "PHP OOP Basics",
+                                           "file":  "php-oop-basics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "PHP Sessions \u0026 Cookies",
+                                           "file":  "php-sessions-cookies.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "PHP MySQL Integration",
+                                           "file":  "php-mysql-integration.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "PHP Best Practices",
+                                           "file":  "php-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "jquery",
+                         "title":  "jQuery Tutorial",
+                         "description":  "Learn jQuery for DOM manipulation and interactive UI.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "jQuery Introduction",
+                                           "file":  "jquery-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "jQuery Selectors",
+                                           "file":  "jquery-selectors.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "jQuery Events",
+                                           "file":  "jquery-events.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "jQuery DOM Manipulation",
+                                           "file":  "jquery-dom-manipulation.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "jQuery Effects",
+                                           "file":  "jquery-effects.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "jQuery Traversing",
+                                           "file":  "jquery-traversing.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "jQuery AJAX",
+                                           "file":  "jquery-ajax.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "jQuery Forms",
+                                           "file":  "jquery-forms.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "jQuery UI Basics",
+                                           "file":  "jquery-ui-basics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "jQuery Plugins",
+                                           "file":  "jquery-plugins.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "jQuery Performance",
+                                           "file":  "jquery-performance.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "jQuery Best Practices",
+                                           "file":  "jquery-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "bootstrap",
+                         "title":  "Bootstrap Tutorial",
+                         "description":  "Learn Bootstrap for fast responsive UI development.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "Bootstrap Introduction",
+                                           "file":  "bootstrap-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Bootstrap Setup",
+                                           "file":  "bootstrap-setup.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Bootstrap Grid System",
+                                           "file":  "bootstrap-grid-system.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Bootstrap Typography",
+                                           "file":  "bootstrap-typography.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Bootstrap Components",
+                                           "file":  "bootstrap-components.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Bootstrap Utilities",
+                                           "file":  "bootstrap-utilities.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Bootstrap Forms",
+                                           "file":  "bootstrap-forms.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Bootstrap Navbars",
+                                           "file":  "bootstrap-navbars.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Bootstrap Cards \u0026 Modals",
+                                           "file":  "bootstrap-cards-modals.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Bootstrap Responsive Design",
+                                           "file":  "bootstrap-responsive-design.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Bootstrap Theming",
+                                           "file":  "bootstrap-theming.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Bootstrap Best Practices",
+                                           "file":  "bootstrap-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "r",
+                         "title":  "R Tutorial",
+                         "description":  "Learn R for statistics and data analysis.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "R Introduction",
+                                           "file":  "r-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "R Setup",
+                                           "file":  "r-setup.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "R Variables",
+                                           "file":  "r-variables.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "R Data Types",
+                                           "file":  "r-data-types.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "R Vectors \u0026 Lists",
+                                           "file":  "r-vectors-lists.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "R Data Frames",
+                                           "file":  "r-data-frames.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "R Control Flow",
+                                           "file":  "r-control-flow.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "R Functions",
+                                           "file":  "r-functions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "R dplyr Basics",
+                                           "file":  "r-dplyr-basics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "R ggplot2 Basics",
+                                           "file":  "r-ggplot2-basics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "R Statistics Basics",
+                                           "file":  "r-statistics-basics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "R Best Practices",
+                                           "file":  "r-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "kotlin",
+                         "title":  "Kotlin Tutorial",
+                         "description":  "Learn Kotlin for modern Android and backend development.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "Kotlin Introduction",
+                                           "file":  "kotlin-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Kotlin Syntax \u0026 Variables",
+                                           "file":  "kotlin-syntax-variables.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Kotlin Data Types",
+                                           "file":  "kotlin-data-types.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Kotlin Null Safety",
+                                           "file":  "kotlin-null-safety.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Kotlin Conditionals \u0026 Loops",
+                                           "file":  "kotlin-conditionals-loops.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Kotlin Functions",
+                                           "file":  "kotlin-functions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Kotlin Classes \u0026 Objects",
+                                           "file":  "kotlin-classes-objects.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Kotlin Inheritance",
+                                           "file":  "kotlin-inheritance.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Kotlin Collections",
+                                           "file":  "kotlin-collections.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Kotlin Coroutines",
+                                           "file":  "kotlin-coroutines.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Kotlin Android Basics",
+                                           "file":  "kotlin-android-basics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Kotlin Best Practices",
+                                           "file":  "kotlin-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "nodejs",
+                         "title":  "Node.js Tutorial",
+                         "description":  "Learn Node.js for server-side JavaScript development.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "Node.js Introduction",
+                                           "file":  "nodejs-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Node.js Setup",
+                                           "file":  "nodejs-setup.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Node.js Modules",
+                                           "file":  "nodejs-modules.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Node.js File System",
+                                           "file":  "nodejs-file-system.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Node.js HTTP Server",
+                                           "file":  "nodejs-http-server.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Node.js Express Basics",
+                                           "file":  "nodejs-express-basics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Node.js Async/Await",
+                                           "file":  "nodejs-async-await.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Node.js Events",
+                                           "file":  "nodejs-events.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Node.js NPM",
+                                           "file":  "nodejs-npm.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Node.js API Building",
+                                           "file":  "nodejs-api-building.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Node.js Authentication",
+                                           "file":  "nodejs-authentication.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Node.js Best Practices",
+                                           "file":  "nodejs-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "react",
+                         "title":  "React Tutorial",
+                         "description":  "Learn React to build modern component-based UIs.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "React Introduction",
+                                           "file":  "react-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "React Setup \u0026 JSX",
+                                           "file":  "react-setup-jsx.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "React Components",
+                                           "file":  "react-components.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "React Props \u0026 State",
+                                           "file":  "react-props-state.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "React Hooks",
+                                           "file":  "react-hooks.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "React Events",
+                                           "file":  "react-events.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "React Forms",
+                                           "file":  "react-forms.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "React Routing",
+                                           "file":  "react-routing.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "React API Fetching",
+                                           "file":  "react-api-fetching.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "React Context API",
+                                           "file":  "react-context-api.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "React Performance",
+                                           "file":  "react-performance.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "React Best Practices",
+                                           "file":  "react-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "json",
+                         "title":  "JSON Tutorial",
+                         "description":  "Learn JSON for data exchange in web applications.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "JSON Introduction",
+                                           "file":  "json-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JSON Syntax",
+                                           "file":  "json-syntax.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JSON Data Types",
+                                           "file":  "json-data-types.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JSON Objects \u0026 Arrays",
+                                           "file":  "json-objects-arrays.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JSON Parse \u0026 Stringify",
+                                           "file":  "json-parse-stringify.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JSON API Usage",
+                                           "file":  "json-api-usage.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JSON Validation",
+                                           "file":  "json-validation.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JSON Schema Basics",
+                                           "file":  "json-schema-basics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JSON Storage",
+                                           "file":  "json-storage.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JSON Transformations",
+                                           "file":  "json-transformations.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JSON Security",
+                                           "file":  "json-security.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "JSON Best Practices",
+                                           "file":  "json-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "vue",
+                         "title":  "Vue Tutorial",
+                         "description":  "Learn Vue for progressive frontend app development.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "Vue Introduction",
+                                           "file":  "vue-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Vue Setup",
+                                           "file":  "vue-setup.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Vue Template Syntax",
+                                           "file":  "vue-template-syntax.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Vue Reactivity",
+                                           "file":  "vue-reactivity.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Vue Computed \u0026 Watchers",
+                                           "file":  "vue-computed-watchers.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Vue Components",
+                                           "file":  "vue-components.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Vue Props \u0026 Events",
+                                           "file":  "vue-props-events.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Vue Router",
+                                           "file":  "vue-router.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Vue State Management",
+                                           "file":  "vue-state-management.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Vue API Calls",
+                                           "file":  "vue-api-calls.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Vue Composition API",
+                                           "file":  "vue-composition-api.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Vue Best Practices",
+                                           "file":  "vue-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "mysql",
+                         "title":  "MySQL Tutorial",
+                         "description":  "Learn MySQL for relational database design and queries.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "MySQL Introduction",
+                                           "file":  "mysql-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "MySQL Setup",
+                                           "file":  "mysql-setup.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "MySQL Databases",
+                                           "file":  "mysql-databases.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "MySQL Tables",
+                                           "file":  "mysql-tables.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "MySQL CRUD",
+                                           "file":  "mysql-crud.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "MySQL WHERE \u0026 ORDER BY",
+                                           "file":  "mysql-where-orderby.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "MySQL Joins",
+                                           "file":  "mysql-joins.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "MySQL GROUP BY \u0026 HAVING",
+                                           "file":  "mysql-groupby-having.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "MySQL Indexes",
+                                           "file":  "mysql-indexes.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "MySQL Transactions",
+                                           "file":  "mysql-transactions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "MySQL Stored Procedures",
+                                           "file":  "mysql-stored-procedures.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "MySQL Best Practices",
+                                           "file":  "mysql-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "xml",
+                         "title":  "XML Tutorial",
+                         "description":  "Learn XML for structured data representation.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "XML Introduction",
+                                           "file":  "xml-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "XML Syntax",
+                                           "file":  "xml-syntax.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "XML Elements \u0026 Attributes",
+                                           "file":  "xml-elements-attributes.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "XML Namespaces",
+                                           "file":  "xml-namespaces.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "XML DTD \u0026 XSD",
+                                           "file":  "xml-dtd-xsd.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "XML XPath",
+                                           "file":  "xml-xpath.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "XML XSLT",
+                                           "file":  "xml-xslt.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "XML DOM \u0026 SAX",
+                                           "file":  "xml-dom-sax.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "XML APIs",
+                                           "file":  "xml-apis.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "XML RSS \u0026 Atom",
+                                           "file":  "xml-rss-atom.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "XML Security",
+                                           "file":  "xml-security.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "XML Best Practices",
+                                           "file":  "xml-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "sass",
+                         "title":  "Sass Tutorial",
+                         "description":  "Learn Sass to write scalable CSS with variables and mixins.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "Sass Introduction",
+                                           "file":  "sass-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Sass Setup",
+                                           "file":  "sass-setup.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Sass Variables",
+                                           "file":  "sass-variables.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Sass Nesting",
+                                           "file":  "sass-nesting.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Sass Mixins",
+                                           "file":  "sass-mixins.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Sass Functions",
+                                           "file":  "sass-functions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Sass Partials",
+                                           "file":  "sass-partials.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Sass Extend",
+                                           "file":  "sass-extend.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Sass Control Directives",
+                                           "file":  "sass-control-directives.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Sass Modules",
+                                           "file":  "sass-modules.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Sass Architecture",
+                                           "file":  "sass-architecture.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Sass Best Practices",
+                                           "file":  "sass-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "icons",
+                         "title":  "Icons Tutorial",
+                         "description":  "Learn how to use icon libraries in modern web projects.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "Icons Introduction",
+                                           "file":  "icons-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Icon Fonts",
+                                           "file":  "icons-icon-fonts.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SVG Icons",
+                                           "file":  "icons-svg-icons.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Icon Libraries",
+                                           "file":  "icons-icon-libraries.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Accessible Icons",
+                                           "file":  "icons-accessible-icons.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Styling Icons",
+                                           "file":  "icons-styling-icons.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Sprites",
+                                           "file":  "icons-sprites.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Icon Animation",
+                                           "file":  "icons-icon-animation.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Icons in React",
+                                           "file":  "icons-icons-react.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Icons in Vue",
+                                           "file":  "icons-icons-vue.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Custom Icon Sets",
+                                           "file":  "icons-custom-icon-sets.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Icons Best Practices",
+                                           "file":  "icons-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "rwd",
+                         "title":  "RWD Tutorial",
+                         "description":  "Learn responsive web design for all screen sizes.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "RWD Introduction",
+                                           "file":  "rwd-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Viewport Meta Tag",
+                                           "file":  "rwd-viewport.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Fluid Layouts",
+                                           "file":  "rwd-fluid-layouts.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Media Queries",
+                                           "file":  "rwd-media-queries.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Responsive Flexbox",
+                                           "file":  "rwd-responsive-flexbox.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Responsive Grid",
+                                           "file":  "rwd-responsive-grid.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Responsive Images",
+                                           "file":  "rwd-responsive-images.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Responsive Typography",
+                                           "file":  "rwd-responsive-typography.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Mobile-First Design",
+                                           "file":  "rwd-mobile-first.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Breakpoints Strategy",
+                                           "file":  "rwd-breakpoints.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Responsive Testing",
+                                           "file":  "rwd-testing.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "RWD Best Practices",
+                                           "file":  "rwd-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "graphics",
+                         "title":  "Graphics Tutorial",
+                         "description":  "Learn web graphics fundamentals for modern interfaces.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "Graphics Introduction",
+                                           "file":  "graphics-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Color Theory Basics",
+                                           "file":  "graphics-color-theory.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Layout \u0026 Composition",
+                                           "file":  "graphics-layout-composition.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Typography in Design",
+                                           "file":  "graphics-typography-design.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Image Formats",
+                                           "file":  "graphics-image-formats.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Vector vs Raster",
+                                           "file":  "graphics-vector-vs-raster.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Graphics",
+                                           "file":  "graphics-css-graphics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SVG Graphics",
+                                           "file":  "graphics-svg-graphics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Canvas Graphics",
+                                           "file":  "graphics-canvas-graphics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "WebGL Basics",
+                                           "file":  "graphics-webgl-basics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Graphics Optimization",
+                                           "file":  "graphics-optimization.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Graphics Best Practices",
+                                           "file":  "graphics-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "svg",
+                         "title":  "SVG Tutorial",
+                         "description":  "Learn SVG for scalable vector graphics on the web.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "SVG Introduction",
+                                           "file":  "svg-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SVG Syntax",
+                                           "file":  "svg-syntax.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SVG Shapes",
+                                           "file":  "svg-shapes.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SVG Paths",
+                                           "file":  "svg-paths.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SVG Text \u0026 Gradients",
+                                           "file":  "svg-text-gradients.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SVG Groups \u0026 Symbols",
+                                           "file":  "svg-groups-symbols.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SVG ViewBox",
+                                           "file":  "svg-viewbox.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SVG Filters \u0026 Masks",
+                                           "file":  "svg-filters-masks.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SVG Animation",
+                                           "file":  "svg-animation.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SVG Interaction",
+                                           "file":  "svg-interaction.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SVG Optimization",
+                                           "file":  "svg-optimization.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SVG Best Practices",
+                                           "file":  "svg-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "canvas",
+                         "title":  "Canvas Tutorial",
+                         "description":  "Learn Canvas for dynamic 2D drawing in browsers.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "Canvas Introduction",
+                                           "file":  "canvas-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Canvas Setup",
+                                           "file":  "canvas-setup.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Canvas Shapes",
+                                           "file":  "canvas-shapes.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Canvas Styles",
+                                           "file":  "canvas-styles.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Canvas Text \u0026 Images",
+                                           "file":  "canvas-text-images.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Canvas Transformations",
+                                           "file":  "canvas-transformations.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Canvas Animation",
+                                           "file":  "canvas-animation.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Canvas Interactions",
+                                           "file":  "canvas-interactions.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Canvas Game Loop",
+                                           "file":  "canvas-game-loop.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Canvas Data Visualization",
+                                           "file":  "canvas-data-visualization.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Canvas Performance",
+                                           "file":  "canvas-performance.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Canvas Best Practices",
+                                           "file":  "canvas-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "raspberrypi",
+                         "title":  "Raspberry Pi Tutorial",
+                         "description":  "Learn Raspberry Pi basics for coding and hardware projects.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "Raspberry Pi Introduction",
+                                           "file":  "raspberrypi-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Raspberry Pi Setup",
+                                           "file":  "raspberrypi-setup.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Raspberry Pi OS Basics",
+                                           "file":  "raspberrypi-os-basics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "GPIO Basics",
+                                           "file":  "raspberrypi-gpio-basics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Python GPIO",
+                                           "file":  "raspberrypi-python-gpio.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Sensors",
+                                           "file":  "raspberrypi-sensors.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Actuators",
+                                           "file":  "raspberrypi-actuators.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Networking",
+                                           "file":  "raspberrypi-networking.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "MQTT IoT Basics",
+                                           "file":  "raspberrypi-mqtt-iot.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Camera Projects",
+                                           "file":  "raspberrypi-camera-projects.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Automation Projects",
+                                           "file":  "raspberrypi-automation-projects.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Raspberry Pi Best Practices",
+                                           "file":  "raspberrypi-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "cyber-security",
+                         "title":  "CNS (Cyber and Network Security) Tutorial",
+                         "description":  "Learn cyber and network security fundamentals, including SSH hardening and privacy protection.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "Cyber Security Introduction",
+                                           "file":  "cyber-security-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CIA Triad",
+                                           "file":  "cyber-security-cia-triad.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Threat Modeling",
+                                           "file":  "cyber-security-threat-modeling.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Network Security",
+                                           "file":  "cyber-security-network-security.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "SSH Security",
+                                           "file":  "cyber-security-ssh-security.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "VPN and Firewall Security",
+                                           "file":  "cyber-security-vpn-firewall-security.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Web Security",
+                                           "file":  "cyber-security-web-security.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Authentication \u0026 Access Control",
+                                           "file":  "cyber-security-auth-access-control.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Cryptography Basics",
+                                           "file":  "cyber-security-cryptography-basics.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Data Privacy \/ Privacy Protection",
+                                           "file":  "cyber-security-privacy-protection.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Email and Phishing Security",
+                                           "file":  "cyber-security-email-phishing-security.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Secure Coding",
+                                           "file":  "cyber-security-secure-coding.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Vulnerability Assessment",
+                                           "file":  "cyber-security-vulnerability-assessment.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Incident Response",
+                                           "file":  "cyber-security-incident-response.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Security Tools",
+                                           "file":  "cyber-security-security-tools.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Cyber Security Best Practices",
+                                           "file":  "cyber-security-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "colors",
+                         "title":  "Colors Tutorial",
+                         "description":  "Learn color systems and usage in web/UI design.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "Colors Introduction",
+                                           "file":  "colors-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Color Models",
+                                           "file":  "colors-color-models.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "RGB, HEX, HSL",
+                                           "file":  "colors-rgb-hex-hsl.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Contrast \u0026 Accessibility",
+                                           "file":  "colors-contrast-accessibility.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Color Palettes",
+                                           "file":  "colors-palettes.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Color Psychology",
+                                           "file":  "colors-psychology.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Gradients",
+                                           "file":  "colors-gradients.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "CSS Colors",
+                                           "file":  "colors-css-colors.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Design System Colors",
+                                           "file":  "colors-design-system-colors.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Data Viz Colors",
+                                           "file":  "colors-data-viz-colors.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Color Testing Tools",
+                                           "file":  "colors-testing-tools.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Colors Best Practices",
+                                           "file":  "colors-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "git",
+                         "title":  "Git Tutorial",
+                         "description":  "Learn Git for version control and collaboration.",
+                         "icon":  "book",
+                         "basePath":  "./",
+                         "links":  [
+                                       {
+                                           "title":  "Git Introduction",
+                                           "file":  "git-intro.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Git Setup",
+                                           "file":  "git-setup.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Git Init, Add, Commit",
+                                           "file":  "git-init-add-commit.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Git Branching",
+                                           "file":  "git-branching.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Git Merging",
+                                           "file":  "git-merging.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Git Remote Repositories",
+                                           "file":  "git-remote-repositories.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Git Pull Requests",
+                                           "file":  "git-pull-requests.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Git Rebase \u0026 Cherry-pick",
+                                           "file":  "git-rebase-cherry-pick.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Git Stash \u0026 Tags",
+                                           "file":  "git-stash-tags.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Git Undo \u0026 Recovery",
+                                           "file":  "git-undo-recovery.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Git Workflows",
+                                           "file":  "git-workflows.html",
+                                           "status":  "published"
+                                       },
+                                       {
+                                           "title":  "Git Best Practices",
+                                           "file":  "git-best-practices.html",
+                                           "status":  "published"
+                                       }
+                                   ]
+                     }
+                 ]
+}

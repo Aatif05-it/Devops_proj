@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML Head &amp; Meta - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="../../html-intro.html" class="active" target="_blank">HTML</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="html"></aside>
+
+    <main class="content">
+      <h1>HTML Head &amp; Meta</h1>
+      <p>
+        The head section of an HTML document contains information about the page:
+        title, character encoding, responsive settings, SEO meta tags, and links to CSS or icons.
+      </p>
+
+      <h2>Basic head structure</h2>
+      <div class="example-box">
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  ...
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+      <p>
+        The <code>lang</code> attribute helps browsers and screen readers, while
+        <code>meta charset=&quot;UTF-8&quot;</code> ensures most characters are displayed correctly.
+      </p>
+
+      <h2>Viewport meta (responsive)</h2>
+      <p>
+        The viewport tag makes your layout scale correctly on phones and tablets.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+</code></pre>
+      </div>
+      <p>
+        <code>width=device-width</code> sets the page width to the device width and
+        <code>initial-scale=1</code> sets the initial zoom level.
+      </p>
+
+      <h2>Description and keywords</h2>
+      <p>
+        Search engines often use the description meta in search results.
+      </p>
+      <div class="example-box">
+        <pre><code>&lt;meta name=&quot;description&quot;
+      content=&quot;Learn HTML, CSS, and JavaScript with simple examples.&quot;&gt;
+&lt;meta name=&quot;keywords&quot;
+      content=&quot;HTML, CSS, JavaScript, tutorial&quot;&gt;
+</code></pre>
+      </div>
+      <p>
+        Description should be a short summary of the page. Keywords are less important today but still used in some tools.
+      </p>
+
+      <h2>Linking CSS and favicon</h2>
+      <div class="example-box">
+        <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+&lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;/assets/images/favicon.png&quot;&gt;
+</code></pre>
+      </div>
+      <p>
+        Use <code>link rel=&quot;stylesheet&quot;</code> to connect your CSS files and
+        <code>rel=&quot;icon&quot;</code> to set the small icon shown in the browser tab.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="html-text-formatting.html" target="_blank">&laquo; Previous: HTML Text Formatting</a>
+        <a class="btn primary" href="html-audio-video.html" target="_blank">Next: HTML Audio &amp; Video &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VPN and Firewall Security - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="cyber-security-intro.html" class="active" target="_blank">Cyber Security</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="cyber-security"></aside>
+
+    <main class="content">
+      <h1>VPN and Firewall Security</h1>
+      <p>VPNs encrypt traffic over untrusted networks, while firewalls enforce network access rules to block unauthorized communication.</p>
+
+      <h2>Example</h2>
+      <div class="example-box">
+<pre><code># Rule concept
+Allow: HTTPS (443) to web server
+Deny: all unnecessary inbound ports
+VPN: required for remote admin access
+</code></pre>
+      </div>
+
+      <h2>What You Will Learn</h2>
+      <ul>
+        <li>How site-to-site and remote-access VPNs differ.</li>
+        <li>How firewall default-deny policy reduces exposure.</li>
+        <li>How to combine VPN and firewall for secure remote administration.</li>
+      </ul>
+
+      <h2>Practice Task</h2>
+      <p>Create a simple policy that allows developer access only through VPN and blocks direct public SSH access.</p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="cyber-security-ssh-security.html" target="_blank">&laquo; Previous</a>
+        <a class="btn primary" href="cyber-security-web-security.html" target="_blank">Next &raquo;</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>

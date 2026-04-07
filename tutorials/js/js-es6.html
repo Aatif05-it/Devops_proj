@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS ES6+ Features - CodeNexa Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="logo">CodeNexa Academy</div>
+    <nav class="topnav-links">
+      <a href="../../index.html" target="_blank">Home</a>
+      <a href="js-intro.html" class="active" target="_blank">JavaScript</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" data-section="js"></aside>
+
+    <main class="content">
+      <h1>JS ES6+ Features</h1>
+      <p>
+        ES6 and later versions introduced modern JavaScript features such as <code>let</code>/<code>const</code>, arrow functions, template literals, and destructuring. 
+      </p>
+
+      <h2>Template literals and destructuring</h2>
+      <p>
+        This example uses object destructuring to extract properties and a template literal to build a message. 
+      </p>
+
+      <div class="example-box">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+  &lt;pre id="info"&gt;&lt;/pre&gt;
+
+  &lt;script&gt;
+    const user = { name: "Alex", city: "Mumbai", role: "Student" };
+
+    const { name, city } = user;
+
+    const message = `User ${name} lives in ${city}.`;
+
+    document.getElementById("info").textContent = message;
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+      </div>
+
+      <p>
+        Other helpful ES6+ additions include default parameters, spread and rest syntax, classes, modules, and async functions.
+      </p>
+
+      <div class="tutorial-nav">
+        <a class="btn secondary" href="js-local-storage.html" target="_blank">&laquo; Back: JS Local Storage</a>
+        <a class="btn primary" href="../../index.html" target="_blank">Back to Home &raquo;</a>
+      </div>
+
+      <div class="next-topics">
+        <h3>Continue Learning with Web Development</h3>
+        <p>Now that you've mastered JavaScript, enhance your web development skills:</p>
+        <ul>
+          <li><a href="../css/css-intro.html" target="_blank">CSS Introduction</a> - Master styling for beautiful web design</li>
+          <li><a href="../css/css-selectors.html" target="_blank">CSS Selectors</a> - Learn advanced CSS selection techniques</li>
+          <li><a href="../css/css-flexbox.html" target="_blank">CSS Flexbox</a> - Create responsive layouts with Flexbox</li>
+          <li><a href="../css/css-grid.html" target="_blank">CSS Grid</a> - Master CSS Grid for complex layouts</li>
+          <li><a href="../html/html-intro.html" target="_blank">HTML Advanced</a> - Deepen your HTML knowledge</li>
+          <li><a href="../Python/python-intro.html" target="_blank">Python Introduction</a> - Start Python from basics</li>
+          <li><a href="../Python/python-intro.html" target="_blank">Python Backend</a> - Learn backend development with Python</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 CodeNexa Academy</p>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/sidebar.js"></script>
+</body>
+</html>
+
+
+
