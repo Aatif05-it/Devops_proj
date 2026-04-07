@@ -14,9 +14,9 @@
 2. Commit files:
    git add .
    git commit -m "Add DevOps pipeline (GitHub Actions, Jenkins, Docker, K8s, Minikube)"
-3. Create GitHub repo and connect remote:
+3. Connect to remote repository:
    git branch -M main
-   git remote add origin <YOUR_GITHUB_REPO_URL>
+   git remote add origin https://github.com/Aatif05-it/Devops_proj.git
    git push -u origin main
 
 ## GitHub Actions CI/CD
@@ -40,8 +40,8 @@
 ## Minikube deploy
 1. Ensure kubectl + minikube installed.
 2. Run:
-   bash scripts/deploy-minikube.sh ghcr.io/<owner>/<repo>:latest
+   bash scripts/deploy-minikube.sh ghcr.io/aatif05-it/devops_proj:latest
 
 ## Important
-- Update image in k8s/deployment.yaml from placeholder to your actual GHCR path.
+- Image path is preconfigured as ghcr.io/aatif05-it/devops_proj:latest.
 - For private GHCR images, create imagePullSecret in cluster.
